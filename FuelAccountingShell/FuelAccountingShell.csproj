@@ -1,0 +1,268 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{C7C2E85C-9E14-4AD4-9553-8C7D320ACE08}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>FuelAccountingShell</RootNamespace>
+    <AssemblyName>FuelAccountingShell</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="MaterialSkin, Version=2.3.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\MaterialSkin.2.2.3.1\lib\net48\MaterialSkin.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Forms\FormAddEditDriver.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FormAddEditDriver.Designer.cs">
+      <DependentUpon>FormAddEditDriver.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FormAddEditFuel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FormAddEditFuel.Designer.cs">
+      <DependentUpon>FormAddEditFuel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FormAddEditFuelAccountingItem.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FormAddEditFuelAccountingItem.Designer.cs">
+      <DependentUpon>FormAddEditFuelAccountingItem.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FormAddEditFuelStation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FormAddEditFuelStation.Designer.cs">
+      <DependentUpon>FormAddEditFuelStation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FormAddEditSupplier.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FormAddEditSupplier.Designer.cs">
+      <DependentUpon>FormAddEditSupplier.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FormAddEditTrailer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FormAddEditTrailer.Designer.cs">
+      <DependentUpon>FormAddEditTrailer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FormAddEditTruck.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FormAddEditTruck.Designer.cs">
+      <DependentUpon>FormAddEditTruck.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FormAddEditUser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FormAddEditUser.Designer.cs">
+      <DependentUpon>FormAddEditUser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FormAuthorization.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FormAuthorization.Designer.cs">
+      <DependentUpon>FormAuthorization.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FormMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FormMain.Designer.cs">
+      <DependentUpon>FormMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Infrastructure\DataGridVeiwStyle.cs" />
+    <Compile Include="Infrastructure\InitMaterialSkin.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UserControls\UserControlDriver.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\UserControlDriver.Designer.cs">
+      <DependentUpon>UserControlDriver.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\UserControlFuelAccountingItem.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\UserControlFuelAccountingItem.Designer.cs">
+      <DependentUpon>UserControlFuelAccountingItem.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\UserControlFuel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\UserControlFuel.Designer.cs">
+      <DependentUpon>UserControlFuel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\UserControlFuelStation.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\UserControlFuelStation.Designer.cs">
+      <DependentUpon>UserControlFuelStation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\UserControlSupplier.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\UserControlSupplier.Designer.cs">
+      <DependentUpon>UserControlSupplier.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\UserControlTrailer.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\UserControlTrailer.Designer.cs">
+      <DependentUpon>UserControlTrailer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\UserControlTruck.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\UserControlTruck.Designer.cs">
+      <DependentUpon>UserControlTruck.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\UserControlUser.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\UserControlUser.Designer.cs">
+      <DependentUpon>UserControlUser.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Forms\FormAddEditDriver.resx">
+      <DependentUpon>FormAddEditDriver.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FormAddEditFuel.resx">
+      <DependentUpon>FormAddEditFuel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FormAddEditFuelAccountingItem.resx">
+      <DependentUpon>FormAddEditFuelAccountingItem.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FormAddEditFuelStation.resx">
+      <DependentUpon>FormAddEditFuelStation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FormAddEditSupplier.resx">
+      <DependentUpon>FormAddEditSupplier.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FormAddEditTrailer.resx">
+      <DependentUpon>FormAddEditTrailer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FormAddEditTruck.resx">
+      <DependentUpon>FormAddEditTruck.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FormAddEditUser.resx">
+      <DependentUpon>FormAddEditUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FormAuthorization.resx">
+      <DependentUpon>FormAuthorization.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FormMain.resx">
+      <DependentUpon>FormMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="UserControls\UserControlDriver.resx">
+      <DependentUpon>UserControlDriver.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\UserControlFuel.resx">
+      <DependentUpon>UserControlFuel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\UserControlFuelAccountingItem.resx">
+      <DependentUpon>UserControlFuelAccountingItem.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\UserControlFuelStation.resx">
+      <DependentUpon>UserControlFuelStation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\UserControlSupplier.resx">
+      <DependentUpon>UserControlSupplier.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\UserControlTrailer.resx">
+      <DependentUpon>UserControlTrailer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\UserControlTruck.resx">
+      <DependentUpon>UserControlTruck.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\UserControlUser.resx">
+      <DependentUpon>UserControlUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Azs.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Document.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Driver.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Fuel.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Supplier.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Trailer.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Truck.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\User.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
