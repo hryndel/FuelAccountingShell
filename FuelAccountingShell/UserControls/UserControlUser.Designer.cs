@@ -28,15 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            MaterialSkin.MaterialListBoxItem materialListBoxItem10 = new MaterialSkin.MaterialListBoxItem();
-            MaterialSkin.MaterialListBoxItem materialListBoxItem11 = new MaterialSkin.MaterialListBoxItem();
-            MaterialSkin.MaterialListBoxItem materialListBoxItem12 = new MaterialSkin.MaterialListBoxItem();
-            MaterialSkin.MaterialListBoxItem materialListBoxItem13 = new MaterialSkin.MaterialListBoxItem();
-            MaterialSkin.MaterialListBoxItem materialListBoxItem14 = new MaterialSkin.MaterialListBoxItem();
-            MaterialSkin.MaterialListBoxItem materialListBoxItem15 = new MaterialSkin.MaterialListBoxItem();
-            MaterialSkin.MaterialListBoxItem materialListBoxItem16 = new MaterialSkin.MaterialListBoxItem();
-            MaterialSkin.MaterialListBoxItem materialListBoxItem17 = new MaterialSkin.MaterialListBoxItem();
-            MaterialSkin.MaterialListBoxItem materialListBoxItem18 = new MaterialSkin.MaterialListBoxItem();
             this.flowLayoutPanelHelp = new System.Windows.Forms.FlowLayoutPanel();
             this.materialCardHelp = new MaterialSkin.Controls.MaterialCard();
             this.materialListBoxRoles = new MaterialSkin.Controls.MaterialListBox();
@@ -56,6 +47,7 @@
             this.ColumnPatronymic = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColumnMail = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColumnLogin = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColumnUserType = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.flowLayoutPanelHelp.SuspendLayout();
             this.materialCardHelp.SuspendLayout();
             this.materialCardHelpTitle.SuspendLayout();
@@ -99,42 +91,6 @@
             this.materialListBoxRoles.BorderColor = System.Drawing.Color.LightGray;
             this.materialListBoxRoles.Depth = 0;
             this.materialListBoxRoles.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            materialListBoxItem10.SecondaryText = "";
-            materialListBoxItem10.Tag = null;
-            materialListBoxItem10.Text = "1";
-            materialListBoxItem11.SecondaryText = "";
-            materialListBoxItem11.Tag = null;
-            materialListBoxItem11.Text = "2";
-            materialListBoxItem12.SecondaryText = "";
-            materialListBoxItem12.Tag = null;
-            materialListBoxItem12.Text = "3";
-            materialListBoxItem13.SecondaryText = "";
-            materialListBoxItem13.Tag = null;
-            materialListBoxItem13.Text = "ListBoxItem";
-            materialListBoxItem14.SecondaryText = "";
-            materialListBoxItem14.Tag = null;
-            materialListBoxItem14.Text = "ListBoxItem";
-            materialListBoxItem15.SecondaryText = "";
-            materialListBoxItem15.Tag = null;
-            materialListBoxItem15.Text = "ListBoxItem";
-            materialListBoxItem16.SecondaryText = "";
-            materialListBoxItem16.Tag = null;
-            materialListBoxItem16.Text = "ListBoxItem";
-            materialListBoxItem17.SecondaryText = "";
-            materialListBoxItem17.Tag = null;
-            materialListBoxItem17.Text = "ListBoxItem";
-            materialListBoxItem18.SecondaryText = "";
-            materialListBoxItem18.Tag = null;
-            materialListBoxItem18.Text = "ListBoxItem";
-            this.materialListBoxRoles.Items.Add(materialListBoxItem10);
-            this.materialListBoxRoles.Items.Add(materialListBoxItem11);
-            this.materialListBoxRoles.Items.Add(materialListBoxItem12);
-            this.materialListBoxRoles.Items.Add(materialListBoxItem13);
-            this.materialListBoxRoles.Items.Add(materialListBoxItem14);
-            this.materialListBoxRoles.Items.Add(materialListBoxItem15);
-            this.materialListBoxRoles.Items.Add(materialListBoxItem16);
-            this.materialListBoxRoles.Items.Add(materialListBoxItem17);
-            this.materialListBoxRoles.Items.Add(materialListBoxItem18);
             this.materialListBoxRoles.Location = new System.Drawing.Point(14, 75);
             this.materialListBoxRoles.Margin = new System.Windows.Forms.Padding(0);
             this.materialListBoxRoles.MouseState = MaterialSkin.MouseState.HOVER;
@@ -144,6 +100,7 @@
             this.materialListBoxRoles.Size = new System.Drawing.Size(206, 182);
             this.materialListBoxRoles.TabIndex = 1;
             this.materialListBoxRoles.UseAccentColor = true;
+            this.materialListBoxRoles.SelectedIndexChanged += new MaterialSkin.Controls.MaterialListBox.SelectedIndexChangedEventHandler(this.materialListBoxRoles_SelectedIndexChanged);
             // 
             // materialCardHelpTitle
             // 
@@ -196,13 +153,15 @@
             this.ColumnLastName,
             this.ColumnPatronymic,
             this.ColumnMail,
-            this.ColumnLogin});
+            this.ColumnLogin,
+            this.ColumnUserType});
             this.dataGridViewUsers.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataGridViewUsers.Location = new System.Drawing.Point(14, 113);
             this.dataGridViewUsers.Margin = new System.Windows.Forms.Padding(14, 3, 14, 3);
             this.dataGridViewUsers.Name = "dataGridViewUsers";
             this.dataGridViewUsers.Size = new System.Drawing.Size(1100, 553);
             this.dataGridViewUsers.TabIndex = 0;
+            this.dataGridViewUsers.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.dataGridViewUsers_CellFormatting);
             // 
             // tableLayoutPanel
             // 
@@ -349,6 +308,7 @@
             this.textBoxSearch.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.textBoxSearch.TrailingIcon = null;
             this.textBoxSearch.UseSystemPasswordChar = false;
+            this.textBoxSearch.TextChanged += new System.EventHandler(this.textBoxSearch_TextChanged);
             // 
             // ColumnFirstName
             // 
@@ -379,6 +339,12 @@
             this.ColumnLogin.DataPropertyName = "Login";
             this.ColumnLogin.HeaderText = "Логин";
             this.ColumnLogin.Name = "ColumnLogin";
+            // 
+            // ColumnUserType
+            // 
+            this.ColumnUserType.DataPropertyName = "UserType";
+            this.ColumnUserType.HeaderText = "Роль";
+            this.ColumnUserType.Name = "ColumnUserType";
             // 
             // UserControlUser
             // 
@@ -424,5 +390,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn ColumnPatronymic;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColumnMail;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColumnLogin;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColumnUserType;
     }
 }

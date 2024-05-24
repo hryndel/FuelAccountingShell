@@ -17,18 +17,22 @@ namespace FuelAccountingShell.Forms
         {
             if (!string.IsNullOrWhiteSpace(textBoxLogin.Text) && !string.IsNullOrWhiteSpace(textBoxPassword.Text))
             {
+                buttonEnter.Enabled = false;
                 var result = await CommonClient.SignIn(textBoxLogin.Text, textBoxPassword.Text);
                 if (result)
                 {
+                    textBoxLogin.Clear();
+                    textBoxPassword.Clear();
                     this.Hide();
                     FormMain form = new FormMain();
                     form.ShowDialog();
                     this.Show();
                 }
+                buttonEnter.Enabled = true;
             }
             else
             {
-                MaterialMessageBox.Show("Некорректные данные.", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error, false, FlexibleMaterialForm.ButtonsPosition.Fill);
+                MaterialMessageBox.Show("Некорректные данные.", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error, false);
             }
         }
 

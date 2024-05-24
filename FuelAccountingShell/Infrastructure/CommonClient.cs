@@ -6,6 +6,7 @@ using System.Collections.Generic;
 using System.Net.Http;
 using System.Net.Http.Headers;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -27,7 +28,7 @@ namespace FuelAccountingShell.Infrastructure
             }
             catch
             {
-                MaterialMessageBox.Show("Ошибка соединения с сервером.", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error, false, FlexibleMaterialForm.ButtonsPosition.Fill);
+                MaterialMessageBox.Show("Ошибка соединения с сервером.", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error, false);
                 return new List<T>();
             }
         }
@@ -43,14 +44,14 @@ namespace FuelAccountingShell.Infrastructure
                 var dialogResult = ResponseMessages.MessageFiltr(data);
                 if (dialogResult == DialogResult.OK)
                 {
-                    MaterialMessageBox.Show("Запись успешно создана.", "Информация", MessageBoxButtons.OK, MessageBoxIcon.Information, false, FlexibleMaterialForm.ButtonsPosition.Fill);
+                    MaterialMessageBox.Show("Запись успешно создана.", "Информация", MessageBoxButtons.OK, MessageBoxIcon.Information, false);
                     return dialogResult;
                 }
                 return dialogResult;
             }
             catch
             {
-                MaterialMessageBox.Show("Ошибка соединения с сервером.", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error, false, FlexibleMaterialForm.ButtonsPosition.Fill);
+                MaterialMessageBox.Show("Ошибка соединения с сервером.", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error, false);
                 return DialogResult.Cancel;
             }
         }
@@ -66,14 +67,14 @@ namespace FuelAccountingShell.Infrastructure
                 var dialogResult = ResponseMessages.MessageFiltr(data);
                 if (dialogResult == DialogResult.OK)
                 {
-                    MaterialMessageBox.Show("Запись успешно обновлена.", "Информация", MessageBoxButtons.OK, MessageBoxIcon.Information, false, FlexibleMaterialForm.ButtonsPosition.Fill);
+                    MaterialMessageBox.Show("Запись успешно обновлена.", "Информация", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     return dialogResult;
                 }
                 return dialogResult;
             }
             catch
             {
-                MaterialMessageBox.Show("Ошибка соединения с сервером.", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error, false, FlexibleMaterialForm.ButtonsPosition.Fill);
+                MaterialMessageBox.Show("Ошибка соединения с сервером.", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error, false);
                 return DialogResult.Cancel;
             }
         }
@@ -87,14 +88,14 @@ namespace FuelAccountingShell.Infrastructure
                 var dialogResult = ResponseMessages.MessageFiltr(data);
                 if (dialogResult == DialogResult.OK)
                 {
-                    MaterialMessageBox.Show("Запись успешно удалена.", "Информация", MessageBoxButtons.OK, MessageBoxIcon.Information, false, FlexibleMaterialForm.ButtonsPosition.Fill);
+                    MaterialMessageBox.Show("Запись успешно удалена.", "Информация", MessageBoxButtons.OK, MessageBoxIcon.Information, false);
                     return dialogResult;
                 }
                 return dialogResult;
             }
             catch
             {
-                MaterialMessageBox.Show("Ошибка соединения с сервером.", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error, false, FlexibleMaterialForm.ButtonsPosition.Fill);
+                MaterialMessageBox.Show("Ошибка соединения с сервером.", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error, false);
                 return DialogResult.Cancel;
             }
         }
@@ -109,14 +110,14 @@ namespace FuelAccountingShell.Infrastructure
                 if (dialogResult == DialogResult.OK)
                 {
                     JSonWebToken.Token = await data.Content.ReadAsStringAsync();
-                    MaterialMessageBox.Show("Успешный вход в приложение.", "Информация", MessageBoxButtons.OK, MessageBoxIcon.Information, false, FlexibleMaterialForm.ButtonsPosition.Fill);
+                    MaterialMessageBox.Show("Успешный вход в приложение.", "Информация", MessageBoxButtons.OK, MessageBoxIcon.Information, false);
                     return true;
                 }
                 return false;
             }
             catch
             {
-                MaterialMessageBox.Show("Ошибка соединения с сервером.", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error, false, FlexibleMaterialForm.ButtonsPosition.Fill);
+                MaterialMessageBox.Show("Ошибка соединения с сервером.", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error, false);
                 return false;
             }
         }

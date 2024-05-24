@@ -132,6 +132,7 @@
       <DependentUpon>FormMain.cs</DependentUpon>
     </Compile>
     <Compile Include="Infrastructure\CommonClient.cs" />
+    <Compile Include="Infrastructure\EnumReader.cs" />
     <Compile Include="Infrastructure\GenerateHttpClient.cs" />
     <Compile Include="Infrastructure\JSonWebToken.cs" />
     <Compile Include="Infrastructure\Styles\DataGridVeiwStyle.cs" />
