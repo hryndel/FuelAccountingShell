@@ -28,11 +28,15 @@
         /// </summary>
         private void InitializeComponent()
         {
-            MaterialSkin.MaterialListBoxItem materialListBoxItem4 = new MaterialSkin.MaterialListBoxItem();
-            MaterialSkin.MaterialListBoxItem materialListBoxItem5 = new MaterialSkin.MaterialListBoxItem();
-            MaterialSkin.MaterialListBoxItem materialListBoxItem6 = new MaterialSkin.MaterialListBoxItem();
+            MaterialSkin.MaterialListBoxItem materialListBoxItem1 = new MaterialSkin.MaterialListBoxItem();
+            MaterialSkin.MaterialListBoxItem materialListBoxItem2 = new MaterialSkin.MaterialListBoxItem();
+            MaterialSkin.MaterialListBoxItem materialListBoxItem3 = new MaterialSkin.MaterialListBoxItem();
             this.tableLayoutPanel = new System.Windows.Forms.TableLayoutPanel();
             this.dataGridViewSuppliers = new System.Windows.Forms.DataGridView();
+            this.ColumnName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColumnInn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColumnPhone = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColumnDescription = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.labelStatus = new MaterialSkin.Controls.MaterialLabel();
             this.flowLayoutPanelHelp = new System.Windows.Forms.FlowLayoutPanel();
             this.materialCardHelp = new MaterialSkin.Controls.MaterialCard();
@@ -76,12 +80,41 @@
             // dataGridViewSuppliers
             // 
             this.dataGridViewSuppliers.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewSuppliers.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.ColumnName,
+            this.ColumnInn,
+            this.ColumnPhone,
+            this.ColumnDescription});
             this.dataGridViewSuppliers.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataGridViewSuppliers.Location = new System.Drawing.Point(14, 113);
             this.dataGridViewSuppliers.Margin = new System.Windows.Forms.Padding(14, 3, 14, 3);
             this.dataGridViewSuppliers.Name = "dataGridViewSuppliers";
             this.dataGridViewSuppliers.Size = new System.Drawing.Size(1100, 553);
             this.dataGridViewSuppliers.TabIndex = 0;
+            // 
+            // ColumnName
+            // 
+            this.ColumnName.DataPropertyName = "Name";
+            this.ColumnName.HeaderText = "Название";
+            this.ColumnName.Name = "ColumnName";
+            // 
+            // ColumnInn
+            // 
+            this.ColumnInn.DataPropertyName = "Inn";
+            this.ColumnInn.HeaderText = "ИНН";
+            this.ColumnInn.Name = "ColumnInn";
+            // 
+            // ColumnPhone
+            // 
+            this.ColumnPhone.DataPropertyName = "Phone";
+            this.ColumnPhone.HeaderText = "Телефон";
+            this.ColumnPhone.Name = "ColumnPhone";
+            // 
+            // ColumnDescription
+            // 
+            this.ColumnDescription.DataPropertyName = "Description";
+            this.ColumnDescription.HeaderText = "Описание";
+            this.ColumnDescription.Name = "ColumnDescription";
             // 
             // labelStatus
             // 
@@ -130,18 +163,18 @@
             this.materialListBoxSort.BorderColor = System.Drawing.Color.LightGray;
             this.materialListBoxSort.Depth = 0;
             this.materialListBoxSort.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            materialListBoxItem4.SecondaryText = "";
-            materialListBoxItem4.Tag = null;
-            materialListBoxItem4.Text = "По умолчанию";
-            materialListBoxItem5.SecondaryText = "";
-            materialListBoxItem5.Tag = null;
-            materialListBoxItem5.Text = "По убыванию";
-            materialListBoxItem6.SecondaryText = "";
-            materialListBoxItem6.Tag = null;
-            materialListBoxItem6.Text = "По возрастанию";
-            this.materialListBoxSort.Items.Add(materialListBoxItem4);
-            this.materialListBoxSort.Items.Add(materialListBoxItem5);
-            this.materialListBoxSort.Items.Add(materialListBoxItem6);
+            materialListBoxItem1.SecondaryText = "";
+            materialListBoxItem1.Tag = null;
+            materialListBoxItem1.Text = "По умолчанию";
+            materialListBoxItem2.SecondaryText = "";
+            materialListBoxItem2.Tag = null;
+            materialListBoxItem2.Text = "По убыванию";
+            materialListBoxItem3.SecondaryText = "";
+            materialListBoxItem3.Tag = null;
+            materialListBoxItem3.Text = "По возрастанию";
+            this.materialListBoxSort.Items.Add(materialListBoxItem1);
+            this.materialListBoxSort.Items.Add(materialListBoxItem2);
+            this.materialListBoxSort.Items.Add(materialListBoxItem3);
             this.materialListBoxSort.Location = new System.Drawing.Point(14, 75);
             this.materialListBoxSort.Margin = new System.Windows.Forms.Padding(0);
             this.materialListBoxSort.MouseState = MaterialSkin.MouseState.HOVER;
@@ -316,6 +349,7 @@
             this.Controls.Add(this.tableLayoutPanel);
             this.Name = "UserControlSupplier";
             this.Size = new System.Drawing.Size(1368, 698);
+            this.Load += new System.EventHandler(this.UserControlSupplier_Load);
             this.tableLayoutPanel.ResumeLayout(false);
             this.tableLayoutPanel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewSuppliers)).EndInit();
@@ -347,5 +381,9 @@
         private MaterialSkin.Controls.MaterialButton buttonEdit;
         private MaterialSkin.Controls.MaterialButton buttonDelete;
         private MaterialSkin.Controls.MaterialTextBox2 textBoxSearch;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColumnName;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColumnInn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColumnPhone;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColumnDescription;
     }
 }

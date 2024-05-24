@@ -28,9 +28,11 @@
         /// </summary>
         private void InitializeComponent()
         {
-            MaterialSkin.MaterialListBoxItem materialListBoxItem4 = new MaterialSkin.MaterialListBoxItem();
-            MaterialSkin.MaterialListBoxItem materialListBoxItem5 = new MaterialSkin.MaterialListBoxItem();
-            MaterialSkin.MaterialListBoxItem materialListBoxItem6 = new MaterialSkin.MaterialListBoxItem();
+            MaterialSkin.MaterialListBoxItem materialListBoxItem1 = new MaterialSkin.MaterialListBoxItem();
+            MaterialSkin.MaterialListBoxItem materialListBoxItem2 = new MaterialSkin.MaterialListBoxItem();
+            MaterialSkin.MaterialListBoxItem materialListBoxItem3 = new MaterialSkin.MaterialListBoxItem();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.tableLayoutPanel = new System.Windows.Forms.TableLayoutPanel();
             this.dataGridViewFuels = new System.Windows.Forms.DataGridView();
             this.labelStatus = new MaterialSkin.Controls.MaterialLabel();
@@ -45,6 +47,10 @@
             this.buttonEdit = new MaterialSkin.Controls.MaterialButton();
             this.buttonDelete = new MaterialSkin.Controls.MaterialButton();
             this.textBoxSearch = new MaterialSkin.Controls.MaterialTextBox2();
+            this.ColumnFuelType = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColumnPrice = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColumnSupplier = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColumnCount = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tableLayoutPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewFuels)).BeginInit();
             this.flowLayoutPanelHelp.SuspendLayout();
@@ -76,6 +82,11 @@
             // dataGridViewFuels
             // 
             this.dataGridViewFuels.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewFuels.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.ColumnFuelType,
+            this.ColumnPrice,
+            this.ColumnSupplier,
+            this.ColumnCount});
             this.dataGridViewFuels.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataGridViewFuels.Location = new System.Drawing.Point(14, 113);
             this.dataGridViewFuels.Margin = new System.Windows.Forms.Padding(14, 3, 14, 3);
@@ -130,18 +141,18 @@
             this.materialListBoxSort.BorderColor = System.Drawing.Color.LightGray;
             this.materialListBoxSort.Depth = 0;
             this.materialListBoxSort.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            materialListBoxItem4.SecondaryText = "";
-            materialListBoxItem4.Tag = null;
-            materialListBoxItem4.Text = "По умолчанию";
-            materialListBoxItem5.SecondaryText = "";
-            materialListBoxItem5.Tag = null;
-            materialListBoxItem5.Text = "По убыванию";
-            materialListBoxItem6.SecondaryText = "";
-            materialListBoxItem6.Tag = null;
-            materialListBoxItem6.Text = "По возрастанию";
-            this.materialListBoxSort.Items.Add(materialListBoxItem4);
-            this.materialListBoxSort.Items.Add(materialListBoxItem5);
-            this.materialListBoxSort.Items.Add(materialListBoxItem6);
+            materialListBoxItem1.SecondaryText = "";
+            materialListBoxItem1.Tag = null;
+            materialListBoxItem1.Text = "По умолчанию";
+            materialListBoxItem2.SecondaryText = "";
+            materialListBoxItem2.Tag = null;
+            materialListBoxItem2.Text = "По убыванию";
+            materialListBoxItem3.SecondaryText = "";
+            materialListBoxItem3.Tag = null;
+            materialListBoxItem3.Text = "По возрастанию";
+            this.materialListBoxSort.Items.Add(materialListBoxItem1);
+            this.materialListBoxSort.Items.Add(materialListBoxItem2);
+            this.materialListBoxSort.Items.Add(materialListBoxItem3);
             this.materialListBoxSort.Location = new System.Drawing.Point(14, 75);
             this.materialListBoxSort.Margin = new System.Windows.Forms.Padding(0);
             this.materialListBoxSort.MouseState = MaterialSkin.MouseState.HOVER;
@@ -309,6 +320,36 @@
             this.textBoxSearch.TrailingIcon = null;
             this.textBoxSearch.UseSystemPasswordChar = false;
             // 
+            // ColumnFuelType
+            // 
+            this.ColumnFuelType.DataPropertyName = "FuelType";
+            this.ColumnFuelType.HeaderText = "Тип топлива";
+            this.ColumnFuelType.Name = "ColumnFuelType";
+            // 
+            // ColumnPrice
+            // 
+            this.ColumnPrice.DataPropertyName = "Price";
+            dataGridViewCellStyle1.Format = "C2";
+            dataGridViewCellStyle1.NullValue = null;
+            this.ColumnPrice.DefaultCellStyle = dataGridViewCellStyle1;
+            this.ColumnPrice.HeaderText = "Цена";
+            this.ColumnPrice.Name = "ColumnPrice";
+            // 
+            // ColumnSupplier
+            // 
+            this.ColumnSupplier.DataPropertyName = "Supplier";
+            this.ColumnSupplier.HeaderText = "Поставщик";
+            this.ColumnSupplier.Name = "ColumnSupplier";
+            // 
+            // ColumnCount
+            // 
+            this.ColumnCount.DataPropertyName = "Count";
+            dataGridViewCellStyle2.Format = "N0";
+            dataGridViewCellStyle2.NullValue = null;
+            this.ColumnCount.DefaultCellStyle = dataGridViewCellStyle2;
+            this.ColumnCount.HeaderText = "Количество";
+            this.ColumnCount.Name = "ColumnCount";
+            // 
             // UserControlFuel
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -316,6 +357,7 @@
             this.Controls.Add(this.tableLayoutPanel);
             this.Name = "UserControlFuel";
             this.Size = new System.Drawing.Size(1368, 698);
+            this.Load += new System.EventHandler(this.UserControlFuel_Load);
             this.tableLayoutPanel.ResumeLayout(false);
             this.tableLayoutPanel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewFuels)).EndInit();
@@ -347,5 +389,9 @@
         private MaterialSkin.Controls.MaterialButton buttonEdit;
         private MaterialSkin.Controls.MaterialButton buttonDelete;
         private MaterialSkin.Controls.MaterialTextBox2 textBoxSearch;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColumnFuelType;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColumnPrice;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColumnSupplier;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColumnCount;
     }
 }

@@ -12,6 +12,21 @@
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -118,11 +133,30 @@
     </Compile>
     <Compile Include="Infrastructure\CommonClient.cs" />
     <Compile Include="Infrastructure\GenerateHttpClient.cs" />
+    <Compile Include="Infrastructure\JSonWebToken.cs" />
     <Compile Include="Infrastructure\Styles\DataGridVeiwStyle.cs" />
     <Compile Include="Infrastructure\Styles\InitMaterialSkin.cs" />
     <Compile Include="Infrastructure\Messages\Errors.cs" />
     <Compile Include="Infrastructure\Messages\MessageErrors.cs" />
     <Compile Include="Infrastructure\Messages\ResponseMessages.cs" />
+    <Compile Include="Models\Driver\DriverRequest.cs" />
+    <Compile Include="Models\Driver\DriverResponse.cs" />
+    <Compile Include="Models\Enums\FuelTypes.cs" />
+    <Compile Include="Models\Enums\UserTypes.cs" />
+    <Compile Include="Models\FuelAccountingItem\FuelAccountingItemRequest.cs" />
+    <Compile Include="Models\FuelAccountingItem\FuelAccountingItemResponse.cs" />
+    <Compile Include="Models\FuelStation\FuelStationRequest.cs" />
+    <Compile Include="Models\FuelStation\FuelStationResponse.cs" />
+    <Compile Include="Models\Fuel\FuelRequest.cs" />
+    <Compile Include="Models\Fuel\FuelResponse.cs" />
+    <Compile Include="Models\Supplier\SupplierRequest.cs" />
+    <Compile Include="Models\Supplier\SupplierResponse.cs" />
+    <Compile Include="Models\Trailer\TrailerRequest.cs" />
+    <Compile Include="Models\Trailer\TrailerResponse.cs" />
+    <Compile Include="Models\Truck\TruckRequest.cs" />
+    <Compile Include="Models\Truck\TruckResponse.cs" />
+    <Compile Include="Models\User\UserRequest.cs" />
+    <Compile Include="Models\User\UserResponse.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Properties\Resources.Designer.cs">
@@ -275,14 +309,24 @@
   <ItemGroup>
     <None Include="Resources\User.png" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Models\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <None Include="Resources\Icon.png" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Icon.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.8">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.8 %28x86 и x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

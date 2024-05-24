@@ -1,4 +1,7 @@
 ﻿using FuelAccountingShell.Forms;
+using FuelAccountingShell.Infrastructure;
+using FuelAccountingShell.Infrastructure.Styles;
+using FuelAccountingShell.Models.Trailer;
 using System;
 using System.Windows.Forms;
 
@@ -8,7 +11,15 @@ namespace FuelAccountingShell.UserControls
     {
         public UserControlTrailer()
         {
-            InitializeComponent();
+            InitializeComponent(); 
+            DataGridVeiwStyle.Stylization(dataGridViewTrailers);
+        }
+
+        private async void UserControlTrailer_Load(object sender, EventArgs e)
+        {
+            var items = await CommonClient.GetData<TrailerResponse>("Trailer/");
+            dataGridViewTrailers.DataSource = items;
+            labelStatus.Text = $"Количество записей: {dataGridViewTrailers.Rows.Count} из {items.Count}";
         }
 
         private void buttonAdd_Click(object sender, EventArgs e)

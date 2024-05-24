@@ -45,6 +45,9 @@
             this.buttonEdit = new MaterialSkin.Controls.MaterialButton();
             this.buttonDelete = new MaterialSkin.Controls.MaterialButton();
             this.textBoxSearch = new MaterialSkin.Controls.MaterialTextBox2();
+            this.ColumnName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColumnAddress = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColumnDescription = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tableLayoutPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewFuelStations)).BeginInit();
             this.flowLayoutPanelHelp.SuspendLayout();
@@ -76,6 +79,10 @@
             // dataGridViewFuelStations
             // 
             this.dataGridViewFuelStations.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewFuelStations.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.ColumnName,
+            this.ColumnAddress,
+            this.ColumnDescription});
             this.dataGridViewFuelStations.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataGridViewFuelStations.Location = new System.Drawing.Point(14, 113);
             this.dataGridViewFuelStations.Margin = new System.Windows.Forms.Padding(14, 3, 14, 3);
@@ -309,6 +316,24 @@
             this.textBoxSearch.TrailingIcon = null;
             this.textBoxSearch.UseSystemPasswordChar = false;
             // 
+            // ColumnName
+            // 
+            this.ColumnName.DataPropertyName = "Name";
+            this.ColumnName.HeaderText = "Название";
+            this.ColumnName.Name = "ColumnName";
+            // 
+            // ColumnAddress
+            // 
+            this.ColumnAddress.DataPropertyName = "Address";
+            this.ColumnAddress.HeaderText = "Адрес";
+            this.ColumnAddress.Name = "ColumnAddress";
+            // 
+            // ColumnDescription
+            // 
+            this.ColumnDescription.DataPropertyName = "Description";
+            this.ColumnDescription.HeaderText = "Описание";
+            this.ColumnDescription.Name = "ColumnDescription";
+            // 
             // UserControlFuelStation
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -316,6 +341,7 @@
             this.Controls.Add(this.tableLayoutPanel);
             this.Name = "UserControlFuelStation";
             this.Size = new System.Drawing.Size(1368, 698);
+            this.Load += new System.EventHandler(this.UserControlFuelStation_Load);
             this.tableLayoutPanel.ResumeLayout(false);
             this.tableLayoutPanel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewFuelStations)).EndInit();
@@ -347,5 +373,8 @@
         private MaterialSkin.Controls.MaterialButton buttonEdit;
         private MaterialSkin.Controls.MaterialButton buttonDelete;
         private MaterialSkin.Controls.MaterialTextBox2 textBoxSearch;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColumnName;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColumnAddress;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColumnDescription;
     }
 }

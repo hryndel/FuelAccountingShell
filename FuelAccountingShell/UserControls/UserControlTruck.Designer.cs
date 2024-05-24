@@ -45,6 +45,9 @@
             this.buttonEdit = new MaterialSkin.Controls.MaterialButton();
             this.buttonDelete = new MaterialSkin.Controls.MaterialButton();
             this.textBoxSearch = new MaterialSkin.Controls.MaterialTextBox2();
+            this.ColumnName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColumnNumber = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColumnVin = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tableLayoutPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewTrucks)).BeginInit();
             this.flowLayoutPanelHelp.SuspendLayout();
@@ -76,6 +79,10 @@
             // dataGridViewTrucks
             // 
             this.dataGridViewTrucks.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewTrucks.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.ColumnName,
+            this.ColumnNumber,
+            this.ColumnVin});
             this.dataGridViewTrucks.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataGridViewTrucks.Location = new System.Drawing.Point(14, 113);
             this.dataGridViewTrucks.Margin = new System.Windows.Forms.Padding(14, 3, 14, 3);
@@ -309,6 +316,24 @@
             this.textBoxSearch.TrailingIcon = null;
             this.textBoxSearch.UseSystemPasswordChar = false;
             // 
+            // ColumnName
+            // 
+            this.ColumnName.DataPropertyName = "Name";
+            this.ColumnName.HeaderText = "Имя";
+            this.ColumnName.Name = "ColumnName";
+            // 
+            // ColumnNumber
+            // 
+            this.ColumnNumber.DataPropertyName = "Number";
+            this.ColumnNumber.HeaderText = "Номер";
+            this.ColumnNumber.Name = "ColumnNumber";
+            // 
+            // ColumnVin
+            // 
+            this.ColumnVin.DataPropertyName = "Vin";
+            this.ColumnVin.HeaderText = "VIN";
+            this.ColumnVin.Name = "ColumnVin";
+            // 
             // UserControlTruck
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -316,6 +341,7 @@
             this.Controls.Add(this.tableLayoutPanel);
             this.Name = "UserControlTruck";
             this.Size = new System.Drawing.Size(1368, 698);
+            this.Load += new System.EventHandler(this.UserControlTruck_Load);
             this.tableLayoutPanel.ResumeLayout(false);
             this.tableLayoutPanel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewTrucks)).EndInit();
@@ -347,5 +373,8 @@
         private MaterialSkin.Controls.MaterialButton buttonEdit;
         private MaterialSkin.Controls.MaterialButton buttonDelete;
         private MaterialSkin.Controls.MaterialTextBox2 textBoxSearch;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColumnName;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColumnNumber;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColumnVin;
     }
 }

@@ -28,9 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            MaterialSkin.MaterialListBoxItem materialListBoxItem4 = new MaterialSkin.MaterialListBoxItem();
-            MaterialSkin.MaterialListBoxItem materialListBoxItem5 = new MaterialSkin.MaterialListBoxItem();
-            MaterialSkin.MaterialListBoxItem materialListBoxItem6 = new MaterialSkin.MaterialListBoxItem();
+            MaterialSkin.MaterialListBoxItem materialListBoxItem7 = new MaterialSkin.MaterialListBoxItem();
+            MaterialSkin.MaterialListBoxItem materialListBoxItem8 = new MaterialSkin.MaterialListBoxItem();
+            MaterialSkin.MaterialListBoxItem materialListBoxItem9 = new MaterialSkin.MaterialListBoxItem();
             this.tableLayoutPanel = new System.Windows.Forms.TableLayoutPanel();
             this.dataGridViewDrivers = new System.Windows.Forms.DataGridView();
             this.labelStatus = new MaterialSkin.Controls.MaterialLabel();
@@ -45,6 +45,11 @@
             this.buttonEdit = new MaterialSkin.Controls.MaterialButton();
             this.buttonDelete = new MaterialSkin.Controls.MaterialButton();
             this.textBoxSearch = new MaterialSkin.Controls.MaterialTextBox2();
+            this.ColumnFirstName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColumnLastName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColumnPatronymic = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColumnPhone = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColumnDriversLicense = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tableLayoutPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewDrivers)).BeginInit();
             this.flowLayoutPanelHelp.SuspendLayout();
@@ -76,6 +81,12 @@
             // dataGridViewDrivers
             // 
             this.dataGridViewDrivers.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewDrivers.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.ColumnFirstName,
+            this.ColumnLastName,
+            this.ColumnPatronymic,
+            this.ColumnPhone,
+            this.ColumnDriversLicense});
             this.dataGridViewDrivers.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataGridViewDrivers.Location = new System.Drawing.Point(14, 113);
             this.dataGridViewDrivers.Margin = new System.Windows.Forms.Padding(14, 3, 14, 3);
@@ -130,18 +141,18 @@
             this.materialListBoxSort.BorderColor = System.Drawing.Color.LightGray;
             this.materialListBoxSort.Depth = 0;
             this.materialListBoxSort.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            materialListBoxItem4.SecondaryText = "";
-            materialListBoxItem4.Tag = null;
-            materialListBoxItem4.Text = "По умолчанию";
-            materialListBoxItem5.SecondaryText = "";
-            materialListBoxItem5.Tag = null;
-            materialListBoxItem5.Text = "По убыванию";
-            materialListBoxItem6.SecondaryText = "";
-            materialListBoxItem6.Tag = null;
-            materialListBoxItem6.Text = "По возрастанию";
-            this.materialListBoxSort.Items.Add(materialListBoxItem4);
-            this.materialListBoxSort.Items.Add(materialListBoxItem5);
-            this.materialListBoxSort.Items.Add(materialListBoxItem6);
+            materialListBoxItem7.SecondaryText = "";
+            materialListBoxItem7.Tag = null;
+            materialListBoxItem7.Text = "По умолчанию";
+            materialListBoxItem8.SecondaryText = "";
+            materialListBoxItem8.Tag = null;
+            materialListBoxItem8.Text = "По убыванию";
+            materialListBoxItem9.SecondaryText = "";
+            materialListBoxItem9.Tag = null;
+            materialListBoxItem9.Text = "По возрастанию";
+            this.materialListBoxSort.Items.Add(materialListBoxItem7);
+            this.materialListBoxSort.Items.Add(materialListBoxItem8);
+            this.materialListBoxSort.Items.Add(materialListBoxItem9);
             this.materialListBoxSort.Location = new System.Drawing.Point(14, 75);
             this.materialListBoxSort.Margin = new System.Windows.Forms.Padding(0);
             this.materialListBoxSort.MouseState = MaterialSkin.MouseState.HOVER;
@@ -309,6 +320,36 @@
             this.textBoxSearch.TrailingIcon = null;
             this.textBoxSearch.UseSystemPasswordChar = false;
             // 
+            // ColumnFirstName
+            // 
+            this.ColumnFirstName.DataPropertyName = "FirstName";
+            this.ColumnFirstName.HeaderText = "Имя";
+            this.ColumnFirstName.Name = "ColumnFirstName";
+            // 
+            // ColumnLastName
+            // 
+            this.ColumnLastName.DataPropertyName = "LastName";
+            this.ColumnLastName.HeaderText = "Фамилия";
+            this.ColumnLastName.Name = "ColumnLastName";
+            // 
+            // ColumnPatronymic
+            // 
+            this.ColumnPatronymic.DataPropertyName = "Patronymic";
+            this.ColumnPatronymic.HeaderText = "Отчество";
+            this.ColumnPatronymic.Name = "ColumnPatronymic";
+            // 
+            // ColumnPhone
+            // 
+            this.ColumnPhone.DataPropertyName = "Phone";
+            this.ColumnPhone.HeaderText = "Телефон";
+            this.ColumnPhone.Name = "ColumnPhone";
+            // 
+            // ColumnDriversLicense
+            // 
+            this.ColumnDriversLicense.DataPropertyName = "DriversLicense";
+            this.ColumnDriversLicense.HeaderText = "ВУ";
+            this.ColumnDriversLicense.Name = "ColumnDriversLicense";
+            // 
             // UserControlDriver
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -316,6 +357,7 @@
             this.Controls.Add(this.tableLayoutPanel);
             this.Name = "UserControlDriver";
             this.Size = new System.Drawing.Size(1368, 698);
+            this.Load += new System.EventHandler(this.UserControlDriver_Load);
             this.tableLayoutPanel.ResumeLayout(false);
             this.tableLayoutPanel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewDrivers)).EndInit();
@@ -347,5 +389,10 @@
         private MaterialSkin.Controls.MaterialButton buttonEdit;
         private MaterialSkin.Controls.MaterialButton buttonDelete;
         private MaterialSkin.Controls.MaterialTextBox2 textBoxSearch;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColumnFirstName;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColumnLastName;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColumnPatronymic;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColumnPhone;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColumnDriversLicense;
     }
 }

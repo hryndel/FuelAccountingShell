@@ -31,6 +31,9 @@
             MaterialSkin.MaterialListBoxItem materialListBoxItem7 = new MaterialSkin.MaterialListBoxItem();
             MaterialSkin.MaterialListBoxItem materialListBoxItem8 = new MaterialSkin.MaterialListBoxItem();
             MaterialSkin.MaterialListBoxItem materialListBoxItem9 = new MaterialSkin.MaterialListBoxItem();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
             this.tableLayoutPanel = new System.Windows.Forms.TableLayoutPanel();
             this.dataGridViewFuelAccountingItems = new System.Windows.Forms.DataGridView();
             this.labelStatus = new MaterialSkin.Controls.MaterialLabel();
@@ -44,8 +47,16 @@
             this.buttonAdd = new MaterialSkin.Controls.MaterialButton();
             this.buttonEdit = new MaterialSkin.Controls.MaterialButton();
             this.buttonDelete = new MaterialSkin.Controls.MaterialButton();
-            this.textBoxSearch = new MaterialSkin.Controls.MaterialTextBox2();
             this.materialButtonPdf = new MaterialSkin.Controls.MaterialButton();
+            this.textBoxSearch = new MaterialSkin.Controls.MaterialTextBox2();
+            this.ColumnDriver = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColumnTruck = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColumnTrailer = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColumnFuel = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColumnCount = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColumnFuelStation = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColumnStartDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColumnEndDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tableLayoutPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewFuelAccountingItems)).BeginInit();
             this.flowLayoutPanelHelp.SuspendLayout();
@@ -77,6 +88,15 @@
             // dataGridViewFuelAccountingItems
             // 
             this.dataGridViewFuelAccountingItems.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewFuelAccountingItems.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.ColumnDriver,
+            this.ColumnTruck,
+            this.ColumnTrailer,
+            this.ColumnFuel,
+            this.ColumnCount,
+            this.ColumnFuelStation,
+            this.ColumnStartDate,
+            this.ColumnEndDate});
             this.dataGridViewFuelAccountingItems.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataGridViewFuelAccountingItems.Location = new System.Drawing.Point(14, 113);
             this.dataGridViewFuelAccountingItems.Margin = new System.Windows.Forms.Padding(14, 3, 14, 3);
@@ -281,6 +301,29 @@
             this.buttonDelete.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
             this.buttonDelete.UseAccentColor = false;
             this.buttonDelete.UseVisualStyleBackColor = true;
+            this.buttonDelete.Click += new System.EventHandler(this.buttonDelete_Click);
+            // 
+            // materialButtonPdf
+            // 
+            this.materialButtonPdf.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
+            this.materialButtonPdf.AutoSize = false;
+            this.materialButtonPdf.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.materialButtonPdf.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
+            this.materialButtonPdf.Depth = 0;
+            this.materialButtonPdf.HighEmphasis = true;
+            this.materialButtonPdf.Icon = null;
+            this.materialButtonPdf.Location = new System.Drawing.Point(403, 0);
+            this.materialButtonPdf.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.materialButtonPdf.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialButtonPdf.Name = "materialButtonPdf";
+            this.materialButtonPdf.NoAccentTextColor = System.Drawing.Color.Empty;
+            this.materialButtonPdf.Size = new System.Drawing.Size(125, 54);
+            this.materialButtonPdf.TabIndex = 4;
+            this.materialButtonPdf.Text = "PDF";
+            this.materialButtonPdf.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
+            this.materialButtonPdf.UseAccentColor = false;
+            this.materialButtonPdf.UseVisualStyleBackColor = true;
             // 
             // textBoxSearch
             // 
@@ -311,27 +354,62 @@
             this.textBoxSearch.TrailingIcon = null;
             this.textBoxSearch.UseSystemPasswordChar = false;
             // 
-            // materialButtonPdf
+            // ColumnDriver
             // 
-            this.materialButtonPdf.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left)));
-            this.materialButtonPdf.AutoSize = false;
-            this.materialButtonPdf.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.materialButtonPdf.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
-            this.materialButtonPdf.Depth = 0;
-            this.materialButtonPdf.HighEmphasis = true;
-            this.materialButtonPdf.Icon = null;
-            this.materialButtonPdf.Location = new System.Drawing.Point(403, 0);
-            this.materialButtonPdf.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.materialButtonPdf.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialButtonPdf.Name = "materialButtonPdf";
-            this.materialButtonPdf.NoAccentTextColor = System.Drawing.Color.Empty;
-            this.materialButtonPdf.Size = new System.Drawing.Size(125, 54);
-            this.materialButtonPdf.TabIndex = 4;
-            this.materialButtonPdf.Text = "PDF";
-            this.materialButtonPdf.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
-            this.materialButtonPdf.UseAccentColor = false;
-            this.materialButtonPdf.UseVisualStyleBackColor = true;
+            this.ColumnDriver.DataPropertyName = "Driver";
+            this.ColumnDriver.HeaderText = "Водитель";
+            this.ColumnDriver.Name = "ColumnDriver";
+            // 
+            // ColumnTruck
+            // 
+            this.ColumnTruck.DataPropertyName = "Truck";
+            this.ColumnTruck.HeaderText = "Грузовик";
+            this.ColumnTruck.Name = "ColumnTruck";
+            // 
+            // ColumnTrailer
+            // 
+            this.ColumnTrailer.DataPropertyName = "Trailer";
+            this.ColumnTrailer.HeaderText = "Полуприцеп";
+            this.ColumnTrailer.Name = "ColumnTrailer";
+            // 
+            // ColumnFuel
+            // 
+            this.ColumnFuel.DataPropertyName = "Fuel";
+            this.ColumnFuel.HeaderText = "Топливо";
+            this.ColumnFuel.Name = "ColumnFuel";
+            // 
+            // ColumnCount
+            // 
+            this.ColumnCount.DataPropertyName = "Count";
+            dataGridViewCellStyle7.Format = "N0";
+            dataGridViewCellStyle7.NullValue = null;
+            this.ColumnCount.DefaultCellStyle = dataGridViewCellStyle7;
+            this.ColumnCount.HeaderText = "Количество";
+            this.ColumnCount.Name = "ColumnCount";
+            // 
+            // ColumnFuelStation
+            // 
+            this.ColumnFuelStation.DataPropertyName = "FuelStation";
+            this.ColumnFuelStation.HeaderText = "АЗС";
+            this.ColumnFuelStation.Name = "ColumnFuelStation";
+            // 
+            // ColumnStartDate
+            // 
+            this.ColumnStartDate.DataPropertyName = "StartDate";
+            dataGridViewCellStyle8.Format = "d";
+            dataGridViewCellStyle8.NullValue = null;
+            this.ColumnStartDate.DefaultCellStyle = dataGridViewCellStyle8;
+            this.ColumnStartDate.HeaderText = "Отправка";
+            this.ColumnStartDate.Name = "ColumnStartDate";
+            // 
+            // ColumnEndDate
+            // 
+            this.ColumnEndDate.DataPropertyName = "EndDate";
+            dataGridViewCellStyle9.Format = "d";
+            dataGridViewCellStyle9.NullValue = null;
+            this.ColumnEndDate.DefaultCellStyle = dataGridViewCellStyle9;
+            this.ColumnEndDate.HeaderText = "Прибытие";
+            this.ColumnEndDate.Name = "ColumnEndDate";
             // 
             // UserControlFuelAccountingItem
             // 
@@ -340,6 +418,7 @@
             this.Controls.Add(this.tableLayoutPanel);
             this.Name = "UserControlFuelAccountingItem";
             this.Size = new System.Drawing.Size(1368, 698);
+            this.Load += new System.EventHandler(this.UserControlFuelAccountingItem_Load);
             this.tableLayoutPanel.ResumeLayout(false);
             this.tableLayoutPanel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewFuelAccountingItems)).EndInit();
@@ -372,5 +451,13 @@
         private MaterialSkin.Controls.MaterialButton buttonDelete;
         private MaterialSkin.Controls.MaterialTextBox2 textBoxSearch;
         private MaterialSkin.Controls.MaterialButton materialButtonPdf;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColumnDriver;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColumnTruck;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColumnTrailer;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColumnFuel;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColumnCount;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColumnFuelStation;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColumnStartDate;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColumnEndDate;
     }
 }

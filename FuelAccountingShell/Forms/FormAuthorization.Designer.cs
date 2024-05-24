@@ -179,6 +179,7 @@
             this.buttonCancel.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
             this.buttonCancel.UseAccentColor = false;
             this.buttonCancel.UseVisualStyleBackColor = true;
+            this.buttonCancel.Click += new System.EventHandler(this.buttonCancel_Click);
             // 
             // FormAuthorization
             // 

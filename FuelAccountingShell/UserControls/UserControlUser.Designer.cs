@@ -51,6 +51,11 @@
             this.buttonEdit = new MaterialSkin.Controls.MaterialButton();
             this.buttonDelete = new MaterialSkin.Controls.MaterialButton();
             this.textBoxSearch = new MaterialSkin.Controls.MaterialTextBox2();
+            this.ColumnFirstName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColumnLastName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColumnPatronymic = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColumnMail = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColumnLogin = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.flowLayoutPanelHelp.SuspendLayout();
             this.materialCardHelp.SuspendLayout();
             this.materialCardHelpTitle.SuspendLayout();
@@ -186,6 +191,12 @@
             // dataGridViewUsers
             // 
             this.dataGridViewUsers.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewUsers.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.ColumnFirstName,
+            this.ColumnLastName,
+            this.ColumnPatronymic,
+            this.ColumnMail,
+            this.ColumnLogin});
             this.dataGridViewUsers.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataGridViewUsers.Location = new System.Drawing.Point(14, 113);
             this.dataGridViewUsers.Margin = new System.Windows.Forms.Padding(14, 3, 14, 3);
@@ -339,6 +350,36 @@
             this.textBoxSearch.TrailingIcon = null;
             this.textBoxSearch.UseSystemPasswordChar = false;
             // 
+            // ColumnFirstName
+            // 
+            this.ColumnFirstName.DataPropertyName = "FirstName";
+            this.ColumnFirstName.HeaderText = "Имя";
+            this.ColumnFirstName.Name = "ColumnFirstName";
+            // 
+            // ColumnLastName
+            // 
+            this.ColumnLastName.DataPropertyName = "LastName";
+            this.ColumnLastName.HeaderText = "Фамилия";
+            this.ColumnLastName.Name = "ColumnLastName";
+            // 
+            // ColumnPatronymic
+            // 
+            this.ColumnPatronymic.DataPropertyName = "Patronymic";
+            this.ColumnPatronymic.HeaderText = "Отчество";
+            this.ColumnPatronymic.Name = "ColumnPatronymic";
+            // 
+            // ColumnMail
+            // 
+            this.ColumnMail.DataPropertyName = "Mail";
+            this.ColumnMail.HeaderText = "Почта";
+            this.ColumnMail.Name = "ColumnMail";
+            // 
+            // ColumnLogin
+            // 
+            this.ColumnLogin.DataPropertyName = "Login";
+            this.ColumnLogin.HeaderText = "Логин";
+            this.ColumnLogin.Name = "ColumnLogin";
+            // 
             // UserControlUser
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -346,6 +387,7 @@
             this.Controls.Add(this.tableLayoutPanel);
             this.Name = "UserControlUser";
             this.Size = new System.Drawing.Size(1368, 698);
+            this.Load += new System.EventHandler(this.UserControlUser_Load);
             this.flowLayoutPanelHelp.ResumeLayout(false);
             this.flowLayoutPanelHelp.PerformLayout();
             this.materialCardHelp.ResumeLayout(false);
@@ -377,5 +419,10 @@
         private MaterialSkin.Controls.MaterialListBox materialListBoxRoles;
         private MaterialSkin.Controls.MaterialCard materialCardHelpTitle;
         private MaterialSkin.Controls.MaterialLabel labelHelp;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColumnFirstName;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColumnLastName;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColumnPatronymic;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColumnMail;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColumnLogin;
     }
 }

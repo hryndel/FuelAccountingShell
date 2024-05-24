@@ -1,4 +1,7 @@
 ﻿using FuelAccountingShell.Forms;
+using FuelAccountingShell.Infrastructure;
+using FuelAccountingShell.Infrastructure.Styles;
+using FuelAccountingShell.Models.FuelStation;
 using System;
 using System.Windows.Forms;
 
@@ -8,7 +11,15 @@ namespace FuelAccountingShell.UserControls
     {
         public UserControlFuelStation()
         {
-            InitializeComponent();
+            InitializeComponent(); 
+            DataGridVeiwStyle.Stylization(dataGridViewFuelStations);
+        }
+
+        private async void UserControlFuelStation_Load(object sender, EventArgs e)
+        {
+            var items = await CommonClient.GetData<FuelStationResponse>("FuelStation/");
+            dataGridViewFuelStations.DataSource = items;
+            labelStatus.Text = $"Количество записей: {dataGridViewFuelStations.Rows.Count} из {items.Count}";
         }
 
         private void buttonAdd_Click(object sender, EventArgs e)
