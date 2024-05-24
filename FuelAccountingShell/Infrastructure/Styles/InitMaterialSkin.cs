@@ -1,7 +1,7 @@
 ﻿using MaterialSkin;
 using MaterialSkin.Controls;
 
-namespace FuelAccountingShell.Infrastructure
+namespace FuelAccountingShell.Infrastructure.Styles
 {
     public static class InitMaterialSkin
     {

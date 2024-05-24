@@ -1,7 +1,7 @@
 ﻿using System.Drawing;
 using System.Windows.Forms;
 
-namespace FuelAccountingShell.Infrastructure
+namespace FuelAccountingShell.Infrastructure.Styles
 {
     public static class DataGridVeiwStyle
     {
@@ -18,6 +18,7 @@ namespace FuelAccountingShell.Infrastructure
             dgv.AllowUserToResizeRows = false;
             dgv.MultiSelect = false;
             dgv.ScrollBars = ScrollBars.Vertical;
+            dgv.AutoGenerateColumns = false;
 
             dgv.RowsDefaultCellStyle.BackColor = Color.FromArgb(250, 250, 250);
             dgv.AlternatingRowsDefaultCellStyle.BackColor = Color.FromArgb(200, 200, 200);
