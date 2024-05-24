@@ -28,19 +28,20 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormAddEditDriver));
             this.buttonCancel = new MaterialSkin.Controls.MaterialButton();
             this.buttonAccept = new MaterialSkin.Controls.MaterialButton();
             this.materialCard = new MaterialSkin.Controls.MaterialCard();
+            this.labeliDriversLicense = new MaterialSkin.Controls.MaterialLabel();
+            this.maskedTextBoxDriversLicense = new MaterialSkin.Controls.MaterialMaskedTextBox();
+            this.labelNumber = new MaterialSkin.Controls.MaterialLabel();
+            this.masketTextBoxNumber = new MaterialSkin.Controls.MaterialMaskedTextBox();
+            this.textBoxPatronymic = new MaterialSkin.Controls.MaterialTextBox2();
+            this.labelPatronymic = new MaterialSkin.Controls.MaterialLabel();
             this.textBoxSecondName = new MaterialSkin.Controls.MaterialTextBox2();
             this.textBoxFirstName = new MaterialSkin.Controls.MaterialTextBox2();
             this.labelSecondName = new MaterialSkin.Controls.MaterialLabel();
             this.labelFirstName = new MaterialSkin.Controls.MaterialLabel();
-            this.textBoxPatronymic = new MaterialSkin.Controls.MaterialTextBox2();
-            this.labelPatronymic = new MaterialSkin.Controls.MaterialLabel();
-            this.masketTextBoxNumber = new MaterialSkin.Controls.MaterialMaskedTextBox();
-            this.labelNumber = new MaterialSkin.Controls.MaterialLabel();
-            this.labeliDriversLicense = new MaterialSkin.Controls.MaterialLabel();
-            this.maskedTextBoxDriversLicense = new MaterialSkin.Controls.MaterialMaskedTextBox();
             this.materialCard.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -109,6 +110,157 @@
             this.materialCard.Padding = new System.Windows.Forms.Padding(14);
             this.materialCard.Size = new System.Drawing.Size(465, 292);
             this.materialCard.TabIndex = 0;
+            // 
+            // labeliDriversLicense
+            // 
+            this.labeliDriversLicense.AutoSize = true;
+            this.labeliDriversLicense.Depth = 0;
+            this.labeliDriversLicense.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.labeliDriversLicense.Location = new System.Drawing.Point(30, 242);
+            this.labeliDriversLicense.MouseState = MaterialSkin.MouseState.HOVER;
+            this.labeliDriversLicense.Name = "labeliDriversLicense";
+            this.labeliDriversLicense.Size = new System.Drawing.Size(77, 19);
+            this.labeliDriversLicense.TabIndex = 0;
+            this.labeliDriversLicense.Text = "Лицензия:";
+            // 
+            // maskedTextBoxDriversLicense
+            // 
+            this.maskedTextBoxDriversLicense.AllowPromptAsInput = true;
+            this.maskedTextBoxDriversLicense.AnimateReadOnly = false;
+            this.maskedTextBoxDriversLicense.AsciiOnly = false;
+            this.maskedTextBoxDriversLicense.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.maskedTextBoxDriversLicense.BeepOnError = false;
+            this.maskedTextBoxDriversLicense.CutCopyMaskFormat = System.Windows.Forms.MaskFormat.IncludeLiterals;
+            this.maskedTextBoxDriversLicense.Depth = 0;
+            this.maskedTextBoxDriversLicense.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.maskedTextBoxDriversLicense.HidePromptOnLeave = false;
+            this.maskedTextBoxDriversLicense.HideSelection = true;
+            this.maskedTextBoxDriversLicense.InsertKeyMode = System.Windows.Forms.InsertKeyMode.Default;
+            this.maskedTextBoxDriversLicense.LeadingIcon = null;
+            this.maskedTextBoxDriversLicense.Location = new System.Drawing.Point(123, 233);
+            this.maskedTextBoxDriversLicense.Mask = "00-00-000000";
+            this.maskedTextBoxDriversLicense.MaxLength = 32767;
+            this.maskedTextBoxDriversLicense.MouseState = MaterialSkin.MouseState.OUT;
+            this.maskedTextBoxDriversLicense.Name = "maskedTextBoxDriversLicense";
+            this.maskedTextBoxDriversLicense.PasswordChar = '\0';
+            this.maskedTextBoxDriversLicense.PrefixSuffixText = null;
+            this.maskedTextBoxDriversLicense.PromptChar = '_';
+            this.maskedTextBoxDriversLicense.ReadOnly = false;
+            this.maskedTextBoxDriversLicense.RejectInputOnFirstFailure = false;
+            this.maskedTextBoxDriversLicense.ResetOnPrompt = true;
+            this.maskedTextBoxDriversLicense.ResetOnSpace = true;
+            this.maskedTextBoxDriversLicense.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.maskedTextBoxDriversLicense.SelectedText = "";
+            this.maskedTextBoxDriversLicense.SelectionLength = 0;
+            this.maskedTextBoxDriversLicense.SelectionStart = 0;
+            this.maskedTextBoxDriversLicense.ShortcutsEnabled = true;
+            this.maskedTextBoxDriversLicense.Size = new System.Drawing.Size(167, 36);
+            this.maskedTextBoxDriversLicense.SkipLiterals = true;
+            this.maskedTextBoxDriversLicense.TabIndex = 4;
+            this.maskedTextBoxDriversLicense.TabStop = false;
+            this.maskedTextBoxDriversLicense.Text = "  -  -";
+            this.maskedTextBoxDriversLicense.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.maskedTextBoxDriversLicense.TextMaskFormat = System.Windows.Forms.MaskFormat.IncludeLiterals;
+            this.maskedTextBoxDriversLicense.TrailingIcon = null;
+            this.maskedTextBoxDriversLicense.UseSystemPasswordChar = false;
+            this.maskedTextBoxDriversLicense.UseTallSize = false;
+            this.maskedTextBoxDriversLicense.ValidatingType = null;
+            // 
+            // labelNumber
+            // 
+            this.labelNumber.AutoSize = true;
+            this.labelNumber.Depth = 0;
+            this.labelNumber.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.labelNumber.Location = new System.Drawing.Point(30, 188);
+            this.labelNumber.MouseState = MaterialSkin.MouseState.HOVER;
+            this.labelNumber.Name = "labelNumber";
+            this.labelNumber.Size = new System.Drawing.Size(70, 19);
+            this.labelNumber.TabIndex = 0;
+            this.labelNumber.Text = "Телефон:";
+            // 
+            // masketTextBoxNumber
+            // 
+            this.masketTextBoxNumber.AllowPromptAsInput = true;
+            this.masketTextBoxNumber.AnimateReadOnly = false;
+            this.masketTextBoxNumber.AsciiOnly = false;
+            this.masketTextBoxNumber.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.masketTextBoxNumber.BeepOnError = false;
+            this.masketTextBoxNumber.CutCopyMaskFormat = System.Windows.Forms.MaskFormat.IncludeLiterals;
+            this.masketTextBoxNumber.Depth = 0;
+            this.masketTextBoxNumber.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.masketTextBoxNumber.HidePromptOnLeave = false;
+            this.masketTextBoxNumber.HideSelection = true;
+            this.masketTextBoxNumber.InsertKeyMode = System.Windows.Forms.InsertKeyMode.Default;
+            this.masketTextBoxNumber.LeadingIcon = null;
+            this.masketTextBoxNumber.Location = new System.Drawing.Point(123, 179);
+            this.masketTextBoxNumber.Mask = "0(000)-000-00-00";
+            this.masketTextBoxNumber.MaxLength = 32767;
+            this.masketTextBoxNumber.MouseState = MaterialSkin.MouseState.OUT;
+            this.masketTextBoxNumber.Name = "masketTextBoxNumber";
+            this.masketTextBoxNumber.PasswordChar = '\0';
+            this.masketTextBoxNumber.PrefixSuffixText = null;
+            this.masketTextBoxNumber.PromptChar = '_';
+            this.masketTextBoxNumber.ReadOnly = false;
+            this.masketTextBoxNumber.RejectInputOnFirstFailure = false;
+            this.masketTextBoxNumber.ResetOnPrompt = true;
+            this.masketTextBoxNumber.ResetOnSpace = true;
+            this.masketTextBoxNumber.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.masketTextBoxNumber.SelectedText = "";
+            this.masketTextBoxNumber.SelectionLength = 0;
+            this.masketTextBoxNumber.SelectionStart = 0;
+            this.masketTextBoxNumber.ShortcutsEnabled = true;
+            this.masketTextBoxNumber.Size = new System.Drawing.Size(167, 36);
+            this.masketTextBoxNumber.SkipLiterals = true;
+            this.masketTextBoxNumber.TabIndex = 3;
+            this.masketTextBoxNumber.TabStop = false;
+            this.masketTextBoxNumber.Text = " (   )-   -  -";
+            this.masketTextBoxNumber.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.masketTextBoxNumber.TextMaskFormat = System.Windows.Forms.MaskFormat.IncludeLiterals;
+            this.masketTextBoxNumber.TrailingIcon = null;
+            this.masketTextBoxNumber.UseSystemPasswordChar = false;
+            this.masketTextBoxNumber.UseTallSize = false;
+            this.masketTextBoxNumber.ValidatingType = null;
+            // 
+            // textBoxPatronymic
+            // 
+            this.textBoxPatronymic.AnimateReadOnly = false;
+            this.textBoxPatronymic.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.textBoxPatronymic.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
+            this.textBoxPatronymic.Depth = 0;
+            this.textBoxPatronymic.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.textBoxPatronymic.HideSelection = true;
+            this.textBoxPatronymic.LeadingIcon = null;
+            this.textBoxPatronymic.Location = new System.Drawing.Point(123, 125);
+            this.textBoxPatronymic.MaxLength = 50;
+            this.textBoxPatronymic.MouseState = MaterialSkin.MouseState.OUT;
+            this.textBoxPatronymic.Name = "textBoxPatronymic";
+            this.textBoxPatronymic.PasswordChar = '\0';
+            this.textBoxPatronymic.PrefixSuffixText = null;
+            this.textBoxPatronymic.ReadOnly = false;
+            this.textBoxPatronymic.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.textBoxPatronymic.SelectedText = "";
+            this.textBoxPatronymic.SelectionLength = 0;
+            this.textBoxPatronymic.SelectionStart = 0;
+            this.textBoxPatronymic.ShortcutsEnabled = true;
+            this.textBoxPatronymic.Size = new System.Drawing.Size(303, 36);
+            this.textBoxPatronymic.TabIndex = 2;
+            this.textBoxPatronymic.TabStop = false;
+            this.textBoxPatronymic.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.textBoxPatronymic.TrailingIcon = null;
+            this.textBoxPatronymic.UseSystemPasswordChar = false;
+            this.textBoxPatronymic.UseTallSize = false;
+            // 
+            // labelPatronymic
+            // 
+            this.labelPatronymic.AutoSize = true;
+            this.labelPatronymic.Depth = 0;
+            this.labelPatronymic.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.labelPatronymic.Location = new System.Drawing.Point(30, 134);
+            this.labelPatronymic.MouseState = MaterialSkin.MouseState.HOVER;
+            this.labelPatronymic.Name = "labelPatronymic";
+            this.labelPatronymic.Size = new System.Drawing.Size(75, 19);
+            this.labelPatronymic.TabIndex = 0;
+            this.labelPatronymic.Text = "Отчество:";
             // 
             // textBoxSecondName
             // 
@@ -192,157 +344,6 @@
             this.labelFirstName.TabIndex = 0;
             this.labelFirstName.Text = "Имя:";
             // 
-            // textBoxPatronymic
-            // 
-            this.textBoxPatronymic.AnimateReadOnly = false;
-            this.textBoxPatronymic.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.textBoxPatronymic.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
-            this.textBoxPatronymic.Depth = 0;
-            this.textBoxPatronymic.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.textBoxPatronymic.HideSelection = true;
-            this.textBoxPatronymic.LeadingIcon = null;
-            this.textBoxPatronymic.Location = new System.Drawing.Point(123, 125);
-            this.textBoxPatronymic.MaxLength = 50;
-            this.textBoxPatronymic.MouseState = MaterialSkin.MouseState.OUT;
-            this.textBoxPatronymic.Name = "textBoxPatronymic";
-            this.textBoxPatronymic.PasswordChar = '\0';
-            this.textBoxPatronymic.PrefixSuffixText = null;
-            this.textBoxPatronymic.ReadOnly = false;
-            this.textBoxPatronymic.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.textBoxPatronymic.SelectedText = "";
-            this.textBoxPatronymic.SelectionLength = 0;
-            this.textBoxPatronymic.SelectionStart = 0;
-            this.textBoxPatronymic.ShortcutsEnabled = true;
-            this.textBoxPatronymic.Size = new System.Drawing.Size(303, 36);
-            this.textBoxPatronymic.TabIndex = 2;
-            this.textBoxPatronymic.TabStop = false;
-            this.textBoxPatronymic.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.textBoxPatronymic.TrailingIcon = null;
-            this.textBoxPatronymic.UseSystemPasswordChar = false;
-            this.textBoxPatronymic.UseTallSize = false;
-            // 
-            // labelPatronymic
-            // 
-            this.labelPatronymic.AutoSize = true;
-            this.labelPatronymic.Depth = 0;
-            this.labelPatronymic.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.labelPatronymic.Location = new System.Drawing.Point(30, 134);
-            this.labelPatronymic.MouseState = MaterialSkin.MouseState.HOVER;
-            this.labelPatronymic.Name = "labelPatronymic";
-            this.labelPatronymic.Size = new System.Drawing.Size(75, 19);
-            this.labelPatronymic.TabIndex = 0;
-            this.labelPatronymic.Text = "Отчество:";
-            // 
-            // masketTextBoxNumber
-            // 
-            this.masketTextBoxNumber.AllowPromptAsInput = true;
-            this.masketTextBoxNumber.AnimateReadOnly = false;
-            this.masketTextBoxNumber.AsciiOnly = false;
-            this.masketTextBoxNumber.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.masketTextBoxNumber.BeepOnError = false;
-            this.masketTextBoxNumber.CutCopyMaskFormat = System.Windows.Forms.MaskFormat.IncludeLiterals;
-            this.masketTextBoxNumber.Depth = 0;
-            this.masketTextBoxNumber.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.masketTextBoxNumber.HidePromptOnLeave = false;
-            this.masketTextBoxNumber.HideSelection = true;
-            this.masketTextBoxNumber.InsertKeyMode = System.Windows.Forms.InsertKeyMode.Default;
-            this.masketTextBoxNumber.LeadingIcon = null;
-            this.masketTextBoxNumber.Location = new System.Drawing.Point(123, 179);
-            this.masketTextBoxNumber.Mask = "0(000)-000-00-00";
-            this.masketTextBoxNumber.MaxLength = 32767;
-            this.masketTextBoxNumber.MouseState = MaterialSkin.MouseState.OUT;
-            this.masketTextBoxNumber.Name = "masketTextBoxNumber";
-            this.masketTextBoxNumber.PasswordChar = '\0';
-            this.masketTextBoxNumber.PrefixSuffixText = null;
-            this.masketTextBoxNumber.PromptChar = '_';
-            this.masketTextBoxNumber.ReadOnly = false;
-            this.masketTextBoxNumber.RejectInputOnFirstFailure = false;
-            this.masketTextBoxNumber.ResetOnPrompt = true;
-            this.masketTextBoxNumber.ResetOnSpace = true;
-            this.masketTextBoxNumber.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.masketTextBoxNumber.SelectedText = "";
-            this.masketTextBoxNumber.SelectionLength = 0;
-            this.masketTextBoxNumber.SelectionStart = 0;
-            this.masketTextBoxNumber.ShortcutsEnabled = true;
-            this.masketTextBoxNumber.Size = new System.Drawing.Size(167, 36);
-            this.masketTextBoxNumber.SkipLiterals = true;
-            this.masketTextBoxNumber.TabIndex = 3;
-            this.masketTextBoxNumber.TabStop = false;
-            this.masketTextBoxNumber.Text = " (   )-   -  -";
-            this.masketTextBoxNumber.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.masketTextBoxNumber.TextMaskFormat = System.Windows.Forms.MaskFormat.IncludeLiterals;
-            this.masketTextBoxNumber.TrailingIcon = null;
-            this.masketTextBoxNumber.UseSystemPasswordChar = false;
-            this.masketTextBoxNumber.UseTallSize = false;
-            this.masketTextBoxNumber.ValidatingType = null;
-            // 
-            // labelNumber
-            // 
-            this.labelNumber.AutoSize = true;
-            this.labelNumber.Depth = 0;
-            this.labelNumber.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.labelNumber.Location = new System.Drawing.Point(30, 188);
-            this.labelNumber.MouseState = MaterialSkin.MouseState.HOVER;
-            this.labelNumber.Name = "labelNumber";
-            this.labelNumber.Size = new System.Drawing.Size(70, 19);
-            this.labelNumber.TabIndex = 0;
-            this.labelNumber.Text = "Телефон:";
-            // 
-            // labeliDriversLicense
-            // 
-            this.labeliDriversLicense.AutoSize = true;
-            this.labeliDriversLicense.Depth = 0;
-            this.labeliDriversLicense.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.labeliDriversLicense.Location = new System.Drawing.Point(30, 242);
-            this.labeliDriversLicense.MouseState = MaterialSkin.MouseState.HOVER;
-            this.labeliDriversLicense.Name = "labeliDriversLicense";
-            this.labeliDriversLicense.Size = new System.Drawing.Size(77, 19);
-            this.labeliDriversLicense.TabIndex = 0;
-            this.labeliDriversLicense.Text = "Лицензия:";
-            // 
-            // maskedTextBoxDriversLicense
-            // 
-            this.maskedTextBoxDriversLicense.AllowPromptAsInput = true;
-            this.maskedTextBoxDriversLicense.AnimateReadOnly = false;
-            this.maskedTextBoxDriversLicense.AsciiOnly = false;
-            this.maskedTextBoxDriversLicense.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.maskedTextBoxDriversLicense.BeepOnError = false;
-            this.maskedTextBoxDriversLicense.CutCopyMaskFormat = System.Windows.Forms.MaskFormat.IncludeLiterals;
-            this.maskedTextBoxDriversLicense.Depth = 0;
-            this.maskedTextBoxDriversLicense.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.maskedTextBoxDriversLicense.HidePromptOnLeave = false;
-            this.maskedTextBoxDriversLicense.HideSelection = true;
-            this.maskedTextBoxDriversLicense.InsertKeyMode = System.Windows.Forms.InsertKeyMode.Default;
-            this.maskedTextBoxDriversLicense.LeadingIcon = null;
-            this.maskedTextBoxDriversLicense.Location = new System.Drawing.Point(123, 233);
-            this.maskedTextBoxDriversLicense.Mask = "00-00-000000";
-            this.maskedTextBoxDriversLicense.MaxLength = 32767;
-            this.maskedTextBoxDriversLicense.MouseState = MaterialSkin.MouseState.OUT;
-            this.maskedTextBoxDriversLicense.Name = "maskedTextBoxDriversLicense";
-            this.maskedTextBoxDriversLicense.PasswordChar = '\0';
-            this.maskedTextBoxDriversLicense.PrefixSuffixText = null;
-            this.maskedTextBoxDriversLicense.PromptChar = '_';
-            this.maskedTextBoxDriversLicense.ReadOnly = false;
-            this.maskedTextBoxDriversLicense.RejectInputOnFirstFailure = false;
-            this.maskedTextBoxDriversLicense.ResetOnPrompt = true;
-            this.maskedTextBoxDriversLicense.ResetOnSpace = true;
-            this.maskedTextBoxDriversLicense.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.maskedTextBoxDriversLicense.SelectedText = "";
-            this.maskedTextBoxDriversLicense.SelectionLength = 0;
-            this.maskedTextBoxDriversLicense.SelectionStart = 0;
-            this.maskedTextBoxDriversLicense.ShortcutsEnabled = true;
-            this.maskedTextBoxDriversLicense.Size = new System.Drawing.Size(167, 36);
-            this.maskedTextBoxDriversLicense.SkipLiterals = true;
-            this.maskedTextBoxDriversLicense.TabIndex = 4;
-            this.maskedTextBoxDriversLicense.TabStop = false;
-            this.maskedTextBoxDriversLicense.Text = "  -  -";
-            this.maskedTextBoxDriversLicense.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.maskedTextBoxDriversLicense.TextMaskFormat = System.Windows.Forms.MaskFormat.IncludeLiterals;
-            this.maskedTextBoxDriversLicense.TrailingIcon = null;
-            this.maskedTextBoxDriversLicense.UseSystemPasswordChar = false;
-            this.maskedTextBoxDriversLicense.UseTallSize = false;
-            this.maskedTextBoxDriversLicense.ValidatingType = null;
-            // 
             // FormAddEditDriver
             // 
             this.AcceptButton = this.buttonAccept;
@@ -354,6 +355,7 @@
             this.Controls.Add(this.buttonAccept);
             this.Controls.Add(this.materialCard);
             this.FormStyle = MaterialSkin.Controls.MaterialForm.FormStyles.ActionBar_64;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.Name = "FormAddEditDriver";
             this.Padding = new System.Windows.Forms.Padding(3, 88, 3, 3);

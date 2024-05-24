@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormAuthorization));
             this.materialCard1 = new MaterialSkin.Controls.MaterialCard();
             this.textBoxPassword = new MaterialSkin.Controls.MaterialTextBox2();
             this.textBoxLogin = new MaterialSkin.Controls.MaterialTextBox2();
@@ -190,6 +191,7 @@
             this.Controls.Add(this.buttonEnter);
             this.Controls.Add(this.materialCard1);
             this.FormStyle = MaterialSkin.Controls.MaterialForm.FormStyles.ActionBar_64;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.Name = "FormAuthorization";
             this.Padding = new System.Windows.Forms.Padding(3, 88, 3, 3);

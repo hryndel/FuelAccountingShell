@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormAddEditUser));
             this.buttonCancel = new MaterialSkin.Controls.MaterialButton();
             this.buttonAccept = new MaterialSkin.Controls.MaterialButton();
             this.materialCard = new MaterialSkin.Controls.MaterialCard();
@@ -411,6 +412,7 @@
             this.Controls.Add(this.buttonAccept);
             this.Controls.Add(this.materialCard);
             this.FormStyle = MaterialSkin.Controls.MaterialForm.FormStyles.ActionBar_64;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.Name = "FormAddEditUser";
             this.Padding = new System.Windows.Forms.Padding(3, 88, 3, 3);

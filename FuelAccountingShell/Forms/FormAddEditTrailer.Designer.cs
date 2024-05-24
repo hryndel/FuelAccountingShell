@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormAddEditTrailer));
             this.buttonCancel = new MaterialSkin.Controls.MaterialButton();
             this.buttonAccept = new MaterialSkin.Controls.MaterialButton();
             this.materialCard = new MaterialSkin.Controls.MaterialCard();
@@ -220,7 +221,7 @@
             // 
             this.labelNumber.AutoSize = true;
             this.labelNumber.Depth = 0;
-            this.labelNumber.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.labelNumber.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.labelNumber.Location = new System.Drawing.Point(30, 80);
             this.labelNumber.MouseState = MaterialSkin.MouseState.HOVER;
             this.labelNumber.Name = "labelNumber";
@@ -251,6 +252,7 @@
             this.Controls.Add(this.buttonAccept);
             this.Controls.Add(this.materialCard);
             this.FormStyle = MaterialSkin.Controls.MaterialForm.FormStyles.ActionBar_64;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.Name = "FormAddEditTrailer";
             this.Padding = new System.Windows.Forms.Padding(3, 88, 3, 3);

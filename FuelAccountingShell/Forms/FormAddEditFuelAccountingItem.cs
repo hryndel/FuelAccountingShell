@@ -1,4 +1,4 @@
-﻿using FuelAccountingShell.Infrastructure;
+﻿using FuelAccountingShell.Infrastructure.Styles;
 using MaterialSkin.Controls;
 using System;
 using System.Drawing;

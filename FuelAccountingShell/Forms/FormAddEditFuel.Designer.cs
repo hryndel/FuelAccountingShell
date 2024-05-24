@@ -28,17 +28,18 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormAddEditFuel));
             this.buttonCancel = new MaterialSkin.Controls.MaterialButton();
             this.buttonAccept = new MaterialSkin.Controls.MaterialButton();
             this.materialCard = new MaterialSkin.Controls.MaterialCard();
+            this.textBoxCount = new MaterialSkin.Controls.MaterialTextBox2();
+            this.comboBoxSupplier = new MaterialSkin.Controls.MaterialComboBox();
             this.comboBoxType = new MaterialSkin.Controls.MaterialComboBox();
             this.labelCount = new MaterialSkin.Controls.MaterialLabel();
             this.labelSupplier = new MaterialSkin.Controls.MaterialLabel();
             this.textBoxPrice = new MaterialSkin.Controls.MaterialTextBox2();
             this.labelPrice = new MaterialSkin.Controls.MaterialLabel();
             this.labelType = new MaterialSkin.Controls.MaterialLabel();
-            this.comboBoxSupplier = new MaterialSkin.Controls.MaterialComboBox();
-            this.textBoxCount = new MaterialSkin.Controls.MaterialTextBox2();
             this.materialCard.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -106,6 +107,59 @@
             this.materialCard.Padding = new System.Windows.Forms.Padding(14);
             this.materialCard.Size = new System.Drawing.Size(473, 248);
             this.materialCard.TabIndex = 0;
+            // 
+            // textBoxCount
+            // 
+            this.textBoxCount.AnimateReadOnly = false;
+            this.textBoxCount.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.textBoxCount.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
+            this.textBoxCount.Depth = 0;
+            this.textBoxCount.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.textBoxCount.HideSelection = true;
+            this.textBoxCount.LeadingIcon = null;
+            this.textBoxCount.Location = new System.Drawing.Point(130, 179);
+            this.textBoxCount.MaxLength = 10;
+            this.textBoxCount.MouseState = MaterialSkin.MouseState.OUT;
+            this.textBoxCount.Name = "textBoxCount";
+            this.textBoxCount.PasswordChar = '\0';
+            this.textBoxCount.PrefixSuffixText = null;
+            this.textBoxCount.ReadOnly = false;
+            this.textBoxCount.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.textBoxCount.SelectedText = "";
+            this.textBoxCount.SelectionLength = 0;
+            this.textBoxCount.SelectionStart = 0;
+            this.textBoxCount.ShortcutsEnabled = true;
+            this.textBoxCount.Size = new System.Drawing.Size(303, 36);
+            this.textBoxCount.TabIndex = 3;
+            this.textBoxCount.TabStop = false;
+            this.textBoxCount.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.textBoxCount.TrailingIcon = null;
+            this.textBoxCount.UseSystemPasswordChar = false;
+            this.textBoxCount.UseTallSize = false;
+            this.textBoxCount.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxCount_KeyPress);
+            // 
+            // comboBoxSupplier
+            // 
+            this.comboBoxSupplier.AutoResize = false;
+            this.comboBoxSupplier.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.comboBoxSupplier.Depth = 0;
+            this.comboBoxSupplier.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawVariable;
+            this.comboBoxSupplier.DropDownHeight = 118;
+            this.comboBoxSupplier.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBoxSupplier.DropDownWidth = 121;
+            this.comboBoxSupplier.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
+            this.comboBoxSupplier.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.comboBoxSupplier.FormattingEnabled = true;
+            this.comboBoxSupplier.IntegralHeight = false;
+            this.comboBoxSupplier.ItemHeight = 29;
+            this.comboBoxSupplier.Location = new System.Drawing.Point(130, 125);
+            this.comboBoxSupplier.MaxDropDownItems = 4;
+            this.comboBoxSupplier.MouseState = MaterialSkin.MouseState.OUT;
+            this.comboBoxSupplier.Name = "comboBoxSupplier";
+            this.comboBoxSupplier.Size = new System.Drawing.Size(303, 35);
+            this.comboBoxSupplier.StartIndex = 0;
+            this.comboBoxSupplier.TabIndex = 2;
+            this.comboBoxSupplier.UseTallSize = false;
             // 
             // comboBoxType
             // 
@@ -208,59 +262,6 @@
             this.labelType.TabIndex = 0;
             this.labelType.Text = "Тип:";
             // 
-            // comboBoxSupplier
-            // 
-            this.comboBoxSupplier.AutoResize = false;
-            this.comboBoxSupplier.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.comboBoxSupplier.Depth = 0;
-            this.comboBoxSupplier.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawVariable;
-            this.comboBoxSupplier.DropDownHeight = 118;
-            this.comboBoxSupplier.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBoxSupplier.DropDownWidth = 121;
-            this.comboBoxSupplier.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
-            this.comboBoxSupplier.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.comboBoxSupplier.FormattingEnabled = true;
-            this.comboBoxSupplier.IntegralHeight = false;
-            this.comboBoxSupplier.ItemHeight = 29;
-            this.comboBoxSupplier.Location = new System.Drawing.Point(130, 125);
-            this.comboBoxSupplier.MaxDropDownItems = 4;
-            this.comboBoxSupplier.MouseState = MaterialSkin.MouseState.OUT;
-            this.comboBoxSupplier.Name = "comboBoxSupplier";
-            this.comboBoxSupplier.Size = new System.Drawing.Size(303, 35);
-            this.comboBoxSupplier.StartIndex = 0;
-            this.comboBoxSupplier.TabIndex = 2;
-            this.comboBoxSupplier.UseTallSize = false;
-            // 
-            // textBoxCount
-            // 
-            this.textBoxCount.AnimateReadOnly = false;
-            this.textBoxCount.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.textBoxCount.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
-            this.textBoxCount.Depth = 0;
-            this.textBoxCount.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.textBoxCount.HideSelection = true;
-            this.textBoxCount.LeadingIcon = null;
-            this.textBoxCount.Location = new System.Drawing.Point(130, 179);
-            this.textBoxCount.MaxLength = 10;
-            this.textBoxCount.MouseState = MaterialSkin.MouseState.OUT;
-            this.textBoxCount.Name = "textBoxCount";
-            this.textBoxCount.PasswordChar = '\0';
-            this.textBoxCount.PrefixSuffixText = null;
-            this.textBoxCount.ReadOnly = false;
-            this.textBoxCount.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.textBoxCount.SelectedText = "";
-            this.textBoxCount.SelectionLength = 0;
-            this.textBoxCount.SelectionStart = 0;
-            this.textBoxCount.ShortcutsEnabled = true;
-            this.textBoxCount.Size = new System.Drawing.Size(303, 36);
-            this.textBoxCount.TabIndex = 3;
-            this.textBoxCount.TabStop = false;
-            this.textBoxCount.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.textBoxCount.TrailingIcon = null;
-            this.textBoxCount.UseSystemPasswordChar = false;
-            this.textBoxCount.UseTallSize = false;
-            this.textBoxCount.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxCount_KeyPress);
-            // 
             // FormAddEditFuel
             // 
             this.AcceptButton = this.buttonAccept;
@@ -272,6 +273,7 @@
             this.Controls.Add(this.buttonAccept);
             this.Controls.Add(this.materialCard);
             this.FormStyle = MaterialSkin.Controls.MaterialForm.FormStyles.ActionBar_64;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.Name = "FormAddEditFuel";
             this.Padding = new System.Windows.Forms.Padding(3, 88, 3, 3);

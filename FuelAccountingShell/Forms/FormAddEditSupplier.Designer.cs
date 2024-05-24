@@ -28,17 +28,18 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormAddEditSupplier));
             this.buttonCancel = new MaterialSkin.Controls.MaterialButton();
             this.buttonAccept = new MaterialSkin.Controls.MaterialButton();
             this.materialCard = new MaterialSkin.Controls.MaterialCard();
+            this.multiTextBoxDescription = new MaterialSkin.Controls.MaterialMultiLineTextBox2();
+            this.labelDescription = new MaterialSkin.Controls.MaterialLabel();
             this.labelNumber = new MaterialSkin.Controls.MaterialLabel();
             this.masketTextBoxNumber = new MaterialSkin.Controls.MaterialMaskedTextBox();
             this.textBoxInn = new MaterialSkin.Controls.MaterialTextBox2();
             this.textBoxName = new MaterialSkin.Controls.MaterialTextBox2();
             this.labelInn = new MaterialSkin.Controls.MaterialLabel();
             this.labelName = new MaterialSkin.Controls.MaterialLabel();
-            this.multiTextBoxDescription = new MaterialSkin.Controls.MaterialMultiLineTextBox2();
-            this.labelDescription = new MaterialSkin.Controls.MaterialLabel();
             this.materialCard.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -105,6 +106,43 @@
             this.materialCard.Padding = new System.Windows.Forms.Padding(14);
             this.materialCard.Size = new System.Drawing.Size(586, 305);
             this.materialCard.TabIndex = 0;
+            // 
+            // multiTextBoxDescription
+            // 
+            this.multiTextBoxDescription.AnimateReadOnly = false;
+            this.multiTextBoxDescription.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.multiTextBoxDescription.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
+            this.multiTextBoxDescription.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.multiTextBoxDescription.Depth = 0;
+            this.multiTextBoxDescription.HideSelection = true;
+            this.multiTextBoxDescription.Location = new System.Drawing.Point(123, 182);
+            this.multiTextBoxDescription.MaxLength = 100;
+            this.multiTextBoxDescription.MouseState = MaterialSkin.MouseState.OUT;
+            this.multiTextBoxDescription.Name = "multiTextBoxDescription";
+            this.multiTextBoxDescription.PasswordChar = '\0';
+            this.multiTextBoxDescription.ReadOnly = false;
+            this.multiTextBoxDescription.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.multiTextBoxDescription.SelectedText = "";
+            this.multiTextBoxDescription.SelectionLength = 0;
+            this.multiTextBoxDescription.SelectionStart = 0;
+            this.multiTextBoxDescription.ShortcutsEnabled = true;
+            this.multiTextBoxDescription.Size = new System.Drawing.Size(429, 101);
+            this.multiTextBoxDescription.TabIndex = 3;
+            this.multiTextBoxDescription.TabStop = false;
+            this.multiTextBoxDescription.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.multiTextBoxDescription.UseSystemPasswordChar = false;
+            // 
+            // labelDescription
+            // 
+            this.labelDescription.AutoSize = true;
+            this.labelDescription.Depth = 0;
+            this.labelDescription.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.labelDescription.Location = new System.Drawing.Point(30, 191);
+            this.labelDescription.MouseState = MaterialSkin.MouseState.HOVER;
+            this.labelDescription.Name = "labelDescription";
+            this.labelDescription.Size = new System.Drawing.Size(77, 19);
+            this.labelDescription.TabIndex = 0;
+            this.labelDescription.Text = "Описание:";
             // 
             // labelNumber
             // 
@@ -244,43 +282,6 @@
             this.labelName.TabIndex = 0;
             this.labelName.Text = "Название:";
             // 
-            // multiTextBoxDescription
-            // 
-            this.multiTextBoxDescription.AnimateReadOnly = false;
-            this.multiTextBoxDescription.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.multiTextBoxDescription.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
-            this.multiTextBoxDescription.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.multiTextBoxDescription.Depth = 0;
-            this.multiTextBoxDescription.HideSelection = true;
-            this.multiTextBoxDescription.Location = new System.Drawing.Point(123, 182);
-            this.multiTextBoxDescription.MaxLength = 100;
-            this.multiTextBoxDescription.MouseState = MaterialSkin.MouseState.OUT;
-            this.multiTextBoxDescription.Name = "multiTextBoxDescription";
-            this.multiTextBoxDescription.PasswordChar = '\0';
-            this.multiTextBoxDescription.ReadOnly = false;
-            this.multiTextBoxDescription.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.multiTextBoxDescription.SelectedText = "";
-            this.multiTextBoxDescription.SelectionLength = 0;
-            this.multiTextBoxDescription.SelectionStart = 0;
-            this.multiTextBoxDescription.ShortcutsEnabled = true;
-            this.multiTextBoxDescription.Size = new System.Drawing.Size(429, 101);
-            this.multiTextBoxDescription.TabIndex = 3;
-            this.multiTextBoxDescription.TabStop = false;
-            this.multiTextBoxDescription.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.multiTextBoxDescription.UseSystemPasswordChar = false;
-            // 
-            // labelDescription
-            // 
-            this.labelDescription.AutoSize = true;
-            this.labelDescription.Depth = 0;
-            this.labelDescription.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.labelDescription.Location = new System.Drawing.Point(30, 191);
-            this.labelDescription.MouseState = MaterialSkin.MouseState.HOVER;
-            this.labelDescription.Name = "labelDescription";
-            this.labelDescription.Size = new System.Drawing.Size(77, 19);
-            this.labelDescription.TabIndex = 0;
-            this.labelDescription.Text = "Описание:";
-            // 
             // FormAddEditSupplier
             // 
             this.AcceptButton = this.buttonAccept;
@@ -292,6 +293,7 @@
             this.Controls.Add(this.buttonAccept);
             this.Controls.Add(this.materialCard);
             this.FormStyle = MaterialSkin.Controls.MaterialForm.FormStyles.ActionBar_64;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.Name = "FormAddEditSupplier";
             this.Padding = new System.Windows.Forms.Padding(3, 88, 3, 3);

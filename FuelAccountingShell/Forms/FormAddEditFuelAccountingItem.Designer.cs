@@ -28,9 +28,14 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormAddEditFuelAccountingItem));
             this.buttonCancel = new MaterialSkin.Controls.MaterialButton();
             this.buttonAccept = new MaterialSkin.Controls.MaterialButton();
             this.materialCard = new MaterialSkin.Controls.MaterialCard();
+            this.comboBoxFuelStation = new MaterialSkin.Controls.MaterialComboBox();
+            this.textBoxCount = new MaterialSkin.Controls.MaterialTextBox2();
+            this.comboBoxFuel = new MaterialSkin.Controls.MaterialComboBox();
+            this.comboBoxTruck = new MaterialSkin.Controls.MaterialComboBox();
             this.dateTimePickerEndDate = new System.Windows.Forms.DateTimePicker();
             this.dateTimePickerStartDate = new System.Windows.Forms.DateTimePicker();
             this.labelEndDate = new MaterialSkin.Controls.MaterialLabel();
@@ -43,10 +48,6 @@
             this.labelTrailer = new MaterialSkin.Controls.MaterialLabel();
             this.labelTruck = new MaterialSkin.Controls.MaterialLabel();
             this.labelDriver = new MaterialSkin.Controls.MaterialLabel();
-            this.comboBoxTruck = new MaterialSkin.Controls.MaterialComboBox();
-            this.comboBoxFuel = new MaterialSkin.Controls.MaterialComboBox();
-            this.textBoxCount = new MaterialSkin.Controls.MaterialTextBox2();
-            this.comboBoxFuelStation = new MaterialSkin.Controls.MaterialComboBox();
             this.materialCard.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -122,6 +123,104 @@
             this.materialCard.Padding = new System.Windows.Forms.Padding(14);
             this.materialCard.Size = new System.Drawing.Size(900, 248);
             this.materialCard.TabIndex = 0;
+            // 
+            // comboBoxFuelStation
+            // 
+            this.comboBoxFuelStation.AutoResize = false;
+            this.comboBoxFuelStation.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.comboBoxFuelStation.Depth = 0;
+            this.comboBoxFuelStation.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawVariable;
+            this.comboBoxFuelStation.DropDownHeight = 118;
+            this.comboBoxFuelStation.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBoxFuelStation.DropDownWidth = 121;
+            this.comboBoxFuelStation.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
+            this.comboBoxFuelStation.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.comboBoxFuelStation.FormattingEnabled = true;
+            this.comboBoxFuelStation.IntegralHeight = false;
+            this.comboBoxFuelStation.ItemHeight = 29;
+            this.comboBoxFuelStation.Location = new System.Drawing.Point(568, 74);
+            this.comboBoxFuelStation.MaxDropDownItems = 4;
+            this.comboBoxFuelStation.MouseState = MaterialSkin.MouseState.OUT;
+            this.comboBoxFuelStation.Name = "comboBoxFuelStation";
+            this.comboBoxFuelStation.Size = new System.Drawing.Size(303, 35);
+            this.comboBoxFuelStation.StartIndex = 0;
+            this.comboBoxFuelStation.TabIndex = 5;
+            this.comboBoxFuelStation.UseTallSize = false;
+            // 
+            // textBoxCount
+            // 
+            this.textBoxCount.AnimateReadOnly = false;
+            this.textBoxCount.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.textBoxCount.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
+            this.textBoxCount.Depth = 0;
+            this.textBoxCount.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.textBoxCount.HideSelection = true;
+            this.textBoxCount.LeadingIcon = null;
+            this.textBoxCount.Location = new System.Drawing.Point(568, 26);
+            this.textBoxCount.MaxLength = 10;
+            this.textBoxCount.MouseState = MaterialSkin.MouseState.OUT;
+            this.textBoxCount.Name = "textBoxCount";
+            this.textBoxCount.PasswordChar = '\0';
+            this.textBoxCount.PrefixSuffixText = null;
+            this.textBoxCount.ReadOnly = false;
+            this.textBoxCount.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.textBoxCount.SelectedText = "";
+            this.textBoxCount.SelectionLength = 0;
+            this.textBoxCount.SelectionStart = 0;
+            this.textBoxCount.ShortcutsEnabled = true;
+            this.textBoxCount.Size = new System.Drawing.Size(303, 36);
+            this.textBoxCount.TabIndex = 4;
+            this.textBoxCount.TabStop = false;
+            this.textBoxCount.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.textBoxCount.TrailingIcon = null;
+            this.textBoxCount.UseSystemPasswordChar = false;
+            this.textBoxCount.UseTallSize = false;
+            // 
+            // comboBoxFuel
+            // 
+            this.comboBoxFuel.AutoResize = false;
+            this.comboBoxFuel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.comboBoxFuel.Depth = 0;
+            this.comboBoxFuel.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawVariable;
+            this.comboBoxFuel.DropDownHeight = 118;
+            this.comboBoxFuel.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBoxFuel.DropDownWidth = 121;
+            this.comboBoxFuel.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
+            this.comboBoxFuel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.comboBoxFuel.FormattingEnabled = true;
+            this.comboBoxFuel.IntegralHeight = false;
+            this.comboBoxFuel.ItemHeight = 29;
+            this.comboBoxFuel.Location = new System.Drawing.Point(130, 179);
+            this.comboBoxFuel.MaxDropDownItems = 4;
+            this.comboBoxFuel.MouseState = MaterialSkin.MouseState.OUT;
+            this.comboBoxFuel.Name = "comboBoxFuel";
+            this.comboBoxFuel.Size = new System.Drawing.Size(303, 35);
+            this.comboBoxFuel.StartIndex = 0;
+            this.comboBoxFuel.TabIndex = 3;
+            this.comboBoxFuel.UseTallSize = false;
+            // 
+            // comboBoxTruck
+            // 
+            this.comboBoxTruck.AutoResize = false;
+            this.comboBoxTruck.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.comboBoxTruck.Depth = 0;
+            this.comboBoxTruck.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawVariable;
+            this.comboBoxTruck.DropDownHeight = 118;
+            this.comboBoxTruck.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBoxTruck.DropDownWidth = 121;
+            this.comboBoxTruck.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
+            this.comboBoxTruck.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.comboBoxTruck.FormattingEnabled = true;
+            this.comboBoxTruck.IntegralHeight = false;
+            this.comboBoxTruck.ItemHeight = 29;
+            this.comboBoxTruck.Location = new System.Drawing.Point(130, 71);
+            this.comboBoxTruck.MaxDropDownItems = 4;
+            this.comboBoxTruck.MouseState = MaterialSkin.MouseState.OUT;
+            this.comboBoxTruck.Name = "comboBoxTruck";
+            this.comboBoxTruck.Size = new System.Drawing.Size(303, 35);
+            this.comboBoxTruck.StartIndex = 0;
+            this.comboBoxTruck.TabIndex = 1;
+            this.comboBoxTruck.UseTallSize = false;
             // 
             // dateTimePickerEndDate
             // 
@@ -292,104 +391,6 @@
             this.labelDriver.TabIndex = 0;
             this.labelDriver.Text = "Водитель:";
             // 
-            // comboBoxTruck
-            // 
-            this.comboBoxTruck.AutoResize = false;
-            this.comboBoxTruck.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.comboBoxTruck.Depth = 0;
-            this.comboBoxTruck.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawVariable;
-            this.comboBoxTruck.DropDownHeight = 118;
-            this.comboBoxTruck.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBoxTruck.DropDownWidth = 121;
-            this.comboBoxTruck.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
-            this.comboBoxTruck.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.comboBoxTruck.FormattingEnabled = true;
-            this.comboBoxTruck.IntegralHeight = false;
-            this.comboBoxTruck.ItemHeight = 29;
-            this.comboBoxTruck.Location = new System.Drawing.Point(130, 71);
-            this.comboBoxTruck.MaxDropDownItems = 4;
-            this.comboBoxTruck.MouseState = MaterialSkin.MouseState.OUT;
-            this.comboBoxTruck.Name = "comboBoxTruck";
-            this.comboBoxTruck.Size = new System.Drawing.Size(303, 35);
-            this.comboBoxTruck.StartIndex = 0;
-            this.comboBoxTruck.TabIndex = 1;
-            this.comboBoxTruck.UseTallSize = false;
-            // 
-            // comboBoxFuel
-            // 
-            this.comboBoxFuel.AutoResize = false;
-            this.comboBoxFuel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.comboBoxFuel.Depth = 0;
-            this.comboBoxFuel.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawVariable;
-            this.comboBoxFuel.DropDownHeight = 118;
-            this.comboBoxFuel.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBoxFuel.DropDownWidth = 121;
-            this.comboBoxFuel.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
-            this.comboBoxFuel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.comboBoxFuel.FormattingEnabled = true;
-            this.comboBoxFuel.IntegralHeight = false;
-            this.comboBoxFuel.ItemHeight = 29;
-            this.comboBoxFuel.Location = new System.Drawing.Point(130, 179);
-            this.comboBoxFuel.MaxDropDownItems = 4;
-            this.comboBoxFuel.MouseState = MaterialSkin.MouseState.OUT;
-            this.comboBoxFuel.Name = "comboBoxFuel";
-            this.comboBoxFuel.Size = new System.Drawing.Size(303, 35);
-            this.comboBoxFuel.StartIndex = 0;
-            this.comboBoxFuel.TabIndex = 3;
-            this.comboBoxFuel.UseTallSize = false;
-            // 
-            // textBoxCount
-            // 
-            this.textBoxCount.AnimateReadOnly = false;
-            this.textBoxCount.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.textBoxCount.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
-            this.textBoxCount.Depth = 0;
-            this.textBoxCount.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.textBoxCount.HideSelection = true;
-            this.textBoxCount.LeadingIcon = null;
-            this.textBoxCount.Location = new System.Drawing.Point(568, 26);
-            this.textBoxCount.MaxLength = 10;
-            this.textBoxCount.MouseState = MaterialSkin.MouseState.OUT;
-            this.textBoxCount.Name = "textBoxCount";
-            this.textBoxCount.PasswordChar = '\0';
-            this.textBoxCount.PrefixSuffixText = null;
-            this.textBoxCount.ReadOnly = false;
-            this.textBoxCount.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.textBoxCount.SelectedText = "";
-            this.textBoxCount.SelectionLength = 0;
-            this.textBoxCount.SelectionStart = 0;
-            this.textBoxCount.ShortcutsEnabled = true;
-            this.textBoxCount.Size = new System.Drawing.Size(303, 36);
-            this.textBoxCount.TabIndex = 4;
-            this.textBoxCount.TabStop = false;
-            this.textBoxCount.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.textBoxCount.TrailingIcon = null;
-            this.textBoxCount.UseSystemPasswordChar = false;
-            this.textBoxCount.UseTallSize = false;
-            // 
-            // comboBoxFuelStation
-            // 
-            this.comboBoxFuelStation.AutoResize = false;
-            this.comboBoxFuelStation.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.comboBoxFuelStation.Depth = 0;
-            this.comboBoxFuelStation.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawVariable;
-            this.comboBoxFuelStation.DropDownHeight = 118;
-            this.comboBoxFuelStation.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBoxFuelStation.DropDownWidth = 121;
-            this.comboBoxFuelStation.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
-            this.comboBoxFuelStation.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.comboBoxFuelStation.FormattingEnabled = true;
-            this.comboBoxFuelStation.IntegralHeight = false;
-            this.comboBoxFuelStation.ItemHeight = 29;
-            this.comboBoxFuelStation.Location = new System.Drawing.Point(568, 74);
-            this.comboBoxFuelStation.MaxDropDownItems = 4;
-            this.comboBoxFuelStation.MouseState = MaterialSkin.MouseState.OUT;
-            this.comboBoxFuelStation.Name = "comboBoxFuelStation";
-            this.comboBoxFuelStation.Size = new System.Drawing.Size(303, 35);
-            this.comboBoxFuelStation.StartIndex = 0;
-            this.comboBoxFuelStation.TabIndex = 5;
-            this.comboBoxFuelStation.UseTallSize = false;
-            // 
             // FormAddEditFuelAccountingItem
             // 
             this.AcceptButton = this.buttonAccept;
@@ -401,6 +402,7 @@
             this.Controls.Add(this.buttonAccept);
             this.Controls.Add(this.materialCard);
             this.FormStyle = MaterialSkin.Controls.MaterialForm.FormStyles.ActionBar_64;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.Name = "FormAddEditFuelAccountingItem";
             this.Padding = new System.Windows.Forms.Padding(3, 88, 3, 3);
