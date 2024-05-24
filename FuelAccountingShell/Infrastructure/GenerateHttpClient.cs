@@ -5,6 +5,6 @@ namespace FuelAccountingShell.Infrastructure
 {
     public class GenerateHttpClient
     {
-        public HttpClient GetHttpClient() => new HttpClient() { BaseAddress = new Uri("https://localhost:7196") };
+        public HttpClient GetHttpClient => new HttpClient() { BaseAddress = new Uri("https://localhost:7196") };
     }
 }

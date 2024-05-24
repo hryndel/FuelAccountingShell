@@ -11,13 +11,13 @@ namespace FuelAccountingShell.Infrastructure.Messages
         {
             switch (response.StatusCode)
             {
-                case HttpStatusCode.Conflict: GetMessageValidatorAsync(response); return DialogResult.No;
-                case HttpStatusCode.NotFound: GetMessageExceptionAsync(response); return DialogResult.No;
-                case HttpStatusCode.NotAcceptable: GetMessageExceptionAsync(response); return DialogResult.No;
-                default: return DialogResult.OK;
+                case HttpStatusCode.Conflict: GetMessageValidatorAsync(response); break;
+                case HttpStatusCode.NotFound: GetMessageExceptionAsync(response); break;
+                case HttpStatusCode.NotAcceptable: GetMessageExceptionAsync(response); break;
+                default: break;
             }
+            return DialogResult.No;
         }
-
 
         public static async void GetMessageValidatorAsync(HttpResponseMessage data)
         {
