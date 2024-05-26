@@ -1,4 +1,5 @@
-﻿using System;
+﻿using FuelAccountingShell.Models.Enums;
+using System;
 
 namespace FuelAccountingShell.Models.User
 {
@@ -18,6 +19,6 @@ namespace FuelAccountingShell.Models.User
 
         public string Password { get; set; } = string.Empty;
 
-        public string UserType { get; set; } = string.Empty;
+        public UserTypes UserType { get; set; } = UserTypes.Employee;
     }
 }

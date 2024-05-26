@@ -1,4 +1,9 @@
-﻿using System;
+﻿using FuelAccountingShell.Models.Driver;
+using FuelAccountingShell.Models.Fuel;
+using FuelAccountingShell.Models.FuelStation;
+using FuelAccountingShell.Models.Trailer;
+using FuelAccountingShell.Models.Truck;
+using System;
 
 namespace FuelAccountingShell.Models.FuelAccountingItem
 {
@@ -6,17 +11,17 @@ namespace FuelAccountingShell.Models.FuelAccountingItem
     {
         public Guid Id { get; set; }
 
-        public string Driver { get; set; } = string.Empty;
+        public DriverResponse Driver { get; set; }
 
-        public string Truck { get; set; } = string.Empty;
+        public TruckResponse Truck { get; set; }
 
-        public string Trailer { get; set; } = string.Empty;
+        public TrailerResponse Trailer { get; set; }
 
-        public string Fuel { get; set; } = string.Empty;
+        public FuelResponse Fuel { get; set; }
 
         public double Count { get; set; }
 
-        public string FuelStation { get; set; } = string.Empty;
+        public FuelStationResponse FuelStation { get; set; }
 
         public DateTimeOffset StartDate { get; set; }
 

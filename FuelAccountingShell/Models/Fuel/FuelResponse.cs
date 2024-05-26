@@ -1,4 +1,6 @@
-﻿using System;
+﻿using FuelAccountingShell.Models.Enums;
+using FuelAccountingShell.Models.Supplier;
+using System;
 
 namespace FuelAccountingShell.Models.Fuel
 {
@@ -6,11 +8,11 @@ namespace FuelAccountingShell.Models.Fuel
     {
         public Guid Id { get; set; }
 
-        public string FuelType { get; set; } = string.Empty;
+        public FuelTypes FuelType { get; set; } = FuelTypes.Petrol92;
 
         public double Price { get; set; }
 
-        public string Supplier { get; set; } = string.Empty;
+        public SupplierResponse Supplier { get; set; }
 
         public double Count { get; set; }
     }
