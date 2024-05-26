@@ -60,6 +60,7 @@ namespace FuelAccountingShell.Forms
             this.tabPageTruck.SuspendLayout();
             this.tabPageUser.SuspendLayout();
             this.SuspendLayout();
+
             // 
             // imageList
             // 

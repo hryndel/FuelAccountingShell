@@ -30,6 +30,7 @@ namespace FuelAccountingShell.Forms
                 case 5: userControlTrailer.UserControlTrailer_Load(sender, e); break;
                 case 6: userControlTruck.UserControlTruck_Load(sender, e); break;
                 case 7: userControlUser.UserControlUser_Load(sender, e); break;
+
             }
         }
 
