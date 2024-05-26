@@ -35,6 +35,12 @@
             this.labelHelp = new MaterialSkin.Controls.MaterialLabel();
             this.labelStatus = new MaterialSkin.Controls.MaterialLabel();
             this.dataGridViewUsers = new System.Windows.Forms.DataGridView();
+            this.ColumnFirstName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColumnLastName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColumnPatronymic = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColumnMail = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColumnLogin = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColumnUserType = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tableLayoutPanel = new System.Windows.Forms.TableLayoutPanel();
             this.materialCardMenu = new MaterialSkin.Controls.MaterialCard();
             this.flowLayoutPanelMenu = new System.Windows.Forms.FlowLayoutPanel();
@@ -42,12 +48,6 @@
             this.buttonEdit = new MaterialSkin.Controls.MaterialButton();
             this.buttonDelete = new MaterialSkin.Controls.MaterialButton();
             this.textBoxSearch = new MaterialSkin.Controls.MaterialTextBox2();
-            this.ColumnFirstName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColumnLastName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColumnPatronymic = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColumnMail = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColumnLogin = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColumnUserType = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.flowLayoutPanelHelp.SuspendLayout();
             this.materialCardHelp.SuspendLayout();
             this.materialCardHelpTitle.SuspendLayout();
@@ -98,7 +98,7 @@
             this.materialListBoxRoles.SelectedIndex = -1;
             this.materialListBoxRoles.SelectedItem = null;
             this.materialListBoxRoles.Size = new System.Drawing.Size(206, 182);
-            this.materialListBoxRoles.TabIndex = 1;
+            this.materialListBoxRoles.TabIndex = 5;
             this.materialListBoxRoles.UseAccentColor = true;
             this.materialListBoxRoles.SelectedIndexChanged += new MaterialSkin.Controls.MaterialListBox.SelectedIndexChangedEventHandler(this.materialListBoxRoles_SelectedIndexChanged);
             // 
@@ -141,9 +141,9 @@
             this.labelStatus.Margin = new System.Windows.Forms.Padding(14, 5, 3, 5);
             this.labelStatus.MouseState = MaterialSkin.MouseState.HOVER;
             this.labelStatus.Name = "labelStatus";
-            this.labelStatus.Size = new System.Drawing.Size(195, 19);
-            this.labelStatus.TabIndex = 1;
-            this.labelStatus.Text = "Количесто записей: 0 из 0";
+            this.labelStatus.Size = new System.Drawing.Size(204, 19);
+            this.labelStatus.TabIndex = 0;
+            this.labelStatus.Text = "Количество записей: 0 из 0";
             // 
             // dataGridViewUsers
             // 
@@ -162,6 +162,43 @@
             this.dataGridViewUsers.Size = new System.Drawing.Size(1100, 553);
             this.dataGridViewUsers.TabIndex = 0;
             this.dataGridViewUsers.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.dataGridViewUsers_CellFormatting);
+            // 
+            // ColumnFirstName
+            // 
+            this.ColumnFirstName.DataPropertyName = "FirstName";
+            this.ColumnFirstName.HeaderText = "Имя";
+            this.ColumnFirstName.Name = "ColumnFirstName";
+            // 
+            // ColumnLastName
+            // 
+            this.ColumnLastName.DataPropertyName = "LastName";
+            this.ColumnLastName.HeaderText = "Фамилия";
+            this.ColumnLastName.Name = "ColumnLastName";
+            // 
+            // ColumnPatronymic
+            // 
+            this.ColumnPatronymic.DataPropertyName = "Patronymic";
+            this.ColumnPatronymic.HeaderText = "Отчество";
+            this.ColumnPatronymic.Name = "ColumnPatronymic";
+            // 
+            // ColumnMail
+            // 
+            this.ColumnMail.DataPropertyName = "Mail";
+            this.ColumnMail.HeaderText = "Почта";
+            this.ColumnMail.Name = "ColumnMail";
+            // 
+            // ColumnLogin
+            // 
+            this.ColumnLogin.DataPropertyName = "Login";
+            this.ColumnLogin.HeaderText = "Логин";
+            this.ColumnLogin.Name = "ColumnLogin";
+            // 
+            // ColumnUserType
+            // 
+            this.ColumnUserType.DataPropertyName = "UserType";
+            this.ColumnUserType.FillWeight = 70F;
+            this.ColumnUserType.HeaderText = "Роль";
+            this.ColumnUserType.Name = "ColumnUserType";
             // 
             // tableLayoutPanel
             // 
@@ -228,7 +265,7 @@
             this.buttonAdd.Name = "buttonAdd";
             this.buttonAdd.NoAccentTextColor = System.Drawing.Color.Empty;
             this.buttonAdd.Size = new System.Drawing.Size(125, 54);
-            this.buttonAdd.TabIndex = 0;
+            this.buttonAdd.TabIndex = 1;
             this.buttonAdd.Text = "Добавить";
             this.buttonAdd.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
             this.buttonAdd.UseAccentColor = false;
@@ -251,7 +288,7 @@
             this.buttonEdit.Name = "buttonEdit";
             this.buttonEdit.NoAccentTextColor = System.Drawing.Color.Empty;
             this.buttonEdit.Size = new System.Drawing.Size(125, 54);
-            this.buttonEdit.TabIndex = 1;
+            this.buttonEdit.TabIndex = 2;
             this.buttonEdit.Text = "Изменить";
             this.buttonEdit.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
             this.buttonEdit.UseAccentColor = false;
@@ -274,11 +311,12 @@
             this.buttonDelete.Name = "buttonDelete";
             this.buttonDelete.NoAccentTextColor = System.Drawing.Color.Empty;
             this.buttonDelete.Size = new System.Drawing.Size(125, 54);
-            this.buttonDelete.TabIndex = 2;
+            this.buttonDelete.TabIndex = 3;
             this.buttonDelete.Text = "Удалить";
             this.buttonDelete.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
             this.buttonDelete.UseAccentColor = false;
             this.buttonDelete.UseVisualStyleBackColor = true;
+            this.buttonDelete.Click += new System.EventHandler(this.buttonDelete_Click);
             // 
             // textBoxSearch
             // 
@@ -303,48 +341,12 @@
             this.textBoxSearch.SelectionStart = 0;
             this.textBoxSearch.ShortcutsEnabled = true;
             this.textBoxSearch.Size = new System.Drawing.Size(250, 48);
-            this.textBoxSearch.TabIndex = 3;
+            this.textBoxSearch.TabIndex = 4;
             this.textBoxSearch.TabStop = false;
             this.textBoxSearch.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.textBoxSearch.TrailingIcon = null;
             this.textBoxSearch.UseSystemPasswordChar = false;
             this.textBoxSearch.TextChanged += new System.EventHandler(this.textBoxSearch_TextChanged);
-            // 
-            // ColumnFirstName
-            // 
-            this.ColumnFirstName.DataPropertyName = "FirstName";
-            this.ColumnFirstName.HeaderText = "Имя";
-            this.ColumnFirstName.Name = "ColumnFirstName";
-            // 
-            // ColumnLastName
-            // 
-            this.ColumnLastName.DataPropertyName = "LastName";
-            this.ColumnLastName.HeaderText = "Фамилия";
-            this.ColumnLastName.Name = "ColumnLastName";
-            // 
-            // ColumnPatronymic
-            // 
-            this.ColumnPatronymic.DataPropertyName = "Patronymic";
-            this.ColumnPatronymic.HeaderText = "Отчество";
-            this.ColumnPatronymic.Name = "ColumnPatronymic";
-            // 
-            // ColumnMail
-            // 
-            this.ColumnMail.DataPropertyName = "Mail";
-            this.ColumnMail.HeaderText = "Почта";
-            this.ColumnMail.Name = "ColumnMail";
-            // 
-            // ColumnLogin
-            // 
-            this.ColumnLogin.DataPropertyName = "Login";
-            this.ColumnLogin.HeaderText = "Логин";
-            this.ColumnLogin.Name = "ColumnLogin";
-            // 
-            // ColumnUserType
-            // 
-            this.ColumnUserType.DataPropertyName = "UserType";
-            this.ColumnUserType.HeaderText = "Роль";
-            this.ColumnUserType.Name = "ColumnUserType";
             // 
             // UserControlUser
             // 

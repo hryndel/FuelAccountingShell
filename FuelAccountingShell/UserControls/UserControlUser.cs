@@ -14,63 +14,69 @@ namespace FuelAccountingShell.UserControls
     public partial class UserControlUser : UserControl
     {
         private List<UserResponse> Users;
+
         public UserControlUser()
         {
             InitializeComponent();
-            FillListBox();
             DataGridVeiwStyle.Stylization(dataGridViewUsers);
+            if (!this.DesignMode)
+            {
+                FillListBox();
+            }
         }
 
-        private async void UserControlUser_Load(object sender, EventArgs e)
+        public void UserControlUser_Load(object sender, EventArgs e)
         {
-            materialListBoxRoles.SelectedIndex = 0;
+            if (!this.DesignMode)
+            {
+                LoadData();
+            }
+        }
 
-            Users = await CommonClient.GetData<UserResponse>("User/");
+        private void LoadData()
+        {
+            Users = CommonClient.GetData<UserResponse>("User/");
+            if (CloseForms.SystemClosing) return;
             dataGridViewUsers.DataSource = Users;
             labelStatus.Text = $"Количество записей: {dataGridViewUsers.Rows.Count} из {Users.Count}";
+
+            buttonEdit.Enabled = buttonDelete.Enabled = CheckCountRows.CheckCount(dataGridViewUsers.Rows.Count);
         }
-        
+
         private void buttonAdd_Click(object sender, EventArgs e)
         {
             FormAddEditUser form = new FormAddEditUser();
             form.ShowDialog();
+            LoadData();
         }
 
         private void buttonEdit_Click(object sender, EventArgs e)
         {
-            FormAddEditUser form = new FormAddEditUser("test");
+            FormAddEditUser form = new FormAddEditUser((UserResponse)dataGridViewUsers.CurrentRow.DataBoundItem);
             form.ShowDialog();
+            LoadData();
         }
 
-        private void FillListBox()
+        private void buttonDelete_Click(object sender, EventArgs e)
         {
-            materialListBoxRoles.Items.Clear();
-            materialListBoxRoles.Items.Add(new MaterialListBoxItem("По умолчанию"));
-            foreach (UserTypes dir in Enum.GetValues(typeof(UserTypes)))
-            {
-                var materialSkikItem = new MaterialListBoxItem();
-                materialSkikItem.Text = dir.EnumConvert();
-                materialSkikItem.Tag = dir;
-                materialListBoxRoles.Items.Add(materialSkikItem);
-            }
-            materialListBoxRoles.SelectedIndex = 0;
+            CommonClient.DeleteData(((UserResponse)dataGridViewUsers.CurrentRow.DataBoundItem).Id, "User/");
+            LoadData();
         }
 
         private void dataGridViewUsers_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
         {
             if (dataGridViewUsers.Columns[e.ColumnIndex].DataPropertyName == "UserType")
             {
-                var myStatus = EnumReader.ParseEnum<UserTypes>(e.Value.ToString());
-                e.Value = myStatus.EnumConvert();
+                var type = (UserTypes)e.Value;
+                e.Value = type.EnumRead();
             }
         }
 
-        public void SearchAndFiltr()
+        private void SearchAndFiltr()
         {
-            var data = materialListBoxRoles.SelectedItem;
-            if (data.Tag is UserTypes enm)
+            if (materialListBoxRoles.SelectedItem.Tag is UserTypes enm)
             {
-                dataGridViewUsers.DataSource = Users.Where(x => x.UserType == enm.ToString() && x.Login.ToLower().Contains(textBoxSearch.Text.ToLower())).ToList();
+                dataGridViewUsers.DataSource = Users.Where(x => x.UserType.ToString() == enm.ToString() && x.Login.ToLower().Contains(textBoxSearch.Text.ToLower())).ToList();
             }
             else
             {
@@ -87,6 +93,21 @@ namespace FuelAccountingShell.UserControls
         private void textBoxSearch_TextChanged(object sender, EventArgs e)
         {
             SearchAndFiltr();
+        }
+
+        private void FillListBox()
+        {
+            materialListBoxRoles.Items.Clear();
+            materialListBoxRoles.Items.Add(new MaterialListBoxItem("По умолчанию"));
+            foreach (UserTypes dir in Enum.GetValues(typeof(UserTypes)))
+            {
+                var materialSkikItem = new MaterialListBoxItem();
+                materialSkikItem.Text = dir.EnumRead();
+                materialSkikItem.Tag = dir;
+                materialListBoxRoles.Items.Add(materialSkikItem);
+            }
+            materialListBoxRoles.SelectedIndex = 0;
+            materialListBoxRoles.SelectedIndex = 0;
         }
     }
 }
