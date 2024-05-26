@@ -33,11 +33,11 @@
             this.buttonAccept = new MaterialSkin.Controls.MaterialButton();
             this.materialCard = new MaterialSkin.Controls.MaterialCard();
             this.labelVin = new MaterialSkin.Controls.MaterialLabel();
-            this.masketTextBoxNumber = new MaterialSkin.Controls.MaterialMaskedTextBox();
-            this.textBoxCapacity = new MaterialSkin.Controls.MaterialTextBox2();
+            this.textBoxVin = new MaterialSkin.Controls.MaterialTextBox2();
             this.textBoxName = new MaterialSkin.Controls.MaterialTextBox2();
             this.labelNumber = new MaterialSkin.Controls.MaterialLabel();
             this.labelName = new MaterialSkin.Controls.MaterialLabel();
+            this.maskedTextBoxNumber = new MaterialSkin.Controls.MaterialMaskedTextBox();
             this.materialCard.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -56,7 +56,7 @@
             this.buttonCancel.Name = "buttonCancel";
             this.buttonCancel.NoAccentTextColor = System.Drawing.Color.Empty;
             this.buttonCancel.Size = new System.Drawing.Size(196, 36);
-            this.buttonCancel.TabIndex = 4;
+            this.buttonCancel.TabIndex = 5;
             this.buttonCancel.Text = "Отмена";
             this.buttonCancel.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
             this.buttonCancel.UseAccentColor = false;
@@ -77,7 +77,7 @@
             this.buttonAccept.Name = "buttonAccept";
             this.buttonAccept.NoAccentTextColor = System.Drawing.Color.Empty;
             this.buttonAccept.Size = new System.Drawing.Size(196, 36);
-            this.buttonAccept.TabIndex = 3;
+            this.buttonAccept.TabIndex = 4;
             this.buttonAccept.Text = "Создать";
             this.buttonAccept.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
             this.buttonAccept.UseAccentColor = false;
@@ -87,9 +87,9 @@
             // materialCard
             // 
             this.materialCard.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.materialCard.Controls.Add(this.maskedTextBoxNumber);
             this.materialCard.Controls.Add(this.labelVin);
-            this.materialCard.Controls.Add(this.masketTextBoxNumber);
-            this.materialCard.Controls.Add(this.textBoxCapacity);
+            this.materialCard.Controls.Add(this.textBoxVin);
             this.materialCard.Controls.Add(this.textBoxName);
             this.materialCard.Controls.Add(this.labelNumber);
             this.materialCard.Controls.Add(this.labelName);
@@ -115,77 +115,34 @@
             this.labelVin.TabIndex = 0;
             this.labelVin.Text = "VIN:";
             // 
-            // masketTextBoxNumber
+            // textBoxVin
             // 
-            this.masketTextBoxNumber.AllowPromptAsInput = true;
-            this.masketTextBoxNumber.AnimateReadOnly = false;
-            this.masketTextBoxNumber.AsciiOnly = false;
-            this.masketTextBoxNumber.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.masketTextBoxNumber.BeepOnError = false;
-            this.masketTextBoxNumber.CutCopyMaskFormat = System.Windows.Forms.MaskFormat.IncludeLiterals;
-            this.masketTextBoxNumber.Depth = 0;
-            this.masketTextBoxNumber.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.masketTextBoxNumber.HidePromptOnLeave = false;
-            this.masketTextBoxNumber.HideSelection = true;
-            this.masketTextBoxNumber.InsertKeyMode = System.Windows.Forms.InsertKeyMode.Default;
-            this.masketTextBoxNumber.LeadingIcon = null;
-            this.masketTextBoxNumber.Location = new System.Drawing.Point(143, 71);
-            this.masketTextBoxNumber.Mask = "LL0000 000";
-            this.masketTextBoxNumber.MaxLength = 32767;
-            this.masketTextBoxNumber.MouseState = MaterialSkin.MouseState.OUT;
-            this.masketTextBoxNumber.Name = "masketTextBoxNumber";
-            this.masketTextBoxNumber.PasswordChar = '\0';
-            this.masketTextBoxNumber.PrefixSuffixText = null;
-            this.masketTextBoxNumber.PromptChar = '_';
-            this.masketTextBoxNumber.ReadOnly = false;
-            this.masketTextBoxNumber.RejectInputOnFirstFailure = false;
-            this.masketTextBoxNumber.ResetOnPrompt = true;
-            this.masketTextBoxNumber.ResetOnSpace = true;
-            this.masketTextBoxNumber.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.masketTextBoxNumber.SelectedText = "";
-            this.masketTextBoxNumber.SelectionLength = 0;
-            this.masketTextBoxNumber.SelectionStart = 0;
-            this.masketTextBoxNumber.ShortcutsEnabled = true;
-            this.masketTextBoxNumber.Size = new System.Drawing.Size(173, 36);
-            this.masketTextBoxNumber.SkipLiterals = true;
-            this.masketTextBoxNumber.TabIndex = 1;
-            this.masketTextBoxNumber.TabStop = false;
-            this.masketTextBoxNumber.Text = "       ";
-            this.masketTextBoxNumber.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.masketTextBoxNumber.TextMaskFormat = System.Windows.Forms.MaskFormat.IncludeLiterals;
-            this.masketTextBoxNumber.TrailingIcon = null;
-            this.masketTextBoxNumber.UseSystemPasswordChar = false;
-            this.masketTextBoxNumber.UseTallSize = false;
-            this.masketTextBoxNumber.ValidatingType = null;
-            // 
-            // textBoxCapacity
-            // 
-            this.textBoxCapacity.AnimateReadOnly = false;
-            this.textBoxCapacity.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.textBoxCapacity.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
-            this.textBoxCapacity.Depth = 0;
-            this.textBoxCapacity.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.textBoxCapacity.HideSelection = true;
-            this.textBoxCapacity.LeadingIcon = null;
-            this.textBoxCapacity.Location = new System.Drawing.Point(143, 125);
-            this.textBoxCapacity.MaxLength = 20;
-            this.textBoxCapacity.MouseState = MaterialSkin.MouseState.OUT;
-            this.textBoxCapacity.Name = "textBoxCapacity";
-            this.textBoxCapacity.PasswordChar = '\0';
-            this.textBoxCapacity.PrefixSuffixText = null;
-            this.textBoxCapacity.ReadOnly = false;
-            this.textBoxCapacity.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.textBoxCapacity.SelectedText = "";
-            this.textBoxCapacity.SelectionLength = 0;
-            this.textBoxCapacity.SelectionStart = 0;
-            this.textBoxCapacity.ShortcutsEnabled = true;
-            this.textBoxCapacity.Size = new System.Drawing.Size(429, 36);
-            this.textBoxCapacity.TabIndex = 2;
-            this.textBoxCapacity.TabStop = false;
-            this.textBoxCapacity.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.textBoxCapacity.TrailingIcon = null;
-            this.textBoxCapacity.UseSystemPasswordChar = false;
-            this.textBoxCapacity.UseTallSize = false;
+            this.textBoxVin.AnimateReadOnly = false;
+            this.textBoxVin.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.textBoxVin.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
+            this.textBoxVin.Depth = 0;
+            this.textBoxVin.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.textBoxVin.HideSelection = true;
+            this.textBoxVin.LeadingIcon = null;
+            this.textBoxVin.Location = new System.Drawing.Point(143, 125);
+            this.textBoxVin.MaxLength = 20;
+            this.textBoxVin.MouseState = MaterialSkin.MouseState.OUT;
+            this.textBoxVin.Name = "textBoxVin";
+            this.textBoxVin.PasswordChar = '\0';
+            this.textBoxVin.PrefixSuffixText = null;
+            this.textBoxVin.ReadOnly = false;
+            this.textBoxVin.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.textBoxVin.SelectedText = "";
+            this.textBoxVin.SelectionLength = 0;
+            this.textBoxVin.SelectionStart = 0;
+            this.textBoxVin.ShortcutsEnabled = true;
+            this.textBoxVin.Size = new System.Drawing.Size(429, 36);
+            this.textBoxVin.TabIndex = 3;
+            this.textBoxVin.TabStop = false;
+            this.textBoxVin.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.textBoxVin.TrailingIcon = null;
+            this.textBoxVin.UseSystemPasswordChar = false;
+            this.textBoxVin.UseTallSize = false;
             // 
             // textBoxName
             // 
@@ -209,7 +166,7 @@
             this.textBoxName.SelectionStart = 0;
             this.textBoxName.ShortcutsEnabled = true;
             this.textBoxName.Size = new System.Drawing.Size(429, 36);
-            this.textBoxName.TabIndex = 0;
+            this.textBoxName.TabIndex = 1;
             this.textBoxName.TabStop = false;
             this.textBoxName.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.textBoxName.TrailingIcon = null;
@@ -239,6 +196,48 @@
             this.labelName.Size = new System.Drawing.Size(77, 19);
             this.labelName.TabIndex = 0;
             this.labelName.Text = "Название:";
+            // 
+            // maskedTextBoxNumber
+            // 
+            this.maskedTextBoxNumber.AllowPromptAsInput = true;
+            this.maskedTextBoxNumber.AnimateReadOnly = false;
+            this.maskedTextBoxNumber.AsciiOnly = false;
+            this.maskedTextBoxNumber.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.maskedTextBoxNumber.BeepOnError = false;
+            this.maskedTextBoxNumber.CutCopyMaskFormat = System.Windows.Forms.MaskFormat.IncludeLiterals;
+            this.maskedTextBoxNumber.Depth = 0;
+            this.maskedTextBoxNumber.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.maskedTextBoxNumber.HidePromptOnLeave = false;
+            this.maskedTextBoxNumber.HideSelection = true;
+            this.maskedTextBoxNumber.InsertKeyMode = System.Windows.Forms.InsertKeyMode.Default;
+            this.maskedTextBoxNumber.LeadingIcon = null;
+            this.maskedTextBoxNumber.Location = new System.Drawing.Point(143, 70);
+            this.maskedTextBoxNumber.Mask = "L000LL009";
+            this.maskedTextBoxNumber.MaxLength = 32767;
+            this.maskedTextBoxNumber.MouseState = MaterialSkin.MouseState.OUT;
+            this.maskedTextBoxNumber.Name = "maskedTextBoxNumber";
+            this.maskedTextBoxNumber.PasswordChar = '\0';
+            this.maskedTextBoxNumber.PrefixSuffixText = null;
+            this.maskedTextBoxNumber.PromptChar = '_';
+            this.maskedTextBoxNumber.ReadOnly = false;
+            this.maskedTextBoxNumber.RejectInputOnFirstFailure = false;
+            this.maskedTextBoxNumber.ResetOnPrompt = true;
+            this.maskedTextBoxNumber.ResetOnSpace = true;
+            this.maskedTextBoxNumber.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.maskedTextBoxNumber.SelectedText = "";
+            this.maskedTextBoxNumber.SelectionLength = 0;
+            this.maskedTextBoxNumber.SelectionStart = 0;
+            this.maskedTextBoxNumber.ShortcutsEnabled = true;
+            this.maskedTextBoxNumber.Size = new System.Drawing.Size(429, 36);
+            this.maskedTextBoxNumber.SkipLiterals = true;
+            this.maskedTextBoxNumber.TabIndex = 2;
+            this.maskedTextBoxNumber.TabStop = false;
+            this.maskedTextBoxNumber.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.maskedTextBoxNumber.TextMaskFormat = System.Windows.Forms.MaskFormat.ExcludePromptAndLiterals;
+            this.maskedTextBoxNumber.TrailingIcon = null;
+            this.maskedTextBoxNumber.UseSystemPasswordChar = false;
+            this.maskedTextBoxNumber.UseTallSize = false;
+            this.maskedTextBoxNumber.ValidatingType = null;
             // 
             // FormAddEditTruck
             // 
@@ -270,10 +269,10 @@
         private MaterialSkin.Controls.MaterialButton buttonAccept;
         private MaterialSkin.Controls.MaterialCard materialCard;
         private MaterialSkin.Controls.MaterialLabel labelVin;
-        private MaterialSkin.Controls.MaterialMaskedTextBox masketTextBoxNumber;
-        private MaterialSkin.Controls.MaterialTextBox2 textBoxCapacity;
+        private MaterialSkin.Controls.MaterialTextBox2 textBoxVin;
         private MaterialSkin.Controls.MaterialTextBox2 textBoxName;
         private MaterialSkin.Controls.MaterialLabel labelNumber;
         private MaterialSkin.Controls.MaterialLabel labelName;
+        private MaterialSkin.Controls.MaterialMaskedTextBox maskedTextBoxNumber;
     }
 }

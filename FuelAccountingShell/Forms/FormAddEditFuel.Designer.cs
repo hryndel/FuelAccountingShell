@@ -58,7 +58,7 @@
             this.buttonCancel.Name = "buttonCancel";
             this.buttonCancel.NoAccentTextColor = System.Drawing.Color.Empty;
             this.buttonCancel.Size = new System.Drawing.Size(196, 36);
-            this.buttonCancel.TabIndex = 5;
+            this.buttonCancel.TabIndex = 6;
             this.buttonCancel.Text = "Отмена";
             this.buttonCancel.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
             this.buttonCancel.UseAccentColor = false;
@@ -71,7 +71,6 @@
             this.buttonAccept.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.buttonAccept.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
             this.buttonAccept.Depth = 0;
-            this.buttonAccept.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.buttonAccept.HighEmphasis = true;
             this.buttonAccept.Icon = null;
             this.buttonAccept.Location = new System.Drawing.Point(17, 370);
@@ -80,7 +79,7 @@
             this.buttonAccept.Name = "buttonAccept";
             this.buttonAccept.NoAccentTextColor = System.Drawing.Color.Empty;
             this.buttonAccept.Size = new System.Drawing.Size(196, 36);
-            this.buttonAccept.TabIndex = 4;
+            this.buttonAccept.TabIndex = 5;
             this.buttonAccept.Text = "Создать";
             this.buttonAccept.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
             this.buttonAccept.UseAccentColor = false;
@@ -130,7 +129,7 @@
             this.textBoxCount.SelectionStart = 0;
             this.textBoxCount.ShortcutsEnabled = true;
             this.textBoxCount.Size = new System.Drawing.Size(303, 36);
-            this.textBoxCount.TabIndex = 3;
+            this.textBoxCount.TabIndex = 4;
             this.textBoxCount.TabStop = false;
             this.textBoxCount.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.textBoxCount.TrailingIcon = null;
@@ -158,8 +157,9 @@
             this.comboBoxSupplier.Name = "comboBoxSupplier";
             this.comboBoxSupplier.Size = new System.Drawing.Size(303, 35);
             this.comboBoxSupplier.StartIndex = 0;
-            this.comboBoxSupplier.TabIndex = 2;
+            this.comboBoxSupplier.TabIndex = 3;
             this.comboBoxSupplier.UseTallSize = false;
+            this.comboBoxSupplier.Format += new System.Windows.Forms.ListControlConvertEventHandler(this.comboBoxSupplier_Format);
             // 
             // comboBoxType
             // 
@@ -181,7 +181,7 @@
             this.comboBoxType.Name = "comboBoxType";
             this.comboBoxType.Size = new System.Drawing.Size(303, 35);
             this.comboBoxType.StartIndex = 0;
-            this.comboBoxType.TabIndex = 0;
+            this.comboBoxType.TabIndex = 1;
             this.comboBoxType.UseTallSize = false;
             // 
             // labelCount
@@ -230,7 +230,7 @@
             this.textBoxPrice.SelectionStart = 0;
             this.textBoxPrice.ShortcutsEnabled = true;
             this.textBoxPrice.Size = new System.Drawing.Size(303, 36);
-            this.textBoxPrice.TabIndex = 1;
+            this.textBoxPrice.TabIndex = 2;
             this.textBoxPrice.TabStop = false;
             this.textBoxPrice.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.textBoxPrice.TrailingIcon = null;

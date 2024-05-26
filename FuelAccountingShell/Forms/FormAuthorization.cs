@@ -10,17 +10,17 @@ namespace FuelAccountingShell.Forms
         public FormAuthorization()
         {
             InitializeComponent();
-            InitMaterialSkin.StylizationUI(this);
+            InitMaterialSkin.StylizationUI(this); 
         }
 
-        private async void buttonEnter_Click(object sender, System.EventArgs e)
+        private void buttonEnter_Click(object sender, System.EventArgs e)
         {
             if (!string.IsNullOrWhiteSpace(textBoxLogin.Text) && !string.IsNullOrWhiteSpace(textBoxPassword.Text))
             {
-                buttonEnter.Enabled = false;
-                var result = await CommonClient.SignIn(textBoxLogin.Text, textBoxPassword.Text);
+                var result = CommonClient.SignIn(textBoxLogin.Text, textBoxPassword.Text);
                 if (result)
                 {
+                    CloseForms.SystemClosing = false;
                     textBoxLogin.Clear();
                     textBoxPassword.Clear();
                     this.Hide();
@@ -28,7 +28,6 @@ namespace FuelAccountingShell.Forms
                     form.ShowDialog();
                     this.Show();
                 }
-                buttonEnter.Enabled = true;
             }
             else
             {

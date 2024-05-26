@@ -36,7 +36,7 @@
             this.labelSupplier = new MaterialSkin.Controls.MaterialLabel();
             this.textBoxPatronymic = new MaterialSkin.Controls.MaterialTextBox2();
             this.labelPatronymic = new MaterialSkin.Controls.MaterialLabel();
-            this.textBoxSecondName = new MaterialSkin.Controls.MaterialTextBox2();
+            this.textBoxLastName = new MaterialSkin.Controls.MaterialTextBox2();
             this.textBoxFirstName = new MaterialSkin.Controls.MaterialTextBox2();
             this.labelSecondName = new MaterialSkin.Controls.MaterialLabel();
             this.labelFirstName = new MaterialSkin.Controls.MaterialLabel();
@@ -64,7 +64,7 @@
             this.buttonCancel.Name = "buttonCancel";
             this.buttonCancel.NoAccentTextColor = System.Drawing.Color.Empty;
             this.buttonCancel.Size = new System.Drawing.Size(364, 36);
-            this.buttonCancel.TabIndex = 7;
+            this.buttonCancel.TabIndex = 8;
             this.buttonCancel.Text = "Отмена";
             this.buttonCancel.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
             this.buttonCancel.UseAccentColor = false;
@@ -77,7 +77,6 @@
             this.buttonAccept.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.buttonAccept.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
             this.buttonAccept.Depth = 0;
-            this.buttonAccept.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.buttonAccept.HighEmphasis = true;
             this.buttonAccept.Icon = null;
             this.buttonAccept.Location = new System.Drawing.Point(61, 361);
@@ -86,7 +85,7 @@
             this.buttonAccept.Name = "buttonAccept";
             this.buttonAccept.NoAccentTextColor = System.Drawing.Color.Empty;
             this.buttonAccept.Size = new System.Drawing.Size(364, 36);
-            this.buttonAccept.TabIndex = 6;
+            this.buttonAccept.TabIndex = 7;
             this.buttonAccept.Text = "Создать";
             this.buttonAccept.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
             this.buttonAccept.UseAccentColor = false;
@@ -100,7 +99,7 @@
             this.materialCard.Controls.Add(this.labelSupplier);
             this.materialCard.Controls.Add(this.textBoxPatronymic);
             this.materialCard.Controls.Add(this.labelPatronymic);
-            this.materialCard.Controls.Add(this.textBoxSecondName);
+            this.materialCard.Controls.Add(this.textBoxLastName);
             this.materialCard.Controls.Add(this.textBoxFirstName);
             this.materialCard.Controls.Add(this.labelSecondName);
             this.materialCard.Controls.Add(this.labelFirstName);
@@ -118,7 +117,7 @@
             this.materialCard.Name = "materialCard";
             this.materialCard.Padding = new System.Windows.Forms.Padding(14);
             this.materialCard.Size = new System.Drawing.Size(905, 239);
-            this.materialCard.TabIndex = 5;
+            this.materialCard.TabIndex = 0;
             // 
             // comboBoxUserType
             // 
@@ -140,7 +139,7 @@
             this.comboBoxUserType.Name = "comboBoxUserType";
             this.comboBoxUserType.Size = new System.Drawing.Size(303, 35);
             this.comboBoxUserType.StartIndex = 0;
-            this.comboBoxUserType.TabIndex = 17;
+            this.comboBoxUserType.TabIndex = 6;
             this.comboBoxUserType.UseTallSize = false;
             // 
             // labelSupplier
@@ -151,9 +150,9 @@
             this.labelSupplier.Location = new System.Drawing.Point(468, 134);
             this.labelSupplier.MouseState = MaterialSkin.MouseState.HOVER;
             this.labelSupplier.Name = "labelSupplier";
-            this.labelSupplier.Size = new System.Drawing.Size(90, 19);
-            this.labelSupplier.TabIndex = 16;
-            this.labelSupplier.Text = "Поставщик:";
+            this.labelSupplier.Size = new System.Drawing.Size(42, 19);
+            this.labelSupplier.TabIndex = 0;
+            this.labelSupplier.Text = "Роль:";
             // 
             // textBoxPatronymic
             // 
@@ -177,7 +176,7 @@
             this.textBoxPatronymic.SelectionStart = 0;
             this.textBoxPatronymic.ShortcutsEnabled = true;
             this.textBoxPatronymic.Size = new System.Drawing.Size(303, 36);
-            this.textBoxPatronymic.TabIndex = 15;
+            this.textBoxPatronymic.TabIndex = 2;
             this.textBoxPatronymic.TabStop = false;
             this.textBoxPatronymic.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.textBoxPatronymic.TrailingIcon = null;
@@ -193,37 +192,37 @@
             this.labelPatronymic.MouseState = MaterialSkin.MouseState.HOVER;
             this.labelPatronymic.Name = "labelPatronymic";
             this.labelPatronymic.Size = new System.Drawing.Size(75, 19);
-            this.labelPatronymic.TabIndex = 10;
+            this.labelPatronymic.TabIndex = 0;
             this.labelPatronymic.Text = "Отчество:";
             // 
-            // textBoxSecondName
+            // textBoxLastName
             // 
-            this.textBoxSecondName.AnimateReadOnly = false;
-            this.textBoxSecondName.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.textBoxSecondName.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
-            this.textBoxSecondName.Depth = 0;
-            this.textBoxSecondName.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.textBoxSecondName.HideSelection = true;
-            this.textBoxSecondName.LeadingIcon = null;
-            this.textBoxSecondName.Location = new System.Drawing.Point(124, 71);
-            this.textBoxSecondName.MaxLength = 50;
-            this.textBoxSecondName.MouseState = MaterialSkin.MouseState.OUT;
-            this.textBoxSecondName.Name = "textBoxSecondName";
-            this.textBoxSecondName.PasswordChar = '\0';
-            this.textBoxSecondName.PrefixSuffixText = null;
-            this.textBoxSecondName.ReadOnly = false;
-            this.textBoxSecondName.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.textBoxSecondName.SelectedText = "";
-            this.textBoxSecondName.SelectionLength = 0;
-            this.textBoxSecondName.SelectionStart = 0;
-            this.textBoxSecondName.ShortcutsEnabled = true;
-            this.textBoxSecondName.Size = new System.Drawing.Size(303, 36);
-            this.textBoxSecondName.TabIndex = 14;
-            this.textBoxSecondName.TabStop = false;
-            this.textBoxSecondName.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.textBoxSecondName.TrailingIcon = null;
-            this.textBoxSecondName.UseSystemPasswordChar = false;
-            this.textBoxSecondName.UseTallSize = false;
+            this.textBoxLastName.AnimateReadOnly = false;
+            this.textBoxLastName.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.textBoxLastName.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
+            this.textBoxLastName.Depth = 0;
+            this.textBoxLastName.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.textBoxLastName.HideSelection = true;
+            this.textBoxLastName.LeadingIcon = null;
+            this.textBoxLastName.Location = new System.Drawing.Point(124, 71);
+            this.textBoxLastName.MaxLength = 50;
+            this.textBoxLastName.MouseState = MaterialSkin.MouseState.OUT;
+            this.textBoxLastName.Name = "textBoxLastName";
+            this.textBoxLastName.PasswordChar = '\0';
+            this.textBoxLastName.PrefixSuffixText = null;
+            this.textBoxLastName.ReadOnly = false;
+            this.textBoxLastName.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.textBoxLastName.SelectedText = "";
+            this.textBoxLastName.SelectionLength = 0;
+            this.textBoxLastName.SelectionStart = 0;
+            this.textBoxLastName.ShortcutsEnabled = true;
+            this.textBoxLastName.Size = new System.Drawing.Size(303, 36);
+            this.textBoxLastName.TabIndex = 1;
+            this.textBoxLastName.TabStop = false;
+            this.textBoxLastName.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.textBoxLastName.TrailingIcon = null;
+            this.textBoxLastName.UseSystemPasswordChar = false;
+            this.textBoxLastName.UseTallSize = false;
             // 
             // textBoxFirstName
             // 
@@ -247,7 +246,7 @@
             this.textBoxFirstName.SelectionStart = 0;
             this.textBoxFirstName.ShortcutsEnabled = true;
             this.textBoxFirstName.Size = new System.Drawing.Size(303, 36);
-            this.textBoxFirstName.TabIndex = 11;
+            this.textBoxFirstName.TabIndex = 0;
             this.textBoxFirstName.TabStop = false;
             this.textBoxFirstName.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.textBoxFirstName.TrailingIcon = null;
@@ -263,7 +262,7 @@
             this.labelSecondName.MouseState = MaterialSkin.MouseState.HOVER;
             this.labelSecondName.Name = "labelSecondName";
             this.labelSecondName.Size = new System.Drawing.Size(74, 19);
-            this.labelSecondName.TabIndex = 12;
+            this.labelSecondName.TabIndex = 0;
             this.labelSecondName.Text = "Фамилия:";
             // 
             // labelFirstName
@@ -275,7 +274,7 @@
             this.labelFirstName.MouseState = MaterialSkin.MouseState.HOVER;
             this.labelFirstName.Name = "labelFirstName";
             this.labelFirstName.Size = new System.Drawing.Size(37, 19);
-            this.labelFirstName.TabIndex = 13;
+            this.labelFirstName.TabIndex = 0;
             this.labelFirstName.Text = "Имя:";
             // 
             // labelPassword
@@ -287,7 +286,7 @@
             this.labelPassword.MouseState = MaterialSkin.MouseState.HOVER;
             this.labelPassword.Name = "labelPassword";
             this.labelPassword.Size = new System.Drawing.Size(61, 19);
-            this.labelPassword.TabIndex = 8;
+            this.labelPassword.TabIndex = 0;
             this.labelPassword.Text = "Пароль:";
             // 
             // textBoxPassword
@@ -312,7 +311,7 @@
             this.textBoxPassword.SelectionStart = 0;
             this.textBoxPassword.ShortcutsEnabled = true;
             this.textBoxPassword.Size = new System.Drawing.Size(303, 36);
-            this.textBoxPassword.TabIndex = 9;
+            this.textBoxPassword.TabIndex = 5;
             this.textBoxPassword.TabStop = false;
             this.textBoxPassword.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.textBoxPassword.TrailingIcon = null;
@@ -328,7 +327,7 @@
             this.labelLogin.MouseState = MaterialSkin.MouseState.HOVER;
             this.labelLogin.Name = "labelLogin";
             this.labelLogin.Size = new System.Drawing.Size(50, 19);
-            this.labelLogin.TabIndex = 6;
+            this.labelLogin.TabIndex = 0;
             this.labelLogin.Text = "Логин:";
             // 
             // textBoxLogin
@@ -353,7 +352,7 @@
             this.textBoxLogin.SelectionStart = 0;
             this.textBoxLogin.ShortcutsEnabled = true;
             this.textBoxLogin.Size = new System.Drawing.Size(303, 36);
-            this.textBoxLogin.TabIndex = 7;
+            this.textBoxLogin.TabIndex = 4;
             this.textBoxLogin.TabStop = false;
             this.textBoxLogin.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.textBoxLogin.TrailingIcon = null;
@@ -369,7 +368,7 @@
             this.labelMail.MouseState = MaterialSkin.MouseState.HOVER;
             this.labelMail.Name = "labelMail";
             this.labelMail.Size = new System.Drawing.Size(51, 19);
-            this.labelMail.TabIndex = 4;
+            this.labelMail.TabIndex = 0;
             this.labelMail.Text = "Почта:";
             // 
             // textBoxMail
@@ -394,7 +393,7 @@
             this.textBoxMail.SelectionStart = 0;
             this.textBoxMail.ShortcutsEnabled = true;
             this.textBoxMail.Size = new System.Drawing.Size(303, 36);
-            this.textBoxMail.TabIndex = 5;
+            this.textBoxMail.TabIndex = 3;
             this.textBoxMail.TabStop = false;
             this.textBoxMail.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.textBoxMail.TrailingIcon = null;
@@ -438,7 +437,7 @@
         private MaterialSkin.Controls.MaterialTextBox2 textBoxMail;
         private MaterialSkin.Controls.MaterialTextBox2 textBoxPatronymic;
         private MaterialSkin.Controls.MaterialLabel labelPatronymic;
-        private MaterialSkin.Controls.MaterialTextBox2 textBoxSecondName;
+        private MaterialSkin.Controls.MaterialTextBox2 textBoxLastName;
         private MaterialSkin.Controls.MaterialTextBox2 textBoxFirstName;
         private MaterialSkin.Controls.MaterialLabel labelSecondName;
         private MaterialSkin.Controls.MaterialLabel labelFirstName;

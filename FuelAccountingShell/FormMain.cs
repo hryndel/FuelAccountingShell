@@ -18,7 +18,6 @@ namespace FuelAccountingShell.Forms
         private void materialTabControl_SelectedIndexChanged(object sender, System.EventArgs e)
         {
             this.Text = tabControl.SelectedTab.Tag.ToString();
-            if (CloseForms.SystemClosing) return;
 
             switch (tabControl.SelectedIndex)
             {
@@ -35,7 +34,7 @@ namespace FuelAccountingShell.Forms
 
         private void FormMain_FormClosing(object sender, FormClosingEventArgs e)
         {
-            if (!CloseForms.SystemClosing)
+            if (e.CloseReason == CloseReason.UserClosing)
             {
                 var dialogResult = MaterialMessageBox.Show("Вы действительно хотите выйти из учетной записи?", "Внимание", MessageBoxButtons.YesNo, MessageBoxIcon.Question, false);
                 if (dialogResult == DialogResult.No)

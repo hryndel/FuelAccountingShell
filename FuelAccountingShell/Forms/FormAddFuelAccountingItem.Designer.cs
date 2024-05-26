@@ -1,6 +1,6 @@
 ﻿namespace FuelAccountingShell.Forms
 {
-    partial class FormAddEditFuelAccountingItem
+    partial class FormAddFuelAccountingItem
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormAddEditFuelAccountingItem));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormAddFuelAccountingItem));
             this.buttonCancel = new MaterialSkin.Controls.MaterialButton();
             this.buttonAccept = new MaterialSkin.Controls.MaterialButton();
             this.materialCard = new MaterialSkin.Controls.MaterialCard();
@@ -66,7 +66,7 @@
             this.buttonCancel.Name = "buttonCancel";
             this.buttonCancel.NoAccentTextColor = System.Drawing.Color.Empty;
             this.buttonCancel.Size = new System.Drawing.Size(353, 36);
-            this.buttonCancel.TabIndex = 9;
+            this.buttonCancel.TabIndex = 10;
             this.buttonCancel.Text = "Отмена";
             this.buttonCancel.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
             this.buttonCancel.UseAccentColor = false;
@@ -79,7 +79,6 @@
             this.buttonAccept.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.buttonAccept.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
             this.buttonAccept.Depth = 0;
-            this.buttonAccept.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.buttonAccept.HighEmphasis = true;
             this.buttonAccept.Icon = null;
             this.buttonAccept.Location = new System.Drawing.Point(50, 370);
@@ -88,7 +87,7 @@
             this.buttonAccept.Name = "buttonAccept";
             this.buttonAccept.NoAccentTextColor = System.Drawing.Color.Empty;
             this.buttonAccept.Size = new System.Drawing.Size(353, 36);
-            this.buttonAccept.TabIndex = 8;
+            this.buttonAccept.TabIndex = 9;
             this.buttonAccept.Text = "Создать";
             this.buttonAccept.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
             this.buttonAccept.UseAccentColor = false;
@@ -144,8 +143,9 @@
             this.comboBoxFuelStation.Name = "comboBoxFuelStation";
             this.comboBoxFuelStation.Size = new System.Drawing.Size(303, 35);
             this.comboBoxFuelStation.StartIndex = 0;
-            this.comboBoxFuelStation.TabIndex = 5;
+            this.comboBoxFuelStation.TabIndex = 6;
             this.comboBoxFuelStation.UseTallSize = false;
+            this.comboBoxFuelStation.Format += new System.Windows.Forms.ListControlConvertEventHandler(this.comboBoxFuelStation_Format);
             // 
             // textBoxCount
             // 
@@ -169,7 +169,7 @@
             this.textBoxCount.SelectionStart = 0;
             this.textBoxCount.ShortcutsEnabled = true;
             this.textBoxCount.Size = new System.Drawing.Size(303, 36);
-            this.textBoxCount.TabIndex = 4;
+            this.textBoxCount.TabIndex = 5;
             this.textBoxCount.TabStop = false;
             this.textBoxCount.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.textBoxCount.TrailingIcon = null;
@@ -196,8 +196,9 @@
             this.comboBoxFuel.Name = "comboBoxFuel";
             this.comboBoxFuel.Size = new System.Drawing.Size(303, 35);
             this.comboBoxFuel.StartIndex = 0;
-            this.comboBoxFuel.TabIndex = 3;
+            this.comboBoxFuel.TabIndex = 4;
             this.comboBoxFuel.UseTallSize = false;
+            this.comboBoxFuel.Format += new System.Windows.Forms.ListControlConvertEventHandler(this.comboBoxFuel_Format);
             // 
             // comboBoxTruck
             // 
@@ -219,19 +220,20 @@
             this.comboBoxTruck.Name = "comboBoxTruck";
             this.comboBoxTruck.Size = new System.Drawing.Size(303, 35);
             this.comboBoxTruck.StartIndex = 0;
-            this.comboBoxTruck.TabIndex = 1;
+            this.comboBoxTruck.TabIndex = 2;
             this.comboBoxTruck.UseTallSize = false;
+            this.comboBoxTruck.Format += new System.Windows.Forms.ListControlConvertEventHandler(this.comboBoxTruck_Format);
             // 
             // dateTimePickerEndDate
             // 
             this.dateTimePickerEndDate.CalendarTrailingForeColor = System.Drawing.Color.Black;
-            this.dateTimePickerEndDate.CustomFormat = "";
-            this.dateTimePickerEndDate.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dateTimePickerEndDate.CustomFormat = "dd.MM.yyyy HH:mm";
+            this.dateTimePickerEndDate.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dateTimePickerEndDate.Location = new System.Drawing.Point(568, 177);
             this.dateTimePickerEndDate.MinimumSize = new System.Drawing.Size(303, 40);
             this.dateTimePickerEndDate.Name = "dateTimePickerEndDate";
             this.dateTimePickerEndDate.Size = new System.Drawing.Size(303, 40);
-            this.dateTimePickerEndDate.TabIndex = 7;
+            this.dateTimePickerEndDate.TabIndex = 8;
             this.dateTimePickerEndDate.Value = new System.DateTime(2024, 5, 20, 23, 8, 4, 0);
             // 
             // dateTimePickerStartDate
@@ -240,14 +242,15 @@
             this.dateTimePickerStartDate.CalendarTitleBackColor = System.Drawing.Color.Black;
             this.dateTimePickerStartDate.CalendarTitleForeColor = System.Drawing.Color.Black;
             this.dateTimePickerStartDate.CalendarTrailingForeColor = System.Drawing.Color.Black;
-            this.dateTimePickerStartDate.CustomFormat = "";
-            this.dateTimePickerStartDate.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dateTimePickerStartDate.CustomFormat = "dd.MM.yyyy HH:mm";
+            this.dateTimePickerStartDate.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dateTimePickerStartDate.Location = new System.Drawing.Point(568, 125);
             this.dateTimePickerStartDate.MinimumSize = new System.Drawing.Size(303, 40);
             this.dateTimePickerStartDate.Name = "dateTimePickerStartDate";
             this.dateTimePickerStartDate.Size = new System.Drawing.Size(303, 40);
-            this.dateTimePickerStartDate.TabIndex = 6;
+            this.dateTimePickerStartDate.TabIndex = 7;
             this.dateTimePickerStartDate.Value = new System.DateTime(2024, 5, 20, 23, 8, 4, 0);
+            this.dateTimePickerStartDate.ValueChanged += new System.EventHandler(this.dateTimePickerStartDate_ValueChanged);
             // 
             // labelEndDate
             // 
@@ -317,8 +320,9 @@
             this.comboBoxTrailer.Name = "comboBoxTrailer";
             this.comboBoxTrailer.Size = new System.Drawing.Size(303, 35);
             this.comboBoxTrailer.StartIndex = 0;
-            this.comboBoxTrailer.TabIndex = 2;
+            this.comboBoxTrailer.TabIndex = 3;
             this.comboBoxTrailer.UseTallSize = false;
+            this.comboBoxTrailer.Format += new System.Windows.Forms.ListControlConvertEventHandler(this.comboBoxTrailer_Format);
             // 
             // comboBoxDriver
             // 
@@ -340,8 +344,9 @@
             this.comboBoxDriver.Name = "comboBoxDriver";
             this.comboBoxDriver.Size = new System.Drawing.Size(303, 35);
             this.comboBoxDriver.StartIndex = 0;
-            this.comboBoxDriver.TabIndex = 0;
+            this.comboBoxDriver.TabIndex = 1;
             this.comboBoxDriver.UseTallSize = false;
+            this.comboBoxDriver.Format += new System.Windows.Forms.ListControlConvertEventHandler(this.comboBoxDriver_Format);
             // 
             // labelFuel
             // 
@@ -391,7 +396,7 @@
             this.labelDriver.TabIndex = 0;
             this.labelDriver.Text = "Водитель:";
             // 
-            // FormAddEditFuelAccountingItem
+            // FormAddFuelAccountingItem
             // 
             this.AcceptButton = this.buttonAccept;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -404,7 +409,7 @@
             this.FormStyle = MaterialSkin.Controls.MaterialForm.FormStyles.ActionBar_64;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
-            this.Name = "FormAddEditFuelAccountingItem";
+            this.Name = "FormAddFuelAccountingItem";
             this.Padding = new System.Windows.Forms.Padding(3, 88, 3, 3);
             this.Sizable = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
