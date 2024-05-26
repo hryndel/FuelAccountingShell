@@ -6,7 +6,7 @@ namespace FuelAccountingShell.Infrastructure
 {
     public static class EnumReader
     {
-        public static string EnumConvert(this Enum en)
+        public static string EnumRead(this Enum en)
         {
             Type type = en.GetType();
 
@@ -18,11 +18,6 @@ namespace FuelAccountingShell.Infrastructure
                     return ((DescriptionAttribute)attrs[0]).Description;
             }
             return en.ToString();
-        }
-
-        public static T ParseEnum<T>(string value)
-        {
-            return (T)Enum.Parse(typeof(T), value, true);
         }
     }
 }
