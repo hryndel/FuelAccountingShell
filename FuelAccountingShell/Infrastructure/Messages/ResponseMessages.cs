@@ -1,4 +1,5 @@
-﻿using Newtonsoft.Json;
+﻿using MaterialSkin.Controls;
+using Newtonsoft.Json;
 using System.Net;
 using System.Net.Http;
 using System.Windows.Forms;
@@ -11,31 +12,42 @@ namespace FuelAccountingShell.Infrastructure.Messages
         {
             switch (response.StatusCode)
             {
-                case HttpStatusCode.Conflict: GetMessageValidatorAsync(response); return DialogResult.No;
-                case HttpStatusCode.NotFound: GetMessageExceptionAsync(response); return DialogResult.No;
-                case HttpStatusCode.NotAcceptable: GetMessageExceptionAsync(response); return DialogResult.No;
-                default: return DialogResult.OK;
+                case HttpStatusCode.OK: 
+                    return DialogResult.OK;
+                case HttpStatusCode.Conflict: 
+                    GetMessageValidator(response); 
+                    break;
+                case HttpStatusCode.NotFound: 
+                    GetMessageException(response); 
+                    break;
+                case HttpStatusCode.NotAcceptable: 
+                    GetMessageException(response); 
+                    break;
+                case HttpStatusCode.Unauthorized: 
+                    MaterialMessageBox.Show("Отказано в доступе", "Ошибка авторизации", MessageBoxButtons.OK, MessageBoxIcon.Error, false);
+                    break;
+                default: break;
             }
+            return DialogResult.No;
         }
 
-
-        public static async void GetMessageValidatorAsync(HttpResponseMessage data)
+        public static void GetMessageValidator(HttpResponseMessage data)
         {
-            var result = await data.Content.ReadAsStringAsync();
+            var result = data.Content.ReadAsStringAsync().Result;
             var errors = JsonConvert.DeserializeObject<Errors>(result);
             var message = string.Empty;
             foreach ( var er in errors.MessageErrors)
             {
                 message += $"{er.Message}\n";
             }
-            MessageBox.Show($"{message}", "Ошибка валидации", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            MaterialMessageBox.Show($"{message}", "Ошибка валидации", MessageBoxButtons.OK, MessageBoxIcon.Error, true);
         }
 
-        public static async void GetMessageExceptionAsync(HttpResponseMessage data)
+        public static void GetMessageException(HttpResponseMessage data)
         {
-            var result = await data.Content.ReadAsStringAsync();
+            var result = data.Content.ReadAsStringAsync().Result;
             var error = JsonConvert.DeserializeObject<MessageErrors>(result);
-            MessageBox.Show($"{error.Message}", "Исключение", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            MaterialMessageBox.Show($"{error.Message}", "Исключение", MessageBoxButtons.OK, MessageBoxIcon.Error, true);
         }
     }
 }

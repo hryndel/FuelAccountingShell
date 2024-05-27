@@ -28,15 +28,18 @@
         /// </summary>
         private void InitializeComponent()
         {
-            MaterialSkin.MaterialListBoxItem materialListBoxItem4 = new MaterialSkin.MaterialListBoxItem();
-            MaterialSkin.MaterialListBoxItem materialListBoxItem5 = new MaterialSkin.MaterialListBoxItem();
-            MaterialSkin.MaterialListBoxItem materialListBoxItem6 = new MaterialSkin.MaterialListBoxItem();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.tableLayoutPanel = new System.Windows.Forms.TableLayoutPanel();
             this.dataGridViewFuels = new System.Windows.Forms.DataGridView();
+            this.ColumnFuelType = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColumnPrice = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColumnSupplier = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColumnCount = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.labelStatus = new MaterialSkin.Controls.MaterialLabel();
             this.flowLayoutPanelHelp = new System.Windows.Forms.FlowLayoutPanel();
             this.materialCardHelp = new MaterialSkin.Controls.MaterialCard();
-            this.materialListBoxSort = new MaterialSkin.Controls.MaterialListBox();
+            this.materialListBoxTypes = new MaterialSkin.Controls.MaterialListBox();
             this.materialCardHelpTitle = new MaterialSkin.Controls.MaterialCard();
             this.labelHelp = new MaterialSkin.Controls.MaterialLabel();
             this.materialCardMenu = new MaterialSkin.Controls.MaterialCard();
@@ -71,17 +74,56 @@
             this.tableLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle());
             this.tableLayoutPanel.Size = new System.Drawing.Size(1368, 698);
-            this.tableLayoutPanel.TabIndex = 5;
+            this.tableLayoutPanel.TabIndex = 0;
             // 
             // dataGridViewFuels
             // 
             this.dataGridViewFuels.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewFuels.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.ColumnFuelType,
+            this.ColumnPrice,
+            this.ColumnSupplier,
+            this.ColumnCount});
             this.dataGridViewFuels.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataGridViewFuels.Location = new System.Drawing.Point(14, 113);
             this.dataGridViewFuels.Margin = new System.Windows.Forms.Padding(14, 3, 14, 3);
             this.dataGridViewFuels.Name = "dataGridViewFuels";
             this.dataGridViewFuels.Size = new System.Drawing.Size(1100, 553);
             this.dataGridViewFuels.TabIndex = 0;
+            this.dataGridViewFuels.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.dataGridViewFuels_CellFormatting);
+            // 
+            // ColumnFuelType
+            // 
+            this.ColumnFuelType.DataPropertyName = "FuelType";
+            this.ColumnFuelType.HeaderText = "Тип топлива";
+            this.ColumnFuelType.Name = "ColumnFuelType";
+            // 
+            // ColumnPrice
+            // 
+            this.ColumnPrice.DataPropertyName = "Price";
+            dataGridViewCellStyle1.Format = "C2";
+            dataGridViewCellStyle1.NullValue = null;
+            this.ColumnPrice.DefaultCellStyle = dataGridViewCellStyle1;
+            this.ColumnPrice.FillWeight = 50F;
+            this.ColumnPrice.HeaderText = "Цена";
+            this.ColumnPrice.Name = "ColumnPrice";
+            // 
+            // ColumnSupplier
+            // 
+            this.ColumnSupplier.DataPropertyName = "Supplier";
+            this.ColumnSupplier.HeaderText = "Поставщик";
+            this.ColumnSupplier.Name = "ColumnSupplier";
+            this.ColumnSupplier.ToolTipText = "Имя поставщика | ИНН";
+            // 
+            // ColumnCount
+            // 
+            this.ColumnCount.DataPropertyName = "Count";
+            dataGridViewCellStyle2.Format = "N0";
+            dataGridViewCellStyle2.NullValue = null;
+            this.ColumnCount.DefaultCellStyle = dataGridViewCellStyle2;
+            this.ColumnCount.FillWeight = 50F;
+            this.ColumnCount.HeaderText = "Количество";
+            this.ColumnCount.Name = "ColumnCount";
             // 
             // labelStatus
             // 
@@ -92,9 +134,9 @@
             this.labelStatus.Margin = new System.Windows.Forms.Padding(14, 5, 3, 5);
             this.labelStatus.MouseState = MaterialSkin.MouseState.HOVER;
             this.labelStatus.Name = "labelStatus";
-            this.labelStatus.Size = new System.Drawing.Size(195, 19);
+            this.labelStatus.Size = new System.Drawing.Size(204, 19);
             this.labelStatus.TabIndex = 1;
-            this.labelStatus.Text = "Количесто записей: 0 из 0";
+            this.labelStatus.Text = "Количество записей: 0 из 0";
             // 
             // flowLayoutPanelHelp
             // 
@@ -102,14 +144,14 @@
             this.flowLayoutPanelHelp.Controls.Add(this.materialCardHelp);
             this.flowLayoutPanelHelp.Location = new System.Drawing.Point(1131, 113);
             this.flowLayoutPanelHelp.Name = "flowLayoutPanelHelp";
-            this.flowLayoutPanelHelp.Size = new System.Drawing.Size(234, 271);
+            this.flowLayoutPanelHelp.Size = new System.Drawing.Size(234, 274);
             this.flowLayoutPanelHelp.TabIndex = 2;
             // 
             // materialCardHelp
             // 
             this.materialCardHelp.AutoSize = true;
             this.materialCardHelp.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.materialCardHelp.Controls.Add(this.materialListBoxSort);
+            this.materialCardHelp.Controls.Add(this.materialListBoxTypes);
             this.materialCardHelp.Controls.Add(this.materialCardHelpTitle);
             this.materialCardHelp.Depth = 0;
             this.materialCardHelp.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -119,38 +161,27 @@
             this.materialCardHelp.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialCardHelp.Name = "materialCardHelp";
             this.materialCardHelp.Padding = new System.Windows.Forms.Padding(14);
-            this.materialCardHelp.Size = new System.Drawing.Size(234, 271);
+            this.materialCardHelp.Size = new System.Drawing.Size(234, 274);
             this.materialCardHelp.TabIndex = 0;
             // 
-            // materialListBoxSort
+            // materialListBoxTypes
             // 
-            this.materialListBoxSort.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.materialListBoxTypes.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.materialListBoxSort.BackColor = System.Drawing.Color.White;
-            this.materialListBoxSort.BorderColor = System.Drawing.Color.LightGray;
-            this.materialListBoxSort.Depth = 0;
-            this.materialListBoxSort.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            materialListBoxItem4.SecondaryText = "";
-            materialListBoxItem4.Tag = null;
-            materialListBoxItem4.Text = "По умолчанию";
-            materialListBoxItem5.SecondaryText = "";
-            materialListBoxItem5.Tag = null;
-            materialListBoxItem5.Text = "По убыванию";
-            materialListBoxItem6.SecondaryText = "";
-            materialListBoxItem6.Tag = null;
-            materialListBoxItem6.Text = "По возрастанию";
-            this.materialListBoxSort.Items.Add(materialListBoxItem4);
-            this.materialListBoxSort.Items.Add(materialListBoxItem5);
-            this.materialListBoxSort.Items.Add(materialListBoxItem6);
-            this.materialListBoxSort.Location = new System.Drawing.Point(14, 75);
-            this.materialListBoxSort.Margin = new System.Windows.Forms.Padding(0);
-            this.materialListBoxSort.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialListBoxSort.Name = "materialListBoxSort";
-            this.materialListBoxSort.SelectedIndex = -1;
-            this.materialListBoxSort.SelectedItem = null;
-            this.materialListBoxSort.Size = new System.Drawing.Size(206, 182);
-            this.materialListBoxSort.TabIndex = 1;
-            this.materialListBoxSort.UseAccentColor = true;
+            this.materialListBoxTypes.BackColor = System.Drawing.Color.White;
+            this.materialListBoxTypes.BorderColor = System.Drawing.Color.LightGray;
+            this.materialListBoxTypes.Depth = 0;
+            this.materialListBoxTypes.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.materialListBoxTypes.Location = new System.Drawing.Point(14, 75);
+            this.materialListBoxTypes.Margin = new System.Windows.Forms.Padding(0);
+            this.materialListBoxTypes.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialListBoxTypes.Name = "materialListBoxTypes";
+            this.materialListBoxTypes.SelectedIndex = -1;
+            this.materialListBoxTypes.SelectedItem = null;
+            this.materialListBoxTypes.Size = new System.Drawing.Size(206, 185);
+            this.materialListBoxTypes.TabIndex = 5;
+            this.materialListBoxTypes.UseAccentColor = true;
+            this.materialListBoxTypes.SelectedIndexChanged += new MaterialSkin.Controls.MaterialListBox.SelectedIndexChangedEventHandler(this.materialListBoxFiltr_SelectedIndexChanged);
             // 
             // materialCardHelpTitle
             // 
@@ -179,7 +210,7 @@
             this.labelHelp.Name = "labelHelp";
             this.labelHelp.Size = new System.Drawing.Size(176, 14);
             this.labelHelp.TabIndex = 0;
-            this.labelHelp.Text = "Сортировка по названию";
+            this.labelHelp.Text = "Фильтрация по типу";
             this.labelHelp.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // materialCardMenu
@@ -228,7 +259,7 @@
             this.buttonAdd.Name = "buttonAdd";
             this.buttonAdd.NoAccentTextColor = System.Drawing.Color.Empty;
             this.buttonAdd.Size = new System.Drawing.Size(125, 54);
-            this.buttonAdd.TabIndex = 0;
+            this.buttonAdd.TabIndex = 1;
             this.buttonAdd.Text = "Добавить";
             this.buttonAdd.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
             this.buttonAdd.UseAccentColor = false;
@@ -251,7 +282,7 @@
             this.buttonEdit.Name = "buttonEdit";
             this.buttonEdit.NoAccentTextColor = System.Drawing.Color.Empty;
             this.buttonEdit.Size = new System.Drawing.Size(125, 54);
-            this.buttonEdit.TabIndex = 1;
+            this.buttonEdit.TabIndex = 2;
             this.buttonEdit.Text = "Изменить";
             this.buttonEdit.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
             this.buttonEdit.UseAccentColor = false;
@@ -274,11 +305,12 @@
             this.buttonDelete.Name = "buttonDelete";
             this.buttonDelete.NoAccentTextColor = System.Drawing.Color.Empty;
             this.buttonDelete.Size = new System.Drawing.Size(125, 54);
-            this.buttonDelete.TabIndex = 2;
+            this.buttonDelete.TabIndex = 3;
             this.buttonDelete.Text = "Удалить";
             this.buttonDelete.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
             this.buttonDelete.UseAccentColor = false;
             this.buttonDelete.UseVisualStyleBackColor = true;
+            this.buttonDelete.Click += new System.EventHandler(this.buttonDelete_Click);
             // 
             // textBoxSearch
             // 
@@ -288,7 +320,7 @@
             this.textBoxSearch.Depth = 0;
             this.textBoxSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.textBoxSearch.HideSelection = true;
-            this.textBoxSearch.Hint = "Поиск по названию";
+            this.textBoxSearch.Hint = "Поиск по поставщику";
             this.textBoxSearch.LeadingIcon = null;
             this.textBoxSearch.Location = new System.Drawing.Point(402, 3);
             this.textBoxSearch.MaxLength = 20;
@@ -303,11 +335,12 @@
             this.textBoxSearch.SelectionStart = 0;
             this.textBoxSearch.ShortcutsEnabled = true;
             this.textBoxSearch.Size = new System.Drawing.Size(250, 48);
-            this.textBoxSearch.TabIndex = 3;
+            this.textBoxSearch.TabIndex = 4;
             this.textBoxSearch.TabStop = false;
             this.textBoxSearch.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.textBoxSearch.TrailingIcon = null;
             this.textBoxSearch.UseSystemPasswordChar = false;
+            this.textBoxSearch.TextChanged += new System.EventHandler(this.textBoxSearch_TextChanged);
             // 
             // UserControlFuel
             // 
@@ -316,6 +349,7 @@
             this.Controls.Add(this.tableLayoutPanel);
             this.Name = "UserControlFuel";
             this.Size = new System.Drawing.Size(1368, 698);
+            this.Load += new System.EventHandler(this.UserControlFuel_Load);
             this.tableLayoutPanel.ResumeLayout(false);
             this.tableLayoutPanel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewFuels)).EndInit();
@@ -338,7 +372,7 @@
         private MaterialSkin.Controls.MaterialLabel labelStatus;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanelHelp;
         private MaterialSkin.Controls.MaterialCard materialCardHelp;
-        private MaterialSkin.Controls.MaterialListBox materialListBoxSort;
+        private MaterialSkin.Controls.MaterialListBox materialListBoxTypes;
         private MaterialSkin.Controls.MaterialCard materialCardHelpTitle;
         private MaterialSkin.Controls.MaterialLabel labelHelp;
         private MaterialSkin.Controls.MaterialCard materialCardMenu;
@@ -347,5 +381,9 @@
         private MaterialSkin.Controls.MaterialButton buttonEdit;
         private MaterialSkin.Controls.MaterialButton buttonDelete;
         private MaterialSkin.Controls.MaterialTextBox2 textBoxSearch;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColumnFuelType;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColumnPrice;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColumnSupplier;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColumnCount;
     }
 }

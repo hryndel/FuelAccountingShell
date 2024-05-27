@@ -1,4 +1,6 @@
-﻿namespace FuelAccountingShell.Forms
+﻿using FuelAccountingShell.UserControls;
+
+namespace FuelAccountingShell.Forms
 {
     partial class FormMain
     {
@@ -33,20 +35,20 @@
             this.imageList = new System.Windows.Forms.ImageList(this.components);
             this.tabControl = new MaterialSkin.Controls.MaterialTabControl();
             this.tabPageDocument = new System.Windows.Forms.TabPage();
-            this.tabPageFuel = new System.Windows.Forms.TabPage();
-            this.tabPageSupplier = new System.Windows.Forms.TabPage();
-            this.tabPageAzs = new System.Windows.Forms.TabPage();
-            this.tabPageDriver = new System.Windows.Forms.TabPage();
-            this.tabPageTrailer = new System.Windows.Forms.TabPage();
-            this.tabPageTruck = new System.Windows.Forms.TabPage();
-            this.tabPageUser = new System.Windows.Forms.TabPage();
             this.userControlFuelAccountingItem = new FuelAccountingShell.UserControls.UserControlFuelAccountingItem();
+            this.tabPageFuel = new System.Windows.Forms.TabPage();
             this.userControlFuel = new FuelAccountingShell.UserControls.UserControlFuel();
+            this.tabPageSupplier = new System.Windows.Forms.TabPage();
             this.userControlSupplier = new FuelAccountingShell.UserControls.UserControlSupplier();
+            this.tabPageAzs = new System.Windows.Forms.TabPage();
             this.userControlFuelStation = new FuelAccountingShell.UserControls.UserControlFuelStation();
+            this.tabPageDriver = new System.Windows.Forms.TabPage();
             this.userControlDriver = new FuelAccountingShell.UserControls.UserControlDriver();
+            this.tabPageTrailer = new System.Windows.Forms.TabPage();
             this.userControlTrailer = new FuelAccountingShell.UserControls.UserControlTrailer();
+            this.tabPageTruck = new System.Windows.Forms.TabPage();
             this.userControlTruck = new FuelAccountingShell.UserControls.UserControlTruck();
+            this.tabPageUser = new System.Windows.Forms.TabPage();
             this.userControlUser = new FuelAccountingShell.UserControls.UserControlUser();
             this.tabControl.SuspendLayout();
             this.tabPageDocument.SuspendLayout();
@@ -58,6 +60,7 @@
             this.tabPageTruck.SuspendLayout();
             this.tabPageUser.SuspendLayout();
             this.SuspendLayout();
+
             // 
             // imageList
             // 
@@ -91,7 +94,7 @@
             this.tabControl.Multiline = true;
             this.tabControl.Name = "tabControl";
             this.tabControl.SelectedIndex = 0;
-            this.tabControl.Size = new System.Drawing.Size(1547, 625);
+            this.tabControl.Size = new System.Drawing.Size(1547, 795);
             this.tabControl.TabIndex = 0;
             this.tabControl.SelectedIndexChanged += new System.EventHandler(this.materialTabControl_SelectedIndexChanged);
             // 
@@ -101,11 +104,19 @@
             this.tabPageDocument.ImageKey = "Document.png";
             this.tabPageDocument.Location = new System.Drawing.Point(4, 37);
             this.tabPageDocument.Name = "tabPageDocument";
-            this.tabPageDocument.Size = new System.Drawing.Size(1539, 584);
+            this.tabPageDocument.Size = new System.Drawing.Size(1539, 754);
             this.tabPageDocument.TabIndex = 0;
             this.tabPageDocument.Tag = "Накладные для заказов";
             this.tabPageDocument.Text = "Накладные";
             this.tabPageDocument.UseVisualStyleBackColor = true;
+            // 
+            // userControlFuelAccountingItem
+            // 
+            this.userControlFuelAccountingItem.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.userControlFuelAccountingItem.Location = new System.Drawing.Point(0, 0);
+            this.userControlFuelAccountingItem.Name = "userControlFuelAccountingItem";
+            this.userControlFuelAccountingItem.Size = new System.Drawing.Size(1539, 754);
+            this.userControlFuelAccountingItem.TabIndex = 0;
             // 
             // tabPageFuel
             // 
@@ -113,11 +124,19 @@
             this.tabPageFuel.ImageKey = "Fuel.png";
             this.tabPageFuel.Location = new System.Drawing.Point(4, 37);
             this.tabPageFuel.Name = "tabPageFuel";
-            this.tabPageFuel.Size = new System.Drawing.Size(1539, 584);
+            this.tabPageFuel.Size = new System.Drawing.Size(1539, 754);
             this.tabPageFuel.TabIndex = 1;
             this.tabPageFuel.Tag = "Виды топлива";
             this.tabPageFuel.Text = "Топливо";
             this.tabPageFuel.UseVisualStyleBackColor = true;
+            // 
+            // userControlFuel
+            // 
+            this.userControlFuel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.userControlFuel.Location = new System.Drawing.Point(0, 0);
+            this.userControlFuel.Name = "userControlFuel";
+            this.userControlFuel.Size = new System.Drawing.Size(1539, 754);
+            this.userControlFuel.TabIndex = 0;
             // 
             // tabPageSupplier
             // 
@@ -125,11 +144,19 @@
             this.tabPageSupplier.ImageKey = "Supplier.png";
             this.tabPageSupplier.Location = new System.Drawing.Point(4, 37);
             this.tabPageSupplier.Name = "tabPageSupplier";
-            this.tabPageSupplier.Size = new System.Drawing.Size(1539, 584);
+            this.tabPageSupplier.Size = new System.Drawing.Size(1539, 754);
             this.tabPageSupplier.TabIndex = 2;
             this.tabPageSupplier.Tag = "Поставщики топлива";
             this.tabPageSupplier.Text = "Поставщики";
             this.tabPageSupplier.UseVisualStyleBackColor = true;
+            // 
+            // userControlSupplier
+            // 
+            this.userControlSupplier.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.userControlSupplier.Location = new System.Drawing.Point(0, 0);
+            this.userControlSupplier.Name = "userControlSupplier";
+            this.userControlSupplier.Size = new System.Drawing.Size(1539, 754);
+            this.userControlSupplier.TabIndex = 0;
             // 
             // tabPageAzs
             // 
@@ -137,11 +164,19 @@
             this.tabPageAzs.ImageKey = "Azs.png";
             this.tabPageAzs.Location = new System.Drawing.Point(4, 37);
             this.tabPageAzs.Name = "tabPageAzs";
-            this.tabPageAzs.Size = new System.Drawing.Size(1539, 584);
+            this.tabPageAzs.Size = new System.Drawing.Size(1539, 754);
             this.tabPageAzs.TabIndex = 3;
             this.tabPageAzs.Tag = "Автозаправочные станции";
             this.tabPageAzs.Text = "АЗС";
             this.tabPageAzs.UseVisualStyleBackColor = true;
+            // 
+            // userControlFuelStation
+            // 
+            this.userControlFuelStation.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.userControlFuelStation.Location = new System.Drawing.Point(0, 0);
+            this.userControlFuelStation.Name = "userControlFuelStation";
+            this.userControlFuelStation.Size = new System.Drawing.Size(1539, 754);
+            this.userControlFuelStation.TabIndex = 0;
             // 
             // tabPageDriver
             // 
@@ -149,11 +184,19 @@
             this.tabPageDriver.ImageKey = "Driver.png";
             this.tabPageDriver.Location = new System.Drawing.Point(4, 37);
             this.tabPageDriver.Name = "tabPageDriver";
-            this.tabPageDriver.Size = new System.Drawing.Size(1539, 584);
+            this.tabPageDriver.Size = new System.Drawing.Size(1539, 754);
             this.tabPageDriver.TabIndex = 4;
             this.tabPageDriver.Tag = "Водители в компании";
             this.tabPageDriver.Text = "Водители";
             this.tabPageDriver.UseVisualStyleBackColor = true;
+            // 
+            // userControlDriver
+            // 
+            this.userControlDriver.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.userControlDriver.Location = new System.Drawing.Point(0, 0);
+            this.userControlDriver.Name = "userControlDriver";
+            this.userControlDriver.Size = new System.Drawing.Size(1539, 754);
+            this.userControlDriver.TabIndex = 0;
             // 
             // tabPageTrailer
             // 
@@ -161,11 +204,19 @@
             this.tabPageTrailer.ImageKey = "Trailer.png";
             this.tabPageTrailer.Location = new System.Drawing.Point(4, 37);
             this.tabPageTrailer.Name = "tabPageTrailer";
-            this.tabPageTrailer.Size = new System.Drawing.Size(1539, 584);
+            this.tabPageTrailer.Size = new System.Drawing.Size(1539, 754);
             this.tabPageTrailer.TabIndex = 5;
             this.tabPageTrailer.Tag = "Топливные полуприцепы";
             this.tabPageTrailer.Text = "Полуприцепы";
             this.tabPageTrailer.UseVisualStyleBackColor = true;
+            // 
+            // userControlTrailer
+            // 
+            this.userControlTrailer.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.userControlTrailer.Location = new System.Drawing.Point(0, 0);
+            this.userControlTrailer.Name = "userControlTrailer";
+            this.userControlTrailer.Size = new System.Drawing.Size(1539, 754);
+            this.userControlTrailer.TabIndex = 0;
             // 
             // tabPageTruck
             // 
@@ -173,11 +224,19 @@
             this.tabPageTruck.ImageKey = "Truck.png";
             this.tabPageTruck.Location = new System.Drawing.Point(4, 37);
             this.tabPageTruck.Name = "tabPageTruck";
-            this.tabPageTruck.Size = new System.Drawing.Size(1539, 584);
+            this.tabPageTruck.Size = new System.Drawing.Size(1539, 754);
             this.tabPageTruck.TabIndex = 6;
             this.tabPageTruck.Tag = "Грузовики в компании";
             this.tabPageTruck.Text = "Грузовики";
             this.tabPageTruck.UseVisualStyleBackColor = true;
+            // 
+            // userControlTruck
+            // 
+            this.userControlTruck.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.userControlTruck.Location = new System.Drawing.Point(0, 0);
+            this.userControlTruck.Name = "userControlTruck";
+            this.userControlTruck.Size = new System.Drawing.Size(1539, 754);
+            this.userControlTruck.TabIndex = 0;
             // 
             // tabPageUser
             // 
@@ -185,91 +244,36 @@
             this.tabPageUser.ImageKey = "User.png";
             this.tabPageUser.Location = new System.Drawing.Point(4, 37);
             this.tabPageUser.Name = "tabPageUser";
-            this.tabPageUser.Size = new System.Drawing.Size(1539, 584);
+            this.tabPageUser.Size = new System.Drawing.Size(1539, 754);
             this.tabPageUser.TabIndex = 7;
             this.tabPageUser.Tag = "Пользователи в системе";
             this.tabPageUser.Text = "Пользователи";
             this.tabPageUser.UseVisualStyleBackColor = true;
-            // 
-            // userControlFuelAccountingItem
-            // 
-            this.userControlFuelAccountingItem.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.userControlFuelAccountingItem.Location = new System.Drawing.Point(0, 0);
-            this.userControlFuelAccountingItem.Name = "userControlFuelAccountingItem";
-            this.userControlFuelAccountingItem.Size = new System.Drawing.Size(1539, 584);
-            this.userControlFuelAccountingItem.TabIndex = 0;
-            // 
-            // userControlFuel
-            // 
-            this.userControlFuel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.userControlFuel.Location = new System.Drawing.Point(0, 0);
-            this.userControlFuel.Name = "userControlFuel";
-            this.userControlFuel.Size = new System.Drawing.Size(1539, 584);
-            this.userControlFuel.TabIndex = 0;
-            // 
-            // userControlSupplier
-            // 
-            this.userControlSupplier.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.userControlSupplier.Location = new System.Drawing.Point(0, 0);
-            this.userControlSupplier.Name = "userControlSupplier";
-            this.userControlSupplier.Size = new System.Drawing.Size(1539, 584);
-            this.userControlSupplier.TabIndex = 0;
-            // 
-            // userControlFuelStation
-            // 
-            this.userControlFuelStation.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.userControlFuelStation.Location = new System.Drawing.Point(0, 0);
-            this.userControlFuelStation.Name = "userControlFuelStation";
-            this.userControlFuelStation.Size = new System.Drawing.Size(1539, 584);
-            this.userControlFuelStation.TabIndex = 0;
-            // 
-            // userControlDriver
-            // 
-            this.userControlDriver.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.userControlDriver.Location = new System.Drawing.Point(0, 0);
-            this.userControlDriver.Name = "userControlDriver";
-            this.userControlDriver.Size = new System.Drawing.Size(1539, 584);
-            this.userControlDriver.TabIndex = 0;
-            // 
-            // userControlTrailer
-            // 
-            this.userControlTrailer.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.userControlTrailer.Location = new System.Drawing.Point(0, 0);
-            this.userControlTrailer.Name = "userControlTrailer";
-            this.userControlTrailer.Size = new System.Drawing.Size(1539, 584);
-            this.userControlTrailer.TabIndex = 0;
-            // 
-            // userControlTruck
-            // 
-            this.userControlTruck.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.userControlTruck.Location = new System.Drawing.Point(0, 0);
-            this.userControlTruck.Name = "userControlTruck";
-            this.userControlTruck.Size = new System.Drawing.Size(1539, 584);
-            this.userControlTruck.TabIndex = 0;
             // 
             // userControlUser
             // 
             this.userControlUser.Dock = System.Windows.Forms.DockStyle.Fill;
             this.userControlUser.Location = new System.Drawing.Point(0, 0);
             this.userControlUser.Name = "userControlUser";
-            this.userControlUser.Size = new System.Drawing.Size(1539, 584);
+            this.userControlUser.Size = new System.Drawing.Size(1539, 754);
             this.userControlUser.TabIndex = 0;
             // 
             // FormMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1550, 700);
+            this.ClientSize = new System.Drawing.Size(1550, 870);
             this.Controls.Add(this.tabControl);
             this.DrawerShowIconsWhenHidden = true;
             this.DrawerTabControl = this.tabControl;
             this.FormStyle = MaterialSkin.Controls.MaterialForm.FormStyles.ActionBar_48;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.MinimumSize = new System.Drawing.Size(1550, 700);
+            this.MinimumSize = new System.Drawing.Size(1550, 870);
             this.Name = "FormMain";
             this.Padding = new System.Windows.Forms.Padding(0, 72, 3, 3);
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Накладные для заказов";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FormMain_FormClosing);
             this.tabControl.ResumeLayout(false);
             this.tabPageDocument.ResumeLayout(false);
             this.tabPageFuel.ResumeLayout(false);
@@ -295,13 +299,13 @@
         private System.Windows.Forms.TabPage tabPageTrailer;
         private System.Windows.Forms.TabPage tabPageTruck;
         private System.Windows.Forms.TabPage tabPageUser;
-        private UserControls.UserControlUser userControlUser;
-        private UserControls.UserControlTruck userControlTruck;
-        private UserControls.UserControlTrailer userControlTrailer;
-        private UserControls.UserControlFuelAccountingItem userControlFuelAccountingItem;
-        private UserControls.UserControlFuelStation userControlFuelStation;
-        private UserControls.UserControlDriver userControlDriver;
-        private UserControls.UserControlFuel userControlFuel;
-        private UserControls.UserControlSupplier userControlSupplier;
+        private UserControlUser userControlUser;
+        private UserControlTruck userControlTruck;
+        private UserControlDriver userControlDriver;
+        private UserControlTrailer userControlTrailer;
+        private UserControlSupplier userControlSupplier;
+        private UserControlFuelStation userControlFuelStation;
+        private UserControlFuel userControlFuel;
+        private UserControlFuelAccountingItem userControlFuelAccountingItem;
     }
 }

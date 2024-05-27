@@ -58,7 +58,7 @@
             this.buttonCancel.Name = "buttonCancel";
             this.buttonCancel.NoAccentTextColor = System.Drawing.Color.Empty;
             this.buttonCancel.Size = new System.Drawing.Size(196, 36);
-            this.buttonCancel.TabIndex = 5;
+            this.buttonCancel.TabIndex = 6;
             this.buttonCancel.Text = "Отмена";
             this.buttonCancel.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
             this.buttonCancel.UseAccentColor = false;
@@ -79,7 +79,7 @@
             this.buttonAccept.Name = "buttonAccept";
             this.buttonAccept.NoAccentTextColor = System.Drawing.Color.Empty;
             this.buttonAccept.Size = new System.Drawing.Size(196, 36);
-            this.buttonAccept.TabIndex = 4;
+            this.buttonAccept.TabIndex = 5;
             this.buttonAccept.Text = "Создать";
             this.buttonAccept.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
             this.buttonAccept.UseAccentColor = false;
@@ -127,7 +127,7 @@
             this.multiTextBoxDescription.SelectionStart = 0;
             this.multiTextBoxDescription.ShortcutsEnabled = true;
             this.multiTextBoxDescription.Size = new System.Drawing.Size(429, 101);
-            this.multiTextBoxDescription.TabIndex = 3;
+            this.multiTextBoxDescription.TabIndex = 4;
             this.multiTextBoxDescription.TabStop = false;
             this.multiTextBoxDescription.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.multiTextBoxDescription.UseSystemPasswordChar = false;
@@ -189,7 +189,7 @@
             this.masketTextBoxNumber.ShortcutsEnabled = true;
             this.masketTextBoxNumber.Size = new System.Drawing.Size(173, 36);
             this.masketTextBoxNumber.SkipLiterals = true;
-            this.masketTextBoxNumber.TabIndex = 2;
+            this.masketTextBoxNumber.TabIndex = 3;
             this.masketTextBoxNumber.TabStop = false;
             this.masketTextBoxNumber.Text = " (   )-   -  -";
             this.masketTextBoxNumber.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -221,7 +221,7 @@
             this.textBoxInn.SelectionStart = 0;
             this.textBoxInn.ShortcutsEnabled = true;
             this.textBoxInn.Size = new System.Drawing.Size(429, 36);
-            this.textBoxInn.TabIndex = 1;
+            this.textBoxInn.TabIndex = 2;
             this.textBoxInn.TabStop = false;
             this.textBoxInn.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.textBoxInn.TrailingIcon = null;
@@ -251,7 +251,7 @@
             this.textBoxName.SelectionStart = 0;
             this.textBoxName.ShortcutsEnabled = true;
             this.textBoxName.Size = new System.Drawing.Size(429, 36);
-            this.textBoxName.TabIndex = 0;
+            this.textBoxName.TabIndex = 1;
             this.textBoxName.TabStop = false;
             this.textBoxName.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.textBoxName.TrailingIcon = null;

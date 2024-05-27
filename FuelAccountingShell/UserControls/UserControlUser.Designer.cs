@@ -28,15 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            MaterialSkin.MaterialListBoxItem materialListBoxItem10 = new MaterialSkin.MaterialListBoxItem();
-            MaterialSkin.MaterialListBoxItem materialListBoxItem11 = new MaterialSkin.MaterialListBoxItem();
-            MaterialSkin.MaterialListBoxItem materialListBoxItem12 = new MaterialSkin.MaterialListBoxItem();
-            MaterialSkin.MaterialListBoxItem materialListBoxItem13 = new MaterialSkin.MaterialListBoxItem();
-            MaterialSkin.MaterialListBoxItem materialListBoxItem14 = new MaterialSkin.MaterialListBoxItem();
-            MaterialSkin.MaterialListBoxItem materialListBoxItem15 = new MaterialSkin.MaterialListBoxItem();
-            MaterialSkin.MaterialListBoxItem materialListBoxItem16 = new MaterialSkin.MaterialListBoxItem();
-            MaterialSkin.MaterialListBoxItem materialListBoxItem17 = new MaterialSkin.MaterialListBoxItem();
-            MaterialSkin.MaterialListBoxItem materialListBoxItem18 = new MaterialSkin.MaterialListBoxItem();
             this.flowLayoutPanelHelp = new System.Windows.Forms.FlowLayoutPanel();
             this.materialCardHelp = new MaterialSkin.Controls.MaterialCard();
             this.materialListBoxRoles = new MaterialSkin.Controls.MaterialListBox();
@@ -44,6 +35,12 @@
             this.labelHelp = new MaterialSkin.Controls.MaterialLabel();
             this.labelStatus = new MaterialSkin.Controls.MaterialLabel();
             this.dataGridViewUsers = new System.Windows.Forms.DataGridView();
+            this.ColumnFirstName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColumnLastName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColumnPatronymic = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColumnMail = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColumnLogin = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColumnUserType = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tableLayoutPanel = new System.Windows.Forms.TableLayoutPanel();
             this.materialCardMenu = new MaterialSkin.Controls.MaterialCard();
             this.flowLayoutPanelMenu = new System.Windows.Forms.FlowLayoutPanel();
@@ -94,42 +91,6 @@
             this.materialListBoxRoles.BorderColor = System.Drawing.Color.LightGray;
             this.materialListBoxRoles.Depth = 0;
             this.materialListBoxRoles.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            materialListBoxItem10.SecondaryText = "";
-            materialListBoxItem10.Tag = null;
-            materialListBoxItem10.Text = "1";
-            materialListBoxItem11.SecondaryText = "";
-            materialListBoxItem11.Tag = null;
-            materialListBoxItem11.Text = "2";
-            materialListBoxItem12.SecondaryText = "";
-            materialListBoxItem12.Tag = null;
-            materialListBoxItem12.Text = "3";
-            materialListBoxItem13.SecondaryText = "";
-            materialListBoxItem13.Tag = null;
-            materialListBoxItem13.Text = "ListBoxItem";
-            materialListBoxItem14.SecondaryText = "";
-            materialListBoxItem14.Tag = null;
-            materialListBoxItem14.Text = "ListBoxItem";
-            materialListBoxItem15.SecondaryText = "";
-            materialListBoxItem15.Tag = null;
-            materialListBoxItem15.Text = "ListBoxItem";
-            materialListBoxItem16.SecondaryText = "";
-            materialListBoxItem16.Tag = null;
-            materialListBoxItem16.Text = "ListBoxItem";
-            materialListBoxItem17.SecondaryText = "";
-            materialListBoxItem17.Tag = null;
-            materialListBoxItem17.Text = "ListBoxItem";
-            materialListBoxItem18.SecondaryText = "";
-            materialListBoxItem18.Tag = null;
-            materialListBoxItem18.Text = "ListBoxItem";
-            this.materialListBoxRoles.Items.Add(materialListBoxItem10);
-            this.materialListBoxRoles.Items.Add(materialListBoxItem11);
-            this.materialListBoxRoles.Items.Add(materialListBoxItem12);
-            this.materialListBoxRoles.Items.Add(materialListBoxItem13);
-            this.materialListBoxRoles.Items.Add(materialListBoxItem14);
-            this.materialListBoxRoles.Items.Add(materialListBoxItem15);
-            this.materialListBoxRoles.Items.Add(materialListBoxItem16);
-            this.materialListBoxRoles.Items.Add(materialListBoxItem17);
-            this.materialListBoxRoles.Items.Add(materialListBoxItem18);
             this.materialListBoxRoles.Location = new System.Drawing.Point(14, 75);
             this.materialListBoxRoles.Margin = new System.Windows.Forms.Padding(0);
             this.materialListBoxRoles.MouseState = MaterialSkin.MouseState.HOVER;
@@ -137,8 +98,9 @@
             this.materialListBoxRoles.SelectedIndex = -1;
             this.materialListBoxRoles.SelectedItem = null;
             this.materialListBoxRoles.Size = new System.Drawing.Size(206, 182);
-            this.materialListBoxRoles.TabIndex = 1;
+            this.materialListBoxRoles.TabIndex = 5;
             this.materialListBoxRoles.UseAccentColor = true;
+            this.materialListBoxRoles.SelectedIndexChanged += new MaterialSkin.Controls.MaterialListBox.SelectedIndexChangedEventHandler(this.materialListBoxRoles_SelectedIndexChanged);
             // 
             // materialCardHelpTitle
             // 
@@ -179,19 +141,64 @@
             this.labelStatus.Margin = new System.Windows.Forms.Padding(14, 5, 3, 5);
             this.labelStatus.MouseState = MaterialSkin.MouseState.HOVER;
             this.labelStatus.Name = "labelStatus";
-            this.labelStatus.Size = new System.Drawing.Size(195, 19);
-            this.labelStatus.TabIndex = 1;
-            this.labelStatus.Text = "Количесто записей: 0 из 0";
+            this.labelStatus.Size = new System.Drawing.Size(204, 19);
+            this.labelStatus.TabIndex = 0;
+            this.labelStatus.Text = "Количество записей: 0 из 0";
             // 
             // dataGridViewUsers
             // 
             this.dataGridViewUsers.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewUsers.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.ColumnFirstName,
+            this.ColumnLastName,
+            this.ColumnPatronymic,
+            this.ColumnMail,
+            this.ColumnLogin,
+            this.ColumnUserType});
             this.dataGridViewUsers.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataGridViewUsers.Location = new System.Drawing.Point(14, 113);
             this.dataGridViewUsers.Margin = new System.Windows.Forms.Padding(14, 3, 14, 3);
             this.dataGridViewUsers.Name = "dataGridViewUsers";
             this.dataGridViewUsers.Size = new System.Drawing.Size(1100, 553);
             this.dataGridViewUsers.TabIndex = 0;
+            this.dataGridViewUsers.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.dataGridViewUsers_CellFormatting);
+            // 
+            // ColumnFirstName
+            // 
+            this.ColumnFirstName.DataPropertyName = "FirstName";
+            this.ColumnFirstName.HeaderText = "Имя";
+            this.ColumnFirstName.Name = "ColumnFirstName";
+            // 
+            // ColumnLastName
+            // 
+            this.ColumnLastName.DataPropertyName = "LastName";
+            this.ColumnLastName.HeaderText = "Фамилия";
+            this.ColumnLastName.Name = "ColumnLastName";
+            // 
+            // ColumnPatronymic
+            // 
+            this.ColumnPatronymic.DataPropertyName = "Patronymic";
+            this.ColumnPatronymic.HeaderText = "Отчество";
+            this.ColumnPatronymic.Name = "ColumnPatronymic";
+            // 
+            // ColumnMail
+            // 
+            this.ColumnMail.DataPropertyName = "Mail";
+            this.ColumnMail.HeaderText = "Почта";
+            this.ColumnMail.Name = "ColumnMail";
+            // 
+            // ColumnLogin
+            // 
+            this.ColumnLogin.DataPropertyName = "Login";
+            this.ColumnLogin.HeaderText = "Логин";
+            this.ColumnLogin.Name = "ColumnLogin";
+            // 
+            // ColumnUserType
+            // 
+            this.ColumnUserType.DataPropertyName = "UserType";
+            this.ColumnUserType.FillWeight = 70F;
+            this.ColumnUserType.HeaderText = "Роль";
+            this.ColumnUserType.Name = "ColumnUserType";
             // 
             // tableLayoutPanel
             // 
@@ -258,7 +265,7 @@
             this.buttonAdd.Name = "buttonAdd";
             this.buttonAdd.NoAccentTextColor = System.Drawing.Color.Empty;
             this.buttonAdd.Size = new System.Drawing.Size(125, 54);
-            this.buttonAdd.TabIndex = 0;
+            this.buttonAdd.TabIndex = 1;
             this.buttonAdd.Text = "Добавить";
             this.buttonAdd.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
             this.buttonAdd.UseAccentColor = false;
@@ -281,7 +288,7 @@
             this.buttonEdit.Name = "buttonEdit";
             this.buttonEdit.NoAccentTextColor = System.Drawing.Color.Empty;
             this.buttonEdit.Size = new System.Drawing.Size(125, 54);
-            this.buttonEdit.TabIndex = 1;
+            this.buttonEdit.TabIndex = 2;
             this.buttonEdit.Text = "Изменить";
             this.buttonEdit.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
             this.buttonEdit.UseAccentColor = false;
@@ -304,11 +311,12 @@
             this.buttonDelete.Name = "buttonDelete";
             this.buttonDelete.NoAccentTextColor = System.Drawing.Color.Empty;
             this.buttonDelete.Size = new System.Drawing.Size(125, 54);
-            this.buttonDelete.TabIndex = 2;
+            this.buttonDelete.TabIndex = 3;
             this.buttonDelete.Text = "Удалить";
             this.buttonDelete.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
             this.buttonDelete.UseAccentColor = false;
             this.buttonDelete.UseVisualStyleBackColor = true;
+            this.buttonDelete.Click += new System.EventHandler(this.buttonDelete_Click);
             // 
             // textBoxSearch
             // 
@@ -333,11 +341,12 @@
             this.textBoxSearch.SelectionStart = 0;
             this.textBoxSearch.ShortcutsEnabled = true;
             this.textBoxSearch.Size = new System.Drawing.Size(250, 48);
-            this.textBoxSearch.TabIndex = 3;
+            this.textBoxSearch.TabIndex = 4;
             this.textBoxSearch.TabStop = false;
             this.textBoxSearch.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.textBoxSearch.TrailingIcon = null;
             this.textBoxSearch.UseSystemPasswordChar = false;
+            this.textBoxSearch.TextChanged += new System.EventHandler(this.textBoxSearch_TextChanged);
             // 
             // UserControlUser
             // 
@@ -346,6 +355,7 @@
             this.Controls.Add(this.tableLayoutPanel);
             this.Name = "UserControlUser";
             this.Size = new System.Drawing.Size(1368, 698);
+            this.Load += new System.EventHandler(this.UserControlUser_Load);
             this.flowLayoutPanelHelp.ResumeLayout(false);
             this.flowLayoutPanelHelp.PerformLayout();
             this.materialCardHelp.ResumeLayout(false);
@@ -377,5 +387,11 @@
         private MaterialSkin.Controls.MaterialListBox materialListBoxRoles;
         private MaterialSkin.Controls.MaterialCard materialCardHelpTitle;
         private MaterialSkin.Controls.MaterialLabel labelHelp;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColumnFirstName;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColumnLastName;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColumnPatronymic;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColumnMail;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColumnLogin;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColumnUserType;
     }
 }

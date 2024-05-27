@@ -56,7 +56,7 @@
             this.buttonCancel.Name = "buttonCancel";
             this.buttonCancel.NoAccentTextColor = System.Drawing.Color.Empty;
             this.buttonCancel.Size = new System.Drawing.Size(196, 36);
-            this.buttonCancel.TabIndex = 4;
+            this.buttonCancel.TabIndex = 5;
             this.buttonCancel.Text = "Отмена";
             this.buttonCancel.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
             this.buttonCancel.UseAccentColor = false;
@@ -69,7 +69,6 @@
             this.buttonAccept.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.buttonAccept.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
             this.buttonAccept.Depth = 0;
-            this.buttonAccept.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.buttonAccept.HighEmphasis = true;
             this.buttonAccept.Icon = null;
             this.buttonAccept.Location = new System.Drawing.Point(50, 433);
@@ -78,7 +77,7 @@
             this.buttonAccept.Name = "buttonAccept";
             this.buttonAccept.NoAccentTextColor = System.Drawing.Color.Empty;
             this.buttonAccept.Size = new System.Drawing.Size(196, 36);
-            this.buttonAccept.TabIndex = 3;
+            this.buttonAccept.TabIndex = 4;
             this.buttonAccept.Text = "Создать";
             this.buttonAccept.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
             this.buttonAccept.UseAccentColor = false;
@@ -124,7 +123,7 @@
             this.multiTextBoxDescription.SelectionStart = 0;
             this.multiTextBoxDescription.ShortcutsEnabled = true;
             this.multiTextBoxDescription.Size = new System.Drawing.Size(429, 101);
-            this.multiTextBoxDescription.TabIndex = 2;
+            this.multiTextBoxDescription.TabIndex = 3;
             this.multiTextBoxDescription.TabStop = false;
             this.multiTextBoxDescription.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.multiTextBoxDescription.UseSystemPasswordChar = false;
@@ -149,7 +148,7 @@
             this.multiTextBoxAddress.SelectionStart = 0;
             this.multiTextBoxAddress.ShortcutsEnabled = true;
             this.multiTextBoxAddress.Size = new System.Drawing.Size(429, 101);
-            this.multiTextBoxAddress.TabIndex = 1;
+            this.multiTextBoxAddress.TabIndex = 2;
             this.multiTextBoxAddress.TabStop = false;
             this.multiTextBoxAddress.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.multiTextBoxAddress.UseSystemPasswordChar = false;
@@ -176,7 +175,7 @@
             this.textBoxName.SelectionStart = 0;
             this.textBoxName.ShortcutsEnabled = true;
             this.textBoxName.Size = new System.Drawing.Size(429, 36);
-            this.textBoxName.TabIndex = 0;
+            this.textBoxName.TabIndex = 1;
             this.textBoxName.TabStop = false;
             this.textBoxName.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.textBoxName.TrailingIcon = null;

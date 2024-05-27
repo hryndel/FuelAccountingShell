@@ -79,7 +79,7 @@
             this.textBoxPassword.SelectionStart = 0;
             this.textBoxPassword.ShortcutsEnabled = true;
             this.textBoxPassword.Size = new System.Drawing.Size(250, 48);
-            this.textBoxPassword.TabIndex = 3;
+            this.textBoxPassword.TabIndex = 2;
             this.textBoxPassword.TabStop = false;
             this.textBoxPassword.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.textBoxPassword.TrailingIcon = null;
@@ -108,7 +108,7 @@
             this.textBoxLogin.SelectionStart = 0;
             this.textBoxLogin.ShortcutsEnabled = true;
             this.textBoxLogin.Size = new System.Drawing.Size(250, 48);
-            this.textBoxLogin.TabIndex = 2;
+            this.textBoxLogin.TabIndex = 1;
             this.textBoxLogin.TabStop = false;
             this.textBoxLogin.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.textBoxLogin.TrailingIcon = null;
@@ -123,7 +123,7 @@
             this.labelPassword.MouseState = MaterialSkin.MouseState.HOVER;
             this.labelPassword.Name = "labelPassword";
             this.labelPassword.Size = new System.Drawing.Size(61, 19);
-            this.labelPassword.TabIndex = 1;
+            this.labelPassword.TabIndex = 0;
             this.labelPassword.Text = "Пароль:";
             // 
             // labelLogin
@@ -152,7 +152,7 @@
             this.buttonEnter.Name = "buttonEnter";
             this.buttonEnter.NoAccentTextColor = System.Drawing.Color.Empty;
             this.buttonEnter.Size = new System.Drawing.Size(196, 36);
-            this.buttonEnter.TabIndex = 4;
+            this.buttonEnter.TabIndex = 3;
             this.buttonEnter.Text = "Войти";
             this.buttonEnter.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
             this.buttonEnter.UseAccentColor = false;
@@ -174,11 +174,12 @@
             this.buttonCancel.Name = "buttonCancel";
             this.buttonCancel.NoAccentTextColor = System.Drawing.Color.Empty;
             this.buttonCancel.Size = new System.Drawing.Size(196, 36);
-            this.buttonCancel.TabIndex = 5;
+            this.buttonCancel.TabIndex = 4;
             this.buttonCancel.Text = "Отмена";
             this.buttonCancel.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
             this.buttonCancel.UseAccentColor = false;
             this.buttonCancel.UseVisualStyleBackColor = true;
+            this.buttonCancel.Click += new System.EventHandler(this.buttonCancel_Click);
             // 
             // FormAuthorization
             // 
