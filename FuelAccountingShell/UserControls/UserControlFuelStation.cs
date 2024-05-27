@@ -71,10 +71,10 @@ namespace FuelAccountingShell.UserControls
                     dataGridViewFuelStations.DataSource = items;
                     break;
                 case 1:
-                    items.Sort((a, b) => a.Name.CompareTo(b.Name));
+                    items.Sort((a, b) => b.Name.CompareTo(a.Name));
                     break;
                 case 2:
-                    items.Sort((a, b) => b.Name.CompareTo(a.Name));
+                    items.Sort((a, b) => a.Name.CompareTo(b.Name));
                     break;
             }
             dataGridViewFuelStations.DataSource = items;

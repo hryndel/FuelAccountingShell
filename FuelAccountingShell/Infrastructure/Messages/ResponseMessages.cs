@@ -15,13 +15,13 @@ namespace FuelAccountingShell.Infrastructure.Messages
                 case HttpStatusCode.OK: 
                     return DialogResult.OK;
                 case HttpStatusCode.Conflict: 
-                    GetMessageValidatorAsync(response); 
+                    GetMessageValidator(response); 
                     break;
                 case HttpStatusCode.NotFound: 
-                    GetMessageExceptionAsync(response); 
+                    GetMessageException(response); 
                     break;
                 case HttpStatusCode.NotAcceptable: 
-                    GetMessageExceptionAsync(response); 
+                    GetMessageException(response); 
                     break;
                 case HttpStatusCode.Unauthorized: 
                     MaterialMessageBox.Show("Отказано в доступе", "Ошибка авторизации", MessageBoxButtons.OK, MessageBoxIcon.Error, false);
@@ -31,7 +31,7 @@ namespace FuelAccountingShell.Infrastructure.Messages
             return DialogResult.No;
         }
 
-        public static void GetMessageValidatorAsync(HttpResponseMessage data)
+        public static void GetMessageValidator(HttpResponseMessage data)
         {
             var result = data.Content.ReadAsStringAsync().Result;
             var errors = JsonConvert.DeserializeObject<Errors>(result);
@@ -43,7 +43,7 @@ namespace FuelAccountingShell.Infrastructure.Messages
             MaterialMessageBox.Show($"{message}", "Ошибка валидации", MessageBoxButtons.OK, MessageBoxIcon.Error, true);
         }
 
-        public static void GetMessageExceptionAsync(HttpResponseMessage data)
+        public static void GetMessageException(HttpResponseMessage data)
         {
             var result = data.Content.ReadAsStringAsync().Result;
             var error = JsonConvert.DeserializeObject<MessageErrors>(result);

@@ -69,7 +69,6 @@
             this.buttonAccept.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.buttonAccept.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
             this.buttonAccept.Depth = 0;
-            this.buttonAccept.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.buttonAccept.HighEmphasis = true;
             this.buttonAccept.Icon = null;
             this.buttonAccept.Location = new System.Drawing.Point(50, 433);

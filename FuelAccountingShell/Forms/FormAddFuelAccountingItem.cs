@@ -92,13 +92,13 @@ namespace FuelAccountingShell.Forms
         private void comboBoxTruck_Format(object sender, ListControlConvertEventArgs e)
         {
             var truck = (TruckResponse)e.ListItem;
-            e.Value = $"{truck.Name} | {truck.Number}";
+            e.Value = $"{truck.Number} | {truck.Name}";
         }
 
         private void comboBoxTrailer_Format(object sender, ListControlConvertEventArgs e)
         {
             var trailer = (TrailerResponse)e.ListItem;
-            e.Value = $"{trailer.Name} | {trailer.Number} | {trailer.Capacity}";
+            e.Value = $"{trailer.Number} | {trailer.Capacity} | {trailer.Name}";
         }
 
         private void comboBoxFuel_Format(object sender, ListControlConvertEventArgs e)

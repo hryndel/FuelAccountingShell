@@ -312,7 +312,6 @@
             this.comboBoxTrailer.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
             this.comboBoxTrailer.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.comboBoxTrailer.FormattingEnabled = true;
-            this.comboBoxTrailer.IntegralHeight = false;
             this.comboBoxTrailer.ItemHeight = 29;
             this.comboBoxTrailer.Location = new System.Drawing.Point(130, 125);
             this.comboBoxTrailer.MaxDropDownItems = 4;

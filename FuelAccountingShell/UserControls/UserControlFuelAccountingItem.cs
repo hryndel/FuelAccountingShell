@@ -95,10 +95,10 @@ namespace FuelAccountingShell.UserControls
                 case 0:
                     break;
                 case 1:
-                    items.Sort((a, b) => a.EndDate.CompareTo(b.EndDate));
+                    items.Sort((a, b) => b.EndDate.CompareTo(a.EndDate));
                     break;
                 case 2:
-                    items.Sort((a, b) => b.EndDate.CompareTo(a.EndDate));
+                    items.Sort((a, b) => a.EndDate.CompareTo(b.EndDate));
                     break;
             }
             dataGridViewFuelAccountingItems.DataSource = items;

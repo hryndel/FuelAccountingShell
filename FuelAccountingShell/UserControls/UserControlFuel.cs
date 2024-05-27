@@ -50,20 +50,20 @@ namespace FuelAccountingShell.UserControls
         {
             FormAddEditFuel form = new FormAddEditFuel();
             form.ShowDialog();
-            FillListBox();
+            LoadData();
         }
 
         private void buttonEdit_Click(object sender, EventArgs e)
         {
             FormAddEditFuel form = new FormAddEditFuel((FuelResponse)dataGridViewFuels.CurrentRow.DataBoundItem);
             form.ShowDialog();
-            FillListBox();
+            LoadData();
         }
 
         private void buttonDelete_Click(object sender, EventArgs e)
         {
             CommonClient.DeleteData(((FuelResponse)dataGridViewFuels.CurrentRow.DataBoundItem).Id, "Fuel/");
-            FillListBox();
+            LoadData();
         }
 
         private void SearchAndFiltr()
