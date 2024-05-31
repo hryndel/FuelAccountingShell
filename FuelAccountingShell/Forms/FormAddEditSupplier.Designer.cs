@@ -209,7 +209,7 @@
             this.textBoxInn.HideSelection = true;
             this.textBoxInn.LeadingIcon = null;
             this.textBoxInn.Location = new System.Drawing.Point(123, 71);
-            this.textBoxInn.MaxLength = 20;
+            this.textBoxInn.MaxLength = 12;
             this.textBoxInn.MouseState = MaterialSkin.MouseState.OUT;
             this.textBoxInn.Name = "textBoxInn";
             this.textBoxInn.PasswordChar = '\0';
