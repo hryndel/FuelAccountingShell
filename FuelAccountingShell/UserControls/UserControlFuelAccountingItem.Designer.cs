@@ -28,22 +28,15 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             MaterialSkin.MaterialListBoxItem materialListBoxItem1 = new MaterialSkin.MaterialListBoxItem();
             MaterialSkin.MaterialListBoxItem materialListBoxItem2 = new MaterialSkin.MaterialListBoxItem();
             MaterialSkin.MaterialListBoxItem materialListBoxItem3 = new MaterialSkin.MaterialListBoxItem();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.tableLayoutPanel = new System.Windows.Forms.TableLayoutPanel();
             this.dataGridViewFuelAccountingItems = new System.Windows.Forms.DataGridView();
-            this.ColumnDriver = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColumnTruck = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColumnTrailer = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColumnFuel = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColumnCount = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColumnFuelStation = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColumnStartDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColumnEndDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.labelStatus = new MaterialSkin.Controls.MaterialLabel();
             this.flowLayoutPanelHelp = new System.Windows.Forms.FlowLayoutPanel();
             this.materialCardHelp = new MaterialSkin.Controls.MaterialCard();
@@ -61,6 +54,15 @@
             this.buttonPdf = new MaterialSkin.Controls.MaterialButton();
             this.textBoxSearch = new MaterialSkin.Controls.MaterialTextBox2();
             this.saveFileDialogSave = new System.Windows.Forms.SaveFileDialog();
+            this.ColumnDriver = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColumnTruck = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColumnTrailer = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColumnFuel = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColumnCount = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColumnFuelStation = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColumnStartDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColumnEndDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColumnPrice = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tableLayoutPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewFuelAccountingItems)).BeginInit();
             this.flowLayoutPanelHelp.SuspendLayout();
@@ -102,7 +104,8 @@
             this.ColumnCount,
             this.ColumnFuelStation,
             this.ColumnStartDate,
-            this.ColumnEndDate});
+            this.ColumnEndDate,
+            this.ColumnPrice});
             this.dataGridViewFuelAccountingItems.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataGridViewFuelAccountingItems.Location = new System.Drawing.Point(14, 113);
             this.dataGridViewFuelAccountingItems.Margin = new System.Windows.Forms.Padding(14, 3, 14, 3);
@@ -110,70 +113,6 @@
             this.dataGridViewFuelAccountingItems.Size = new System.Drawing.Size(1100, 553);
             this.dataGridViewFuelAccountingItems.TabIndex = 0;
             this.dataGridViewFuelAccountingItems.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.dataGridViewFuelAccountingItems_CellFormatting);
-            // 
-            // ColumnDriver
-            // 
-            this.ColumnDriver.DataPropertyName = "Driver";
-            this.ColumnDriver.HeaderText = "Водитель";
-            this.ColumnDriver.Name = "ColumnDriver";
-            this.ColumnDriver.ToolTipText = "ФИО водителия | ВУ";
-            // 
-            // ColumnTruck
-            // 
-            this.ColumnTruck.DataPropertyName = "Truck";
-            this.ColumnTruck.HeaderText = "Грузовик";
-            this.ColumnTruck.Name = "ColumnTruck";
-            this.ColumnTruck.ToolTipText = "Название грузовика | номер";
-            // 
-            // ColumnTrailer
-            // 
-            this.ColumnTrailer.DataPropertyName = "Trailer";
-            this.ColumnTrailer.HeaderText = "Полуприцеп";
-            this.ColumnTrailer.Name = "ColumnTrailer";
-            this.ColumnTrailer.ToolTipText = "Название полупрциепа | номер";
-            // 
-            // ColumnFuel
-            // 
-            this.ColumnFuel.DataPropertyName = "Fuel";
-            this.ColumnFuel.HeaderText = "Топливо";
-            this.ColumnFuel.Name = "ColumnFuel";
-            this.ColumnFuel.ToolTipText = "Тип топлива | имя поставщика";
-            // 
-            // ColumnCount
-            // 
-            this.ColumnCount.DataPropertyName = "Count";
-            dataGridViewCellStyle1.Format = "N0";
-            dataGridViewCellStyle1.NullValue = null;
-            this.ColumnCount.DefaultCellStyle = dataGridViewCellStyle1;
-            this.ColumnCount.HeaderText = "Количество";
-            this.ColumnCount.Name = "ColumnCount";
-            // 
-            // ColumnFuelStation
-            // 
-            this.ColumnFuelStation.DataPropertyName = "FuelStation";
-            this.ColumnFuelStation.HeaderText = "АЗС";
-            this.ColumnFuelStation.Name = "ColumnFuelStation";
-            this.ColumnFuelStation.ToolTipText = "Название АЗС | адрес";
-            // 
-            // ColumnStartDate
-            // 
-            this.ColumnStartDate.DataPropertyName = "StartDate";
-            dataGridViewCellStyle2.Format = "g";
-            dataGridViewCellStyle2.NullValue = null;
-            this.ColumnStartDate.DefaultCellStyle = dataGridViewCellStyle2;
-            this.ColumnStartDate.FillWeight = 90F;
-            this.ColumnStartDate.HeaderText = "Отправка";
-            this.ColumnStartDate.Name = "ColumnStartDate";
-            // 
-            // ColumnEndDate
-            // 
-            this.ColumnEndDate.DataPropertyName = "EndDate";
-            dataGridViewCellStyle3.Format = "g";
-            dataGridViewCellStyle3.NullValue = null;
-            this.ColumnEndDate.DefaultCellStyle = dataGridViewCellStyle3;
-            this.ColumnEndDate.FillWeight = 90F;
-            this.ColumnEndDate.HeaderText = "Прибытие";
-            this.ColumnEndDate.Name = "ColumnEndDate";
             // 
             // labelStatus
             // 
@@ -478,6 +417,79 @@
             this.saveFileDialogSave.Filter = "PDF-файл|*.pdf";
             this.saveFileDialogSave.Title = "Сохранить накладную";
             // 
+            // ColumnDriver
+            // 
+            this.ColumnDriver.DataPropertyName = "Driver";
+            this.ColumnDriver.HeaderText = "Водитель";
+            this.ColumnDriver.Name = "ColumnDriver";
+            this.ColumnDriver.ToolTipText = "ФИО водителия | ВУ";
+            // 
+            // ColumnTruck
+            // 
+            this.ColumnTruck.DataPropertyName = "Truck";
+            this.ColumnTruck.HeaderText = "Грузовик";
+            this.ColumnTruck.Name = "ColumnTruck";
+            this.ColumnTruck.ToolTipText = "Название грузовика | номер";
+            // 
+            // ColumnTrailer
+            // 
+            this.ColumnTrailer.DataPropertyName = "Trailer";
+            this.ColumnTrailer.HeaderText = "Полуприцеп";
+            this.ColumnTrailer.Name = "ColumnTrailer";
+            this.ColumnTrailer.ToolTipText = "Название полупрциепа | номер";
+            // 
+            // ColumnFuel
+            // 
+            this.ColumnFuel.DataPropertyName = "Fuel";
+            this.ColumnFuel.HeaderText = "Топливо";
+            this.ColumnFuel.Name = "ColumnFuel";
+            this.ColumnFuel.ToolTipText = "Тип топлива | имя поставщика";
+            // 
+            // ColumnCount
+            // 
+            this.ColumnCount.DataPropertyName = "Count";
+            dataGridViewCellStyle1.Format = "N0";
+            dataGridViewCellStyle1.NullValue = null;
+            this.ColumnCount.DefaultCellStyle = dataGridViewCellStyle1;
+            this.ColumnCount.HeaderText = "Количество";
+            this.ColumnCount.Name = "ColumnCount";
+            // 
+            // ColumnFuelStation
+            // 
+            this.ColumnFuelStation.DataPropertyName = "FuelStation";
+            this.ColumnFuelStation.HeaderText = "АЗС";
+            this.ColumnFuelStation.Name = "ColumnFuelStation";
+            this.ColumnFuelStation.ToolTipText = "Название АЗС | адрес";
+            // 
+            // ColumnStartDate
+            // 
+            this.ColumnStartDate.DataPropertyName = "StartDate";
+            dataGridViewCellStyle2.Format = "g";
+            dataGridViewCellStyle2.NullValue = null;
+            this.ColumnStartDate.DefaultCellStyle = dataGridViewCellStyle2;
+            this.ColumnStartDate.FillWeight = 90F;
+            this.ColumnStartDate.HeaderText = "Отправка";
+            this.ColumnStartDate.Name = "ColumnStartDate";
+            // 
+            // ColumnEndDate
+            // 
+            this.ColumnEndDate.DataPropertyName = "EndDate";
+            dataGridViewCellStyle3.Format = "g";
+            dataGridViewCellStyle3.NullValue = null;
+            this.ColumnEndDate.DefaultCellStyle = dataGridViewCellStyle3;
+            this.ColumnEndDate.FillWeight = 90F;
+            this.ColumnEndDate.HeaderText = "Прибытие";
+            this.ColumnEndDate.Name = "ColumnEndDate";
+            // 
+            // ColumnPrice
+            // 
+            this.ColumnPrice.DataPropertyName = "Price";
+            dataGridViewCellStyle4.Format = "C2";
+            dataGridViewCellStyle4.NullValue = null;
+            this.ColumnPrice.DefaultCellStyle = dataGridViewCellStyle4;
+            this.ColumnPrice.HeaderText = "Сумма";
+            this.ColumnPrice.Name = "ColumnPrice";
+            // 
             // UserControlFuelAccountingItem
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -533,5 +545,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn ColumnFuelStation;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColumnStartDate;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColumnEndDate;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColumnPrice;
     }
 }

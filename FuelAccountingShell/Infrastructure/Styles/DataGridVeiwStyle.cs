@@ -31,7 +31,7 @@ namespace FuelAccountingShell.Infrastructure.Styles
             dgv.DefaultCellStyle.SelectionBackColor = Color.FromArgb(100, 100, 100);
             dgv.DefaultCellStyle.SelectionForeColor = Color.White;
             dgv.DefaultCellStyle.ForeColor = Color.Black;
-            dgv.ColumnHeadersDefaultCellStyle.Font = new Font("Microsoft Sans Serif", 15, FontStyle.Bold);
+            dgv.ColumnHeadersDefaultCellStyle.Font = new Font("Microsoft Sans Serif", 12, FontStyle.Bold);
             dgv.ColumnHeadersDefaultCellStyle.BackColor = Color.FromArgb(126, 126, 126);
             dgv.ColumnHeadersDefaultCellStyle.ForeColor = Color.Black;
         }

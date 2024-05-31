@@ -90,6 +90,7 @@
             this.dataGridViewTrailers.Name = "dataGridViewTrailers";
             this.dataGridViewTrailers.Size = new System.Drawing.Size(1100, 553);
             this.dataGridViewTrailers.TabIndex = 0;
+            this.dataGridViewTrailers.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.dataGridViewTrailers_CellFormatting);
             // 
             // ColumnName
             // 

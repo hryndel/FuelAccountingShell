@@ -102,6 +102,11 @@ namespace FuelAccountingShell.UserControls
                 var value = (SupplierResponse)e.Value;
                 e.Value = $"{value.Name} | {value.Inn}";
             }
+
+            if (dataGridViewFuels.Columns[e.ColumnIndex].DataPropertyName == "Count")
+            {
+                e.Value = $"{e.Value} л.";
+            }
         }
 
         private void FillListBox()

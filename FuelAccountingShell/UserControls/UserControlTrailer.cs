@@ -91,5 +91,13 @@ namespace FuelAccountingShell.UserControls
         {
             SearchAndSort();
         }
+
+        private void dataGridViewTrailers_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
+        {
+            if (dataGridViewTrailers.Columns[e.ColumnIndex].DataPropertyName == "Capacity")
+            {
+                e.Value = $"{e.Value} л.";
+            }
+        }
     }
 }

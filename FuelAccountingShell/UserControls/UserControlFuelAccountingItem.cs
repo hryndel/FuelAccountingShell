@@ -163,6 +163,17 @@ namespace FuelAccountingShell.UserControls
                 var dateTime = (DateTimeOffset)e.Value;
                 e.Value = dateTime.ToLocalTime();
             }
+
+            if (dataGridViewFuelAccountingItems.Columns[e.ColumnIndex].DataPropertyName == "Count")
+            {
+                e.Value = $"{e.Value} л.";
+            }
+
+            if (dataGridViewFuelAccountingItems.Columns[e.ColumnIndex].DataPropertyName == "Price")
+            {
+                FuelAccountingItemResponse data = dataGridViewFuelAccountingItems.Rows[e.RowIndex].DataBoundItem as FuelAccountingItemResponse;
+                e.Value = data.Count * data.Fuel.Price;
+            }
         }
 
         private void FillListBox()
