@@ -24,7 +24,10 @@ namespace FuelAccountingShell.Infrastructure.Messages
                     GetMessageException(response); 
                     break;
                 case HttpStatusCode.Unauthorized: 
-                    MaterialMessageBox.Show("Отказано в доступе", "Ошибка авторизации", MessageBoxButtons.OK, MessageBoxIcon.Error, false);
+                    MaterialMessageBox.Show("Отказано в доступе.", "Ошибка авторизации", MessageBoxButtons.OK, MessageBoxIcon.Error, false);
+                    break;
+                case HttpStatusCode.InternalServerError:
+                    MaterialMessageBox.Show("Внутренняя ошибка сервера.", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error, false);
                     break;
                 default: break;
             }
