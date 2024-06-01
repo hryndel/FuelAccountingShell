@@ -143,7 +143,7 @@ namespace FuelAccountingShell.UserControls
             if (dataGridViewFuelAccountingItems.Columns[e.ColumnIndex].DataPropertyName == "Fuel")
             {
                 var fuel = (FuelResponse)e.Value;
-                e.Value = $"{fuel.FuelType} | {fuel.Supplier.Name}";
+                e.Value = $"{fuel.FuelType.EnumRead()} | {fuel.Supplier.Name}";
             }
 
             if (dataGridViewFuelAccountingItems.Columns[e.ColumnIndex].DataPropertyName == "FuelStation")

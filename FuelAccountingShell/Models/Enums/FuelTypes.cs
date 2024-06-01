@@ -4,16 +4,16 @@ namespace FuelAccountingShell.Models.Enums
 {
     public enum FuelTypes
     {
-        [Description("Бензин 92 пробы")]
+        [Description("АИ-92")]
         Petrol92,
 
-        [Description("Бензин 95 пробы")]
+        [Description("АИ-95")]
         Petrol95,
 
-        [Description("Бензин 98 пробы")]
+        [Description("АИ-98")]
         Petrol98,
 
-        [Description("Бензин 100 пробы")]
+        [Description("АИ-100")]
         Petrol100,
 
         [Description("Дизель")]
